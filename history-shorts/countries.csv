@@ -1,6 +1,6 @@
 order,country,slug,status,notes
-1,Japan,japan,done,pilot
-2,United Arab Emirates,uae,review,pilot 2: fountain sweep for 1971; pearl-crash silence
+1,Japan,japan,published,pilot
+2,United Arab Emirates,uae,to-schedule 2026-11-10 17:00,pilot 2: fountain sweep for 1971; pearl-crash silence
 3,Egypt,egypt,todo,pyramids → Ptolemies → Rome → Islam → Ottomans → British → Nasser → today
 4,Italy,italy,todo,Rome → Renaissance → unification 1861 → today
 5,United Kingdom,united-kingdom,todo,
