@@ -1,0 +1,413 @@
+{
+ "dur": 59.78,
+ "vo": {
+  "L01": 0.45,
+  "L02": 3.724,
+  "L03": 9.496,
+  "L04": 15.194,
+  "L05": 20.494,
+  "L06": 27.571,
+  "L07": 35.557,
+  "L08": 42.861,
+  "L09": 49.494,
+  "L10": 55.48
+ },
+ "eras": [
+  {
+   "scene": "rice",
+   "line": "L02",
+   "label": "RICE & SMALL KINGDOMS",
+   "year": "2,000+ YRS AGO",
+   "pal": {
+    "sky1": "#F6CD98",
+    "sky2": "#EE9A73",
+    "far": "#7D6B98",
+    "mid": "#3E7079",
+    "near": "#1E3B3F",
+    "sun": "#D8432B",
+    "glow": "#FBE6B4"
+   },
+   "i": 0,
+   "vo": 3.724,
+   "sweep": null,
+   "swdur": 0.45,
+   "label_t": 4.074,
+   "year_t": 4.274,
+   "snap_t": null,
+   "t1": 9.136,
+   "land_t": 3.474
+  },
+  {
+   "scene": "nara",
+   "line": "L03",
+   "label": "NARA, THE NEW CAPITAL",
+   "year": "710",
+   "pal": {
+    "sky1": "#F5E6CC",
+    "sky2": "#E7AFB0",
+    "far": "#7F93B8",
+    "mid": "#4E6E5A",
+    "near": "#22303A",
+    "sun": "#D8432B",
+    "glow": "#F7D9A8"
+   },
+   "i": 1,
+   "vo": 9.496,
+   "sweep": 9.136,
+   "swdur": 0.45,
+   "label_t": 9.606,
+   "year_t": 9.756,
+   "snap_t": null,
+   "t1": 14.874
+  },
+  {
+   "scene": "samurai",
+   "line": "L04",
+   "label": "THE AGE OF THE SAMURAI",
+   "year": "1185",
+   "pal": {
+    "sky1": "#F3D9A4",
+    "sky2": "#E08A4E",
+    "far": "#8A6F92",
+    "mid": "#7A3B2E",
+    "near": "#241A1F",
+    "sun": "#C9302C",
+    "glow": "#F7CF4A"
+   },
+   "i": 2,
+   "vo": 15.194,
+   "sweep": 14.874,
+   "swdur": 0.45,
+   "label_t": 15.344,
+   "year_t": 15.494,
+   "snap_t": null,
+   "t1": 20.154
+  },
+  {
+   "scene": "castle",
+   "line": "L05",
+   "label": "THE TOKUGAWA PEACE",
+   "year": "1603",
+   "pal": {
+    "sky1": "#E8F0F2",
+    "sky2": "#8FBCD0",
+    "far": "#5F86A6",
+    "mid": "#2F6E8E",
+    "near": "#173247",
+    "sun": "#E8553D",
+    "glow": "#D9C7A3"
+   },
+   "i": 3,
+   "vo": 20.494,
+   "sweep": 20.154,
+   "swdur": 0.45,
+   "label_t": 20.624,
+   "year_t": 20.774,
+   "snap_t": null,
+   "t1": 27.231
+  },
+  {
+   "scene": "ships",
+   "line": "L06",
+   "label": "THE BLACK SHIPS",
+   "year": "1853",
+   "pal": {
+    "sky1": "#DCD5C0",
+    "sky2": "#9AA59B",
+    "far": "#6B7884",
+    "mid": "#3E4F57",
+    "near": "#161C22",
+    "sun": "#D9643A",
+    "glow": "#C2BCA3"
+   },
+   "i": 4,
+   "vo": 27.571,
+   "sweep": 27.231,
+   "swdur": 0.45,
+   "label_t": 27.701,
+   "year_t": 27.851,
+   "snap_t": null,
+   "t1": 37.777
+  },
+  {
+   "scene": "ruin",
+   "line": "L07",
+   "label": "THE WAR ENDS",
+   "year": "1945",
+   "silence": true,
+   "pal": {
+    "sky1": "#CFC6B8",
+    "sky2": "#A39A90",
+    "far": "#857D77",
+    "mid": "#5E5752",
+    "near": "#2A2624",
+    "sun": "#8E3B2E",
+    "glow": "#B5ABA0"
+   },
+   "i": 5,
+   "vo": 35.557,
+   "sweep": 37.777,
+   "swdur": 0.7,
+   "label_t": 38.247,
+   "year_t": 38.397,
+   "snap_t": null,
+   "t1": 44.081
+  },
+  {
+   "scene": "train",
+   "line": "L08",
+   "label": "BULLET TRAIN & OLYMPICS",
+   "year": "1964",
+   "snap": true,
+   "pal": {
+    "sky1": "#F7EBC8",
+    "sky2": "#86C6D9",
+    "far": "#4F7DB3",
+    "mid": "#1F5BB0",
+    "near": "#1B2A44",
+    "sun": "#E8452F",
+    "glow": "#F2C14E"
+   },
+   "i": 6,
+   "vo": 42.861,
+   "sweep": 44.081,
+   "swdur": 0.45,
+   "label_t": 44.551,
+   "year_t": 44.701,
+   "snap_t": 45.381,
+   "t1": 49.174
+  },
+  {
+   "scene": "city",
+   "line": "L09",
+   "label": "OVER 120 MILLION PEOPLE",
+   "year": "TODAY",
+   "pal": {
+    "sky1": "#2E2B63",
+    "sky2": "#1D1A45",
+    "far": "#4C4A8A",
+    "mid": "#2B2A5C",
+    "near": "#0F0E22",
+    "sun": "#FF4F7B",
+    "glow": "#F2C14E"
+   },
+   "i": 7,
+   "vo": 49.494,
+   "sweep": 49.174,
+   "swdur": 0.45,
+   "label_t": 49.644,
+   "year_t": 49.794,
+   "snap_t": null,
+   "t1": 55.33
+  }
+ ],
+ "end": {
+  "wall": 55.33,
+  "wall_dur": 1.2,
+  "card": 56.33,
+  "text": [
+   "WHICH COUNTRY",
+   "NEXT?"
+  ]
+ },
+ "subs": [
+  {
+   "line": "L01",
+   "t0": 0.37,
+   "text": "Japan. 2,000 years in 60 seconds.",
+   "speech_end": 3.21,
+   "t1": 3.604,
+   "lines": [
+    "Japan. 2,000 years in 60 seconds."
+   ]
+  },
+  {
+   "line": "L02",
+   "t0": 3.644,
+   "text": "Over 2,000 years ago, rice farming arrives,",
+   "speech_end": 6.504,
+   "t1": 6.384,
+   "lines": [
+    "Over 2,000 years ago,",
+    "rice farming arrives,"
+   ]
+  },
+  {
+   "line": "L02",
+   "t0": 6.424,
+   "text": "and villages grow into small kingdoms.",
+   "speech_end": 8.904,
+   "t1": 9.376,
+   "lines": [
+    "and villages grow",
+    "into small kingdoms."
+   ]
+  },
+  {
+   "line": "L03",
+   "t0": 9.416,
+   "text": "In 710, the court settles at Nara.",
+   "speech_end": 11.836,
+   "t1": 12.236,
+   "lines": [
+    "In 710, the court settles at Nara."
+   ]
+  },
+  {
+   "line": "L03",
+   "t0": 12.276,
+   "text": "Buddhism spreads, and great temples rise.",
+   "speech_end": 14.576,
+   "t1": 15.074,
+   "lines": [
+    "Buddhism spreads,",
+    "and great temples rise."
+   ]
+  },
+  {
+   "line": "L04",
+   "t0": 15.114,
+   "text": "From 1185, samurai take power,",
+   "speech_end": 17.714,
+   "t1": 17.594,
+   "lines": [
+    "From 1185, samurai take power,"
+   ]
+  },
+  {
+   "line": "L04",
+   "t0": 17.634,
+   "text": "and the emperor reigns in name only.",
+   "speech_end": 20.094,
+   "t1": 20.374,
+   "lines": [
+    "and the emperor",
+    "reigns in name only."
+   ]
+  },
+  {
+   "line": "L05",
+   "t0": 20.414,
+   "text": "In 1603, the Tokugawa clan takes over.",
+   "speech_end": 23.634,
+   "t1": 24.154,
+   "lines": [
+    "In 1603, the Tokugawa",
+    "clan takes over."
+   ]
+  },
+  {
+   "line": "L05",
+   "t0": 24.194,
+   "text": "Peace follows, and Japan closes to most of the world.",
+   "speech_end": 27.134,
+   "t1": 27.451,
+   "lines": [
+    "Peace follows, and Japan",
+    "closes to most of the world."
+   ]
+  },
+  {
+   "line": "L06",
+   "t0": 27.491,
+   "text": "In 1853, American warships arrive.",
+   "speech_end": 30.211,
+   "t1": 30.971,
+   "lines": [
+    "In 1853, American warships arrive."
+   ]
+  },
+  {
+   "line": "L06",
+   "t0": 31.011,
+   "text": "Within 15 years, the shogun falls, and Japan modernises fast.",
+   "speech_end": 34.971,
+   "t1": 35.437,
+   "lines": [
+    "Within 15 years, the shogun falls,",
+    "and Japan modernises fast."
+   ]
+  },
+  {
+   "line": "L07",
+   "t0": 35.477,
+   "text": "Growth turns to empire, and war.",
+   "speech_end": 37.537,
+   "t1": 38.077,
+   "lines": [
+    "Growth turns to empire, and war."
+   ]
+  },
+  {
+   "line": "L07",
+   "t0": 38.117,
+   "text": "In 1945, atomic bombs destroy Hiroshima and Nagasaki.",
+   "speech_end": 42.357,
+   "t1": 42.741,
+   "lines": [
+    "In 1945, atomic bombs destroy",
+    "Hiroshima and Nagasaki."
+   ]
+  },
+  {
+   "line": "L08",
+   "t0": 42.781,
+   "text": "Japan rebuilds. In 1964,",
+   "speech_end": 45.281,
+   "t1": 45.681,
+   "lines": [
+    "Japan rebuilds. In 1964,"
+   ]
+  },
+  {
+   "line": "L08",
+   "t0": 45.721,
+   "text": "the bullet train opens, and Tokyo hosts the Olympics.",
+   "speech_end": 48.841,
+   "t1": 49.374,
+   "lines": [
+    "the bullet train opens,",
+    "and Tokyo hosts the Olympics."
+   ]
+  },
+  {
+   "line": "L09",
+   "t0": 49.414,
+   "text": "Today, over 120 million people live",
+   "speech_end": 52.574,
+   "t1": 52.454,
+   "lines": [
+    "Today, over 120",
+    "million people live"
+   ]
+  },
+  {
+   "line": "L09",
+   "t0": 52.494,
+   "text": "where ancient temples meet neon cities.",
+   "speech_end": 54.954,
+   "t1": 55.36,
+   "lines": [
+    "where ancient temples",
+    "meet neon cities."
+   ]
+  },
+  {
+   "line": "L10",
+   "t0": 55.4,
+   "text": "Which country should we print next?",
+   "speech_end": 56.96,
+   "t1": 59.78,
+   "lines": [
+    "Which country should",
+    "we print next?"
+   ]
+  }
+ ],
+ "country": "JAPAN",
+ "sub": "HISTORY IN 60 SECONDS",
+ "paper": "#F3EAD8",
+ "intro": {
+  "vo": 0.45
+ }
+}

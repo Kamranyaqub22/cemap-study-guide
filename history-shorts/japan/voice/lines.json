@@ -1,0 +1,92 @@
+[
+ {
+  "id": "L01",
+  "text": "Japan. Two thousand years, in sixty seconds.",
+  "asr": "Japan 2000 years in 60 seconds",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb",
+  "sub": "Japan. 2,000 years in 60 seconds."
+ },
+ {
+  "id": "L02",
+  "text": "Over two thousand years ago, rice farming arrives, and villages grow into small kingdoms.",
+  "asr": "over 2000 years ago rice farming arrives and villages grow into small kingdoms",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb",
+  "sub": "Over 2,000 years ago, rice farming arrives, | and villages grow into small kingdoms."
+ },
+ {
+  "id": "L03",
+  "text": "In seven-ten, the court settles at Nara. Buddhism spreads, and great temples rise.",
+  "asr": "in 710 the court settles at Nara Buddhism spreads and great temples rise",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb",
+  "sub": "In 710, the court settles at Nara. | Buddhism spreads, and great temples rise."
+ },
+ {
+  "id": "L04",
+  "text": "From eleven eighty-five, samurai take power, and the emperor reigns in name only.",
+  "asr": "from 1185 samurai take power and the emperor reigns in name only",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb",
+  "sub": "From 1185, samurai take power, | and the emperor reigns in name only."
+ },
+ {
+  "id": "L05",
+  "text": "In sixteen-oh-three, the Tokugawa clan takes over. Peace follows, and Japan closes to most of the world.",
+  "asr": "in 1603 the Tokugawa clan takes over peace follows and Japan closes to most of the world",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb",
+  "sub": "In 1603, the Tokugawa clan takes over. | Peace follows, and Japan closes to most of the world."
+ },
+ {
+  "id": "L06",
+  "text": "In eighteen fifty-three, American warships arrive. Within fifteen years, the shogun falls, and Japan modernises fast.",
+  "asr": "in 1853 American warships arrive within 15 years the shogun falls and Japan modernizes fast",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb",
+  "sub": "In 1853, American warships arrive. | Within 15 years, the shogun falls, and Japan modernises fast."
+ },
+ {
+  "id": "L07",
+  "text": "Growth turns to empire, and war. In nineteen forty-five, atomic bombs destroy Hiroshima and Nagasaki.",
+  "asr": "growth turns to empire and war in 1945 atomic bombs destroy Hiroshima and Nagasaki",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb",
+  "sub": "Growth turns to empire, and war. | In 1945, atomic bombs destroy Hiroshima and Nagasaki."
+ },
+ {
+  "id": "L08",
+  "text": "Japan rebuilds. In nineteen sixty-four, the bullet train opens, and Tokyo hosts the Olympics.",
+  "asr": "Japan rebuilds in 1964 the bullet train opens and Tokyo hosts the Olympics",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb",
+  "sub": "Japan rebuilds. In 1964, | the bullet train opens, and Tokyo hosts the Olympics."
+ },
+ {
+  "id": "L09",
+  "text": "Today, over a hundred and twenty million people live where ancient temples meet neon cities.",
+  "asr": "today over 120 million people live where ancient temples meet neon cities",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb",
+  "sub": "Today, over 120 million people live | where ancient temples meet neon cities."
+ },
+ {
+  "id": "L10",
+  "text": "Which country should we print next?",
+  "asr": "which country should we print next",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb",
+  "sub": "Which country should we print next?"
+ }
+]

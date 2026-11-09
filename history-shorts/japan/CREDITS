@@ -1,0 +1,19 @@
+Japan in 60 Seconds · History in 60 Seconds series · Silkscreen Travel Poster style
+
+Picture: drawn in code (Canvas 2D). Print engine engine/silk.js from the Lemo-Opuscar library (MIT).
+Landmarks (raised-floor granary, five-storey pagoda, samurai helmet, castle keep, steam warship, ruined domed hall,
+bullet train, lattice tower and city) are stylised silhouettes drawn as simple paths, not traced from photographs.
+No logos, no brands, no maps or borders.
+
+Fonts (SIL Open Font License 1.1; licence texts in fonts/):
+  Big Shoulders Display — Patric King / Google Fonts
+  Outfit — Rodrigo Fuenzalida / Google Fonts
+
+Voice: Kokoro-82M v1.0 (hexgrad, Apache-2.0) via kokoro-onnx, voice bm_george. Checked with faster-whisper (MIT), model base.en.
+
+Music (original score, music/compose.py): koto and shamisen by physical modelling (core/audio/pluck.py, Lemo-Opuscar, MIT);
+taiko, shime-daiko and bamboo flute synthesised in code. No samples.
+Sound (mix.py): squeegee, ink, screen, paper stamps, clips, wind, birds, sea, ship horn, train rush and city hum synthesised in code
+(core/audio/sfx.py + mix.py).
+
+Facts and sources: FACTS.md.

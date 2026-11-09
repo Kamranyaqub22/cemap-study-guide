@@ -1,0 +1,147 @@
+{
+ "country": "JAPAN",
+ "sub": "HISTORY IN 60 SECONDS",
+ "paper": "#F3EAD8",
+ "intro": {
+  "line": "L01"
+ },
+ "eras": [
+  {
+   "scene": "rice",
+   "line": "L02",
+   "at": null,
+   "label": "RICE & SMALL KINGDOMS",
+   "year": "2,000+ YRS AGO",
+   "pal": {
+    "sky1": "#F6CD98",
+    "sky2": "#EE9A73",
+    "far": "#7D6B98",
+    "mid": "#3E7079",
+    "near": "#1E3B3F",
+    "sun": "#D8432B",
+    "glow": "#FBE6B4"
+   }
+  },
+  {
+   "scene": "nara",
+   "line": "L03",
+   "at": "710",
+   "label": "NARA, THE NEW CAPITAL",
+   "year": "710",
+   "pal": {
+    "sky1": "#F5E6CC",
+    "sky2": "#E7AFB0",
+    "far": "#7F93B8",
+    "mid": "#4E6E5A",
+    "near": "#22303A",
+    "sun": "#D8432B",
+    "glow": "#F7D9A8"
+   }
+  },
+  {
+   "scene": "samurai",
+   "line": "L04",
+   "at": "1185",
+   "label": "THE AGE OF THE SAMURAI",
+   "year": "1185",
+   "pal": {
+    "sky1": "#F3D9A4",
+    "sky2": "#E08A4E",
+    "far": "#8A6F92",
+    "mid": "#7A3B2E",
+    "near": "#241A1F",
+    "sun": "#C9302C",
+    "glow": "#F7CF4A"
+   }
+  },
+  {
+   "scene": "castle",
+   "line": "L05",
+   "at": "1603",
+   "label": "THE TOKUGAWA PEACE",
+   "year": "1603",
+   "pal": {
+    "sky1": "#E8F0F2",
+    "sky2": "#8FBCD0",
+    "far": "#5F86A6",
+    "mid": "#2F6E8E",
+    "near": "#173247",
+    "sun": "#E8553D",
+    "glow": "#D9C7A3"
+   }
+  },
+  {
+   "scene": "ships",
+   "line": "L06",
+   "at": "1853",
+   "label": "THE BLACK SHIPS",
+   "year": "1853",
+   "pal": {
+    "sky1": "#DCD5C0",
+    "sky2": "#9AA59B",
+    "far": "#6B7884",
+    "mid": "#3E4F57",
+    "near": "#161C22",
+    "sun": "#D9643A",
+    "glow": "#C2BCA3"
+   }
+  },
+  {
+   "scene": "ruin",
+   "line": "L07",
+   "at": "1945",
+   "label": "THE WAR ENDS",
+   "year": "1945",
+   "silence": true,
+   "pal": {
+    "sky1": "#CFC6B8",
+    "sky2": "#A39A90",
+    "far": "#857D77",
+    "mid": "#5E5752",
+    "near": "#2A2624",
+    "sun": "#8E3B2E",
+    "glow": "#B5ABA0"
+   }
+  },
+  {
+   "scene": "train",
+   "line": "L08",
+   "at": "1964",
+   "label": "BULLET TRAIN & OLYMPICS",
+   "year": "1964",
+   "snap": true,
+   "pal": {
+    "sky1": "#F7EBC8",
+    "sky2": "#86C6D9",
+    "far": "#4F7DB3",
+    "mid": "#1F5BB0",
+    "near": "#1B2A44",
+    "sun": "#E8452F",
+    "glow": "#F2C14E"
+   }
+  },
+  {
+   "scene": "city",
+   "line": "L09",
+   "at": null,
+   "label": "OVER 120 MILLION PEOPLE",
+   "year": "TODAY",
+   "pal": {
+    "sky1": "#2E2B63",
+    "sky2": "#1D1A45",
+    "far": "#4C4A8A",
+    "mid": "#2B2A5C",
+    "near": "#0F0E22",
+    "sun": "#FF4F7B",
+    "glow": "#F2C14E"
+   }
+  }
+ ],
+ "end": {
+  "line": "L10",
+  "text": [
+   "WHICH COUNTRY",
+   "NEXT?"
+  ]
+ }
+}
