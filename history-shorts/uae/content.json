@@ -1,0 +1,168 @@
+{
+ "country": "UAE",
+ "sub": "HISTORY IN 60 SECONDS",
+ "paper": "#F3EAD8",
+ "intro": {
+  "line": "L01"
+ },
+ "cold": {
+  "scene": "today",
+  "from": [
+   880,
+   250,
+   2.1
+  ],
+  "dur": 5.6
+ },
+ "eras": [
+  {
+   "scene": "magan",
+   "line": "L02",
+   "at": null,
+   "label": "MAGAN, LAND OF COPPER",
+   "year": "4,000+ YRS AGO",
+   "pal": {
+    "sky1": "#F7DCA6",
+    "sky2": "#EBA66C",
+    "far": "#B98A68",
+    "mid": "#C98B55",
+    "near": "#3B2A2A",
+    "sun": "#C8452C",
+    "glow": "#F8E6BE"
+   }
+  },
+  {
+   "scene": "mosque",
+   "line": "L03",
+   "at": "seventh",
+   "label": "ISLAM ARRIVES",
+   "year": "7TH CENTURY",
+   "pal": {
+    "sky1": "#F3E2C0",
+    "sky2": "#8FBDB4",
+    "far": "#9A8670",
+    "mid": "#C99A5B",
+    "near": "#22343A",
+    "sun": "#E0A93B",
+    "glow": "#F7E7C4"
+   }
+  },
+  {
+   "scene": "carrack",
+   "line": "L04",
+   "at": "1500s",
+   "label": "PORTUGUESE FLEETS",
+   "year": "1500s",
+   "pal": {
+    "sky1": "#EAF1EE",
+    "sky2": "#9CC9D3",
+    "far": "#B39270",
+    "mid": "#2F7F8E",
+    "near": "#1D2B3A",
+    "sun": "#E4573D",
+    "glow": "#F2D7A1"
+   }
+  },
+  {
+   "scene": "fort",
+   "line": "L05",
+   "at": "1820",
+   "label": "THE TRUCIAL STATES",
+   "year": "1820",
+   "pal": {
+    "sky1": "#F5E0B5",
+    "sky2": "#E3B07A",
+    "far": "#B58566",
+    "mid": "#A0643F",
+    "near": "#2A2020",
+    "sun": "#D0442F",
+    "glow": "#F4D59A"
+   }
+  },
+  {
+   "scene": "pearl",
+   "line": "L06",
+   "at": null,
+   "label": "THE PEARL CRASH",
+   "year": "1930s",
+   "silence": true,
+   "pal": {
+    "sky1": "#DAD4C6",
+    "sky2": "#B1AA9C",
+    "far": "#8F887C",
+    "mid": "#6E7A78",
+    "near": "#2B2C2E",
+    "sun": "#9C6B4E",
+    "glow": "#CFC8B8"
+   },
+   "year_at": "1930s"
+  },
+  {
+   "scene": "oil",
+   "line": "L07",
+   "at": "1958",
+   "label": "OIL OFF ABU DHABI",
+   "year": "1958",
+   "hit": true,
+   "pal": {
+    "sky1": "#F2C27A",
+    "sky2": "#7083AA",
+    "far": "#4E5F86",
+    "mid": "#24496B",
+    "near": "#121A2B",
+    "sun": "#F07B2C",
+    "glow": "#F7D27A"
+   }
+  },
+  {
+   "scene": "union",
+   "line": "L08",
+   "at": "december",
+   "snap_at": "unite",
+   "label": "SEVEN EMIRATES UNITE",
+   "year": "1971",
+   "snap": true,
+   "fountain": [
+    "#D63A2F",
+    "#E9963B",
+    "#F2C14E",
+    "#3E8E5E",
+    "#2F7F8E",
+    "#2C4F7C",
+    "#6B4A8A"
+   ],
+   "pal": {
+    "sky1": "#F6EAD0",
+    "sky2": "#ECCB97",
+    "far": "#C49A6C",
+    "mid": "#B07A49",
+    "near": "#1F2A24",
+    "sun": "#D63A2F",
+    "glow": "#F3D9A4"
+   }
+  },
+  {
+   "scene": "today",
+   "line": "L09",
+   "at": null,
+   "label": "OVER 11 MILLION PEOPLE",
+   "year": "TODAY",
+   "pal": {
+    "sky1": "#22305A",
+    "sky2": "#172248",
+    "far": "#3B5480",
+    "mid": "#283E68",
+    "near": "#0C1222",
+    "sun": "#E2553A",
+    "glow": "#F2C14E"
+   }
+  }
+ ],
+ "end": {
+  "line": "L10",
+  "text": [
+   "WHICH COUNTRY",
+   "NEXT?"
+  ]
+ }
+}

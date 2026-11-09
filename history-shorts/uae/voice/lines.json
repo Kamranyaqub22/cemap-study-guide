@@ -1,0 +1,92 @@
+[
+ {
+  "id": "L01",
+  "text": "In nineteen seventy-one, this country didn't exist. Today, it has the tallest building on Earth.",
+  "asr": "in 1971 this country didn't exist today it has the tallest building on Earth",
+  "sub": "In 1971, this country didn't exist. | Today, it has the tallest building on Earth.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L02",
+  "text": "Over four thousand years ago, traders here send copper to Mesopotamia, from a land called Magan.",
+  "asr": "over 4000 years ago traders here send copper to Mesopotamia from a land called Magan",
+  "sub": "Over 4,000 years ago, traders here send copper | to Mesopotamia, from a land called Magan.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L03",
+  "text": "In the seventh century, Islam arrives, and spreads along the coast.",
+  "asr": "in the seventh century Islam arrives and spreads along the coast",
+  "sub": "In the 7th century, Islam arrives, | and spreads along the coast.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L04",
+  "text": "In the fifteen hundreds, Portuguese fleets take control of Gulf trade.",
+  "asr": "in the 1500s Portuguese fleets take control of Gulf trade",
+  "sub": "In the 1500s, Portuguese fleets | take control of Gulf trade.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L05",
+  "text": "From eighteen twenty, treaties with Britain bind the coastal emirates, then called the Trucial States.",
+  "asr": "from 1820 treaties with Britain bind the coastal emirates then called the Trucial States",
+  "sub": "From 1820, treaties with Britain | bind the coastal emirates, then called the Trucial States.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L06",
+  "text": "Pearl diving feeds the coast, until the nineteen thirties, when cultured pearls and the Depression crash the trade.",
+  "asr": "pearl diving feeds the coast until the 1930s when cultured pearls and the depression crash the trade",
+  "sub": "Pearl diving feeds the coast, until the 1930s, | when cultured pearls and the Depression crash the trade.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L07",
+  "text": "Then, in nineteen fifty-eight, oil is found off Abu Dhabi.",
+  "asr": "then in 1958 oil is found off Abu Dhabi",
+  "sub": "Then, in 1958, oil is found off Abu Dhabi.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L08",
+  "text": "On December second, nineteen seventy-one, six emirates unite. A seventh joins early the next year.",
+  "asr": "on December 2nd 1971 six emirates unite a seventh joins early the next year",
+  "sub": "On 2 December 1971, | six emirates unite. | A seventh joins early the next year.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L09",
+  "text": "Today, over eleven million people live here, and in twenty twenty-one, its probe reached Mars.",
+  "asr": "today over 11 million people live here and in 2021 its probe reached Mars",
+  "sub": "Today, over 11 million people live here, | and in 2021, its probe reached Mars.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L10",
+  "text": "Which country should we print next?",
+  "asr": "which country should we print next",
+  "sub": "Which country should we print next?",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ }
+]

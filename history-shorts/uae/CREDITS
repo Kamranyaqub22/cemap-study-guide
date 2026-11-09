@@ -1,0 +1,19 @@
+UAE in 60 Seconds · History in 60 Seconds series · Silkscreen Travel Poster style
+
+Picture: drawn in code (Canvas 2D). Print engine engine/silk.js from the Lemo-Opuscar library (MIT).
+Landmarks (round stone tomb, copper ingots, mosque, carrack, coastal fort and wind tower, pearling dhow and oyster,
+offshore platform, seven palms, needle tower, skyline, probe) are original stylised silhouettes drawn as simple paths,
+not traced from photographs. No logos, no flags, no maps or borders.
+
+Fonts (SIL Open Font License 1.1; licence texts in fonts/):
+  Big Shoulders Display — Patric King / Google Fonts
+  Outfit — Rodrigo Fuenzalida / Google Fonts
+
+Voice: Kokoro-82M v1.0 (hexgrad, Apache-2.0) via kokoro-onnx, voice bm_george. Checked with faster-whisper (MIT), model base.en.
+
+Music (original score, music/compose.py): an oud-like plucked lute by physical modelling (core/audio/pluck.py, Lemo-Opuscar, MIT);
+darbuka, frame drum and ney flute synthesised in code. No samples.
+Sound (mix.py): paper swish, stamps, wind, birds, waves, gulls, timber creaks, gas roar, city hum: synthesised in code.
+Mastering: FFmpeg (LGPL/GPL) via imageio-ffmpeg.
+
+Facts and sources: FACTS.md.

@@ -1,31 +1,32 @@
 order,country,slug,status,notes
 1,Japan,japan,done,pilot
-2,Egypt,egypt,todo,pyramids → Ptolemies → Rome → Islam → Ottomans → British → Nasser → today
-3,Italy,italy,todo,Rome → Renaissance → unification 1861 → today
-4,United Kingdom,united-kingdom,todo,
-5,India,india,todo,
-6,United States,united-states,todo,
-7,Greece,greece,todo,
-8,Mexico,mexico,todo,
-9,France,france,todo,
-10,Turkey,turkey,todo,
-11,China,china,todo,sensitive: neutral wording, no maps
-12,Germany,germany,todo,
-13,Brazil,brazil,todo,
-14,South Korea,south-korea,todo,
-15,Spain,spain,todo,
-16,Russia,russia,todo,sensitive: neutral wording, no maps
-17,Peru,peru,todo,
-18,Pakistan,pakistan,todo,
-19,Iran,iran,todo,
-20,Vietnam,vietnam,todo,
-21,Nigeria,nigeria,todo,
-22,Ireland,ireland,todo,
-23,Poland,poland,todo,
-24,Saudi Arabia,saudi-arabia,todo,
-25,Indonesia,indonesia,todo,
-26,Morocco,morocco,todo,
-27,Canada,canada,todo,
-28,Australia,australia,todo,
-29,Ethiopia,ethiopia,todo,
-30,Norway,norway,todo,
+2,United Arab Emirates,uae,review,pilot 2: fountain sweep for 1971; pearl-crash silence
+3,Egypt,egypt,todo,pyramids → Ptolemies → Rome → Islam → Ottomans → British → Nasser → today
+4,Italy,italy,todo,Rome → Renaissance → unification 1861 → today
+5,United Kingdom,united-kingdom,todo,
+6,India,india,todo,
+7,United States,united-states,todo,
+8,Greece,greece,todo,
+9,Mexico,mexico,todo,
+10,France,france,todo,
+11,Turkey,turkey,todo,
+12,China,china,todo,sensitive: neutral wording, no maps
+13,Germany,germany,todo,
+14,Brazil,brazil,todo,
+15,South Korea,south-korea,todo,
+16,Spain,spain,todo,
+17,Russia,russia,todo,sensitive: neutral wording, no maps
+18,Peru,peru,todo,
+19,Pakistan,pakistan,todo,
+20,Iran,iran,todo,
+21,Vietnam,vietnam,todo,
+22,Nigeria,nigeria,todo,
+23,Ireland,ireland,todo,
+24,Poland,poland,todo,
+25,Saudi Arabia,saudi-arabia,todo,
+26,Indonesia,indonesia,todo,
+27,Morocco,morocco,todo,
+28,Canada,canada,todo,
+29,Australia,australia,todo,
+30,Ethiopia,ethiopia,todo,
+31,Norway,norway,todo,

@@ -1,0 +1,446 @@
+{
+ "cold": {
+  "scene": "today",
+  "from": [
+   880,
+   250,
+   2.1
+  ],
+  "dur": 5.6
+ },
+ "dur": 55.99,
+ "vo": {
+  "L01": 0.35,
+  "L02": 6.473,
+  "L03": 12.969,
+  "L04": 17.381,
+  "L05": 21.811,
+  "L06": 27.912,
+  "L07": 35.101,
+  "L08": 39.015,
+  "L09": 45.983,
+  "L10": 52.294
+ },
+ "eras": [
+  {
+   "scene": "magan",
+   "line": "L02",
+   "label": "MAGAN, LAND OF COPPER",
+   "year": "4,000+ YRS AGO",
+   "pal": {
+    "sky1": "#F7DCA6",
+    "sky2": "#EBA66C",
+    "far": "#B98A68",
+    "mid": "#C98B55",
+    "near": "#3B2A2A",
+    "sun": "#C8452C",
+    "glow": "#F8E6BE"
+   },
+   "i": 0,
+   "vo": 6.473,
+   "sweep": 5.973,
+   "swdur": 0.45,
+   "label_t": 6.623,
+   "year_t": 6.773,
+   "snap_t": null,
+   "t1": 12.709,
+   "land_t": 5.973
+  },
+  {
+   "scene": "mosque",
+   "line": "L03",
+   "label": "ISLAM ARRIVES",
+   "year": "7TH CENTURY",
+   "pal": {
+    "sky1": "#F3E2C0",
+    "sky2": "#8FBDB4",
+    "far": "#9A8670",
+    "mid": "#C99A5B",
+    "near": "#22343A",
+    "sun": "#E0A93B",
+    "glow": "#F7E7C4"
+   },
+   "i": 1,
+   "vo": 12.969,
+   "sweep": 12.709,
+   "swdur": 0.45,
+   "label_t": 13.179,
+   "year_t": 13.329,
+   "snap_t": null,
+   "t1": 17.101
+  },
+  {
+   "scene": "carrack",
+   "line": "L04",
+   "label": "PORTUGUESE FLEETS",
+   "year": "1500s",
+   "pal": {
+    "sky1": "#EAF1EE",
+    "sky2": "#9CC9D3",
+    "far": "#B39270",
+    "mid": "#2F7F8E",
+    "near": "#1D2B3A",
+    "sun": "#E4573D",
+    "glow": "#F2D7A1"
+   },
+   "i": 2,
+   "vo": 17.381,
+   "sweep": 17.101,
+   "swdur": 0.45,
+   "label_t": 17.571,
+   "year_t": 17.721,
+   "snap_t": null,
+   "t1": 21.471
+  },
+  {
+   "scene": "fort",
+   "line": "L05",
+   "label": "THE TRUCIAL STATES",
+   "year": "1820",
+   "pal": {
+    "sky1": "#F5E0B5",
+    "sky2": "#E3B07A",
+    "far": "#B58566",
+    "mid": "#A0643F",
+    "near": "#2A2020",
+    "sun": "#D0442F",
+    "glow": "#F4D59A"
+   },
+   "i": 3,
+   "vo": 21.811,
+   "sweep": 21.471,
+   "swdur": 0.45,
+   "label_t": 21.941,
+   "year_t": 22.091,
+   "snap_t": null,
+   "t1": 27.592
+  },
+  {
+   "scene": "pearl",
+   "line": "L06",
+   "label": "THE PEARL CRASH",
+   "year": "1930s",
+   "silence": true,
+   "pal": {
+    "sky1": "#DAD4C6",
+    "sky2": "#B1AA9C",
+    "far": "#8F887C",
+    "mid": "#6E7A78",
+    "near": "#2B2C2E",
+    "sun": "#9C6B4E",
+    "glow": "#CFC8B8"
+   },
+   "i": 4,
+   "vo": 27.912,
+   "sweep": 27.592,
+   "swdur": 0.7,
+   "label_t": 30.162,
+   "year_t": 30.312,
+   "snap_t": null,
+   "silence_t": 30.062,
+   "t1": 35.081
+  },
+  {
+   "scene": "oil",
+   "line": "L07",
+   "label": "OIL OFF ABU DHABI",
+   "year": "1958",
+   "hit": true,
+   "pal": {
+    "sky1": "#F2C27A",
+    "sky2": "#7083AA",
+    "far": "#4E5F86",
+    "mid": "#24496B",
+    "near": "#121A2B",
+    "sun": "#F07B2C",
+    "glow": "#F7D27A"
+   },
+   "i": 5,
+   "vo": 35.101,
+   "sweep": 35.081,
+   "swdur": 0.45,
+   "label_t": 35.551,
+   "year_t": 35.701,
+   "snap_t": null,
+   "t1": 38.695
+  },
+  {
+   "scene": "union",
+   "line": "L08",
+   "label": "SEVEN EMIRATES UNITE",
+   "year": "1971",
+   "snap": true,
+   "fountain": [
+    "#D63A2F",
+    "#E9963B",
+    "#F2C14E",
+    "#3E8E5E",
+    "#2F7F8E",
+    "#2C4F7C",
+    "#6B4A8A"
+   ],
+   "pal": {
+    "sky1": "#F6EAD0",
+    "sky2": "#ECCB97",
+    "far": "#C49A6C",
+    "mid": "#B07A49",
+    "near": "#1F2A24",
+    "sun": "#D63A2F",
+    "glow": "#F3D9A4"
+   },
+   "i": 6,
+   "vo": 39.015,
+   "sweep": 38.695,
+   "swdur": 0.45,
+   "label_t": 39.165,
+   "year_t": 39.315,
+   "snap_t": 42.705,
+   "t1": 45.663
+  },
+  {
+   "scene": "today",
+   "line": "L09",
+   "label": "OVER 11 MILLION PEOPLE",
+   "year": "TODAY",
+   "pal": {
+    "sky1": "#22305A",
+    "sky2": "#172248",
+    "far": "#3B5480",
+    "mid": "#283E68",
+    "near": "#0C1222",
+    "sun": "#E2553A",
+    "glow": "#F2C14E"
+   },
+   "i": 7,
+   "vo": 45.983,
+   "sweep": 45.663,
+   "swdur": 0.45,
+   "label_t": 46.133,
+   "year_t": 46.283,
+   "snap_t": null,
+   "t1": 52.144
+  }
+ ],
+ "end": {
+  "wall": 52.144,
+  "wall_dur": 1.1,
+  "card": 52.794,
+  "text": [
+   "WHICH COUNTRY",
+   "NEXT?"
+  ]
+ },
+ "subs": [
+  {
+   "line": "L01",
+   "t0": 0.27,
+   "text": "In 1971, this country didn't exist.",
+   "speech_end": 3.03,
+   "t1": 3.51,
+   "lines": [
+    "In 1971, this",
+    "country didn't exist."
+   ]
+  },
+  {
+   "line": "L01",
+   "t0": 3.55,
+   "text": "Today, it has the tallest building on Earth.",
+   "speech_end": 5.95,
+   "t1": 6.353,
+   "lines": [
+    "Today, it has the tallest",
+    "building on Earth."
+   ]
+  },
+  {
+   "line": "L02",
+   "t0": 6.393,
+   "text": "Over 4,000 years ago, traders here send copper",
+   "speech_end": 9.493,
+   "t1": 9.373,
+   "lines": [
+    "Over 4,000 years ago,",
+    "traders here send copper"
+   ]
+  },
+  {
+   "line": "L02",
+   "t0": 9.413,
+   "text": "to Mesopotamia, from a land called Magan.",
+   "speech_end": 12.473,
+   "t1": 12.849,
+   "lines": [
+    "to Mesopotamia, from",
+    "a land called Magan."
+   ]
+  },
+  {
+   "line": "L03",
+   "t0": 12.889,
+   "text": "In the 7th century, Islam arrives,",
+   "speech_end": 15.249,
+   "t1": 15.129,
+   "lines": [
+    "In the 7th century,",
+    "Islam arrives,"
+   ]
+  },
+  {
+   "line": "L03",
+   "t0": 15.169,
+   "text": "and spreads along the coast.",
+   "speech_end": 16.709,
+   "t1": 17.261,
+   "lines": [
+    "and spreads along the coast."
+   ]
+  },
+  {
+   "line": "L04",
+   "t0": 17.301,
+   "text": "In the 1500s, Portuguese fleets",
+   "speech_end": 19.521,
+   "t1": 19.401,
+   "lines": [
+    "In the 1500s,",
+    "Portuguese fleets"
+   ]
+  },
+  {
+   "line": "L04",
+   "t0": 19.441,
+   "text": "take control of Gulf trade.",
+   "speech_end": 21.181,
+   "t1": 21.691,
+   "lines": [
+    "take control of Gulf trade."
+   ]
+  },
+  {
+   "line": "L05",
+   "t0": 21.731,
+   "text": "From 1820, treaties with Britain",
+   "speech_end": 23.911,
+   "t1": 23.791,
+   "lines": [
+    "From 1820,",
+    "treaties with Britain"
+   ]
+  },
+  {
+   "line": "L05",
+   "t0": 23.831,
+   "text": "bind the coastal emirates, then called the Trucial States.",
+   "speech_end": 27.171,
+   "t1": 27.792,
+   "lines": [
+    "bind the coastal emirates,",
+    "then called the Trucial States."
+   ]
+  },
+  {
+   "line": "L06",
+   "t0": 27.832,
+   "text": "Pearl diving feeds the coast, until the 1930s,",
+   "speech_end": 31.312,
+   "t1": 31.192,
+   "lines": [
+    "Pearl diving feeds the",
+    "coast, until the 1930s,"
+   ]
+  },
+  {
+   "line": "L06",
+   "t0": 31.232,
+   "text": "when cultured pearls and the Depression crash the trade.",
+   "speech_end": 34.452,
+   "t1": 34.981,
+   "lines": [
+    "when cultured pearls and the",
+    "Depression crash the trade."
+   ]
+  },
+  {
+   "line": "L07",
+   "t0": 35.021,
+   "text": "Then, in 1958, oil is found off Abu Dhabi.",
+   "speech_end": 38.361,
+   "t1": 38.895,
+   "lines": [
+    "Then, in 1958, oil is",
+    "found off Abu Dhabi."
+   ]
+  },
+  {
+   "line": "L08",
+   "t0": 38.935,
+   "text": "On 2 December 1971,",
+   "speech_end": 41.195,
+   "t1": 41.455,
+   "lines": [
+    "On 2 December 1971,"
+   ]
+  },
+  {
+   "line": "L08",
+   "t0": 41.495,
+   "text": "six emirates unite.",
+   "speech_end": 42.655,
+   "t1": 43.335,
+   "lines": [
+    "six emirates unite."
+   ]
+  },
+  {
+   "line": "L08",
+   "t0": 43.375,
+   "text": "A seventh joins early the next year.",
+   "speech_end": 45.455,
+   "t1": 45.863,
+   "lines": [
+    "A seventh joins",
+    "early the next year."
+   ]
+  },
+  {
+   "line": "L09",
+   "t0": 45.903,
+   "text": "Today, over 11 million people live here,",
+   "speech_end": 48.463,
+   "t1": 48.723,
+   "lines": [
+    "Today, over 11 million",
+    "people live here,"
+   ]
+  },
+  {
+   "line": "L09",
+   "t0": 48.763,
+   "text": "and in 2021, its probe reached Mars.",
+   "speech_end": 51.523,
+   "t1": 52.174,
+   "lines": [
+    "and in 2021, its",
+    "probe reached Mars."
+   ]
+  },
+  {
+   "line": "L10",
+   "t0": 52.214,
+   "text": "Which country should we print next?",
+   "speech_end": 53.774,
+   "t1": 55.99,
+   "lines": [
+    "Which country should",
+    "we print next?"
+   ]
+  }
+ ],
+ "country": "UAE",
+ "sub": "HISTORY IN 60 SECONDS",
+ "paper": "#F3EAD8",
+ "intro": {
+  "vo": 0.35
+ }
+}

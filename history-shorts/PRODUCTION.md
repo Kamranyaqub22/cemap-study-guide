@@ -25,6 +25,8 @@ Keep **5–7 finished videos scheduled ahead** in YouTube Studio. Then productio
    - `readcheck ok`; −14 LUFS; no blank frames; length ≤ 60 s;
    - no frozen stretch ≥ 2 s; no text under the Shorts buttons (right ~130 px, bottom ~360 px, top ~140 px);
    - a contact sheet looked at frame by frame.
+   - mastering needs ffmpeg 7+ (`build.sh` uses `/opt/ffmpeg7/bin` when present; the environment setup script installs it). With ffmpeg 6, `mux.sh` can wrongly reject the audio as cut off.
+   - the bar to beat: at least as much motion as the last episode (share of frames that change), transition hiss below the rest of the track, every narration word transcribed back from the final file.
 8. **Upload sheet** `UPLOAD.md`: title, description with sources, hashtags, tags.
 9. **Commit and push** to the branch, set the row to `review`.
 

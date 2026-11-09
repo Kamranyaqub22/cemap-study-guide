@@ -10,6 +10,7 @@ NAME=$(basename "$HERE")
 export LIB
 [ -f "$LIB/core/render/video.mjs" ] || { echo "set LIB to the Lemo-Opuscar library folder"; exit 1; }
 PY="$LIB/.venv/bin/python"
+FFMPEG_DIR=${FFMPEG_DIR:-/opt/ffmpeg7/bin}; [ -x "$FFMPEG_DIR/ffmpeg" ] && PATH="$FFMPEG_DIR:$PATH"     # ffmpeg 7+ for mastering (6.x under-reports audio length in loudnorm)
 SIZE=1080x1920
 cd "$LIB"
 mkdir -p "$HERE/out/voice"
