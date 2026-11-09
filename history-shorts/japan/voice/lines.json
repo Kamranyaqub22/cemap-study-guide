@@ -1,12 +1,12 @@
 [
  {
   "id": "L01",
-  "text": "Japan. Two thousand years, in sixty seconds.",
-  "asr": "Japan 2000 years in 60 seconds",
+  "text": "From rice farmers to bullet trains. This is Japan, in sixty seconds.",
+  "asr": "from rice farmers to bullet trains this is Japan in 60 seconds",
   "voice": "bm_george",
-  "speed": 1.1,
+  "speed": 1.2,
   "lang": "en-gb",
-  "sub": "Japan. 2,000 years in 60 seconds."
+  "sub": "From rice farmers to bullet trains. | This is Japan, in 60 seconds."
  },
  {
   "id": "L02",
@@ -51,7 +51,7 @@
   "voice": "bm_george",
   "speed": 1.1,
   "lang": "en-gb",
-  "sub": "In 1853, American warships arrive. | Within 15 years, the shogun falls, and Japan modernises fast."
+  "sub": "In 1853, American warships arrive. | Within 15 years, the shogun falls, | and Japan modernises fast."
  },
  {
   "id": "L07",

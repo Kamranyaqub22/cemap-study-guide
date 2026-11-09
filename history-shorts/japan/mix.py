@@ -85,6 +85,9 @@ for e in EV:
         d = .6; x = t_(d)
         wood = sum(a * np.sin(2 * np.pi * f * x) * env_exp(d, tau) for f, a, tau in [(480, 1, .03), (1100, .6, .02), (220, .9, .06)])
         add(fol, norm(wood + hp(noise(d), 3000) * env_exp(d, .002)), t, 1.0, 0); add(fol, thump(1, 55), t, .6, 0)
+    elif tp == 'cold':                                                     # the train is already rushing past on frame one
+        d = 2.6; x = t_(d); rush = bp(noise(d), 250, 5000) * np.minimum(1, x / .05) * np.exp(-x / 1.4)
+        add(fol, rush, t, .5, -.4); add(fol, np.roll(rush, 1500), t, .4, .4)
     elif tp == 'wall':
         add(fol, whoosh(e['dur'], 1), t, .12, 0)
     elif tp == 'clip':

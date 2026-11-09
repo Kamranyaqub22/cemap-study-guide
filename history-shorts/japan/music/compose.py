@@ -42,19 +42,28 @@ def put(x, t, g=1.0, pan=0.0):
     add(out, x, t, g, pan)
 
 eras = TL['eras']
-starts = [0.0] + [e['sweep'] + e['swdur'] for e in eras[1:]]      # each section begins as its sweep lands
+starts = [e['sweep'] + e['swdur'] for e in eras]      # each section begins as its sweep lands
 ends = [e['sweep'] for e in eras[1:]] + [TL['end']['wall']]
 sil = [e for e in EV if e['type'] == 'silence']
 sil_a, sil_b = (sil[0]['t'], sil[0]['until']) if sil else (1e9, 1e9)
 
-# ---- intro (0 → first era): a rising koto glissando while the sky is printed, a hit on the lift ----
-for k, m in enumerate([50, 55, 57, 62, 64, 67, 69, 74]): put(pluck('koto', m, vel=.55 + .04 * k), .15 + k * .11, .55, -.4 + .1 * k)
-put(taiko(1.0), 2.15, .55)
+# ---- cold open (0 → first sweep): a drum on frame one, a fast koto run and a driving pulse under the hook ----
+put(taiko(1.0, 56, 1.4), 0.0, .7, 0)
+c_end = eras[0]['sweep']
+for k, m in enumerate([62, 64, 67, 69, 71, 74, 76, 79]): put(pluck('koto', m, vel=.6 + .03 * k), .05 + k * .07, .45, -.4 + .1 * k)
+st0 = c_end / max(1, round(c_end / STEP0)) if (STEP0 := .3125) else .3125
+k = 0
+while k * st0 < c_end - .05:
+    t = k * st0
+    put(pluck('koto', YO[[0, 4, 2, 4][k % 4] + 3], vel=.5), t, .35, .3 if k % 2 else .1)
+    if k % 2: put(shime(.6), t, .08, .4)
+    if k % 4 == 0 and k: put(taiko(.6, 70, .6), t, .2, -.2)
+    k += 1
 
 # ---- one section per era ----
 STEP = .3125                                                       # target eighth (96 bpm); stretched so the section fills exactly
 for i, e in enumerate(eras):
-    a = max(starts[i], eras[0]['land_t'] - .1) if i == 0 else starts[i]
+    a = starts[i]
     b = ends[i]
     if b <= a + .5: continue
     dark = e['scene'] in ('ships', 'ruin')

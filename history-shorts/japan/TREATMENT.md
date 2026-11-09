@@ -83,3 +83,10 @@ Music ducks under narration (voice ~10 dB above music by RMS). Master −14 LUFS
 - The score is in free sections, one per era, each filling its era exactly, so every sweep lands on a drum hit. 1945 has no music, only wind and a flute; the 1964 registration snap is the loudest hit.
 - Ending: the eight prints shrink onto a drying line, and the card reads WHICH COUNTRY NEXT? / TELL US IN THE COMMENTS.
 - Compared with the style's demo: structure, opening, camera path, score and ending all differ (it travels between cities; this re-inks one print through time).
+
+## Revision 2 (YouTube review fixes)
+
+- **Hook:** cold open on the finished 1964 print with the bullet train already sliding in on frame one and a drum hit; new first line "From rice farmers to bullet trains. This is Japan, in 60 seconds." The print is then re-inked back to the first era.
+- **Shorts safe zones:** the title is smaller and lower (clear of the top bar); years and the end card are fitted left of the right-hand button column; subtitles stay above the channel-name/caption area.
+- **Constant motion:** clouds and birds drift in every era, paddy water shimmers, Nara has falling blossom, the black ship sails and its smoke rises, the 1964 train arrives on the snap and accelerates away, city windows blink. No stretch of 2 s or more is frozen (it was 5.5 s before).
+- **Subtitles:** 44 px → 60 px bold, at most two lines of ~28 characters, cut at phrase boundaries.

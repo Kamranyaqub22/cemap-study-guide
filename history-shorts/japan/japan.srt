@@ -1,84 +1,98 @@
 1
-00:00:00,370 --> 00:00:03,604
-Japan. 2,000 years in 60 seconds.
+00:00:00,070 --> 00:00:02,270
+From rice farmers
+to bullet trains.
 
 2
-00:00:03,644 --> 00:00:06,384
+00:00:02,310 --> 00:00:04,453
+This is Japan,
+in 60 seconds.
+
+3
+00:00:04,493 --> 00:00:07,233
 Over 2,000 years ago,
 rice farming arrives,
 
-3
-00:00:06,424 --> 00:00:09,376
+4
+00:00:07,273 --> 00:00:10,185
 and villages grow
 into small kingdoms.
 
-4
-00:00:09,416 --> 00:00:12,236
-In 710, the court settles at Nara.
-
 5
-00:00:12,276 --> 00:00:15,074
+00:00:10,225 --> 00:00:13,045
+In 710, the court
+settles at Nara.
+
+6
+00:00:13,085 --> 00:00:15,843
 Buddhism spreads,
 and great temples rise.
 
-6
-00:00:15,114 --> 00:00:17,594
-From 1185, samurai take power,
-
 7
-00:00:17,634 --> 00:00:20,374
+00:00:15,883 --> 00:00:18,363
+From 1185,
+samurai take power,
+
+8
+00:00:18,403 --> 00:00:21,103
 and the emperor
 reigns in name only.
 
-8
-00:00:20,414 --> 00:00:24,154
+9
+00:00:21,143 --> 00:00:24,883
 In 1603, the Tokugawa
 clan takes over.
 
-9
-00:00:24,194 --> 00:00:27,451
+10
+00:00:24,923 --> 00:00:28,140
 Peace follows, and Japan
 closes to most of the world.
 
-10
-00:00:27,491 --> 00:00:30,971
-In 1853, American warships arrive.
-
 11
-00:00:31,011 --> 00:00:35,437
-Within 15 years, the shogun falls,
-and Japan modernises fast.
+00:00:28,180 --> 00:00:31,660
+In 1853, American
+warships arrive.
 
 12
-00:00:35,477 --> 00:00:38,077
-Growth turns to empire, and war.
+00:00:31,700 --> 00:00:33,660
+Within 15 years,
+the shogun falls,
 
 13
-00:00:38,117 --> 00:00:42,741
+00:00:33,700 --> 00:00:36,086
+and Japan modernises fast.
+
+14
+00:00:36,126 --> 00:00:38,726
+Growth turns to
+empire, and war.
+
+15
+00:00:38,766 --> 00:00:43,350
 In 1945, atomic bombs destroy
 Hiroshima and Nagasaki.
 
-14
-00:00:42,781 --> 00:00:45,681
+16
+00:00:43,390 --> 00:00:46,290
 Japan rebuilds. In 1964,
 
-15
-00:00:45,721 --> 00:00:49,374
+17
+00:00:46,330 --> 00:00:49,943
 the bullet train opens,
 and Tokyo hosts the Olympics.
 
-16
-00:00:49,414 --> 00:00:52,454
+18
+00:00:49,983 --> 00:00:53,023
 Today, over 120
 million people live
 
-17
-00:00:52,494 --> 00:00:55,360
+19
+00:00:53,063 --> 00:00:55,889
 where ancient temples
 meet neon cities.
 
-18
-00:00:55,400 --> 00:00:59,780
+20
+00:00:55,929 --> 00:00:59,710
 Which country should
 we print next?
 

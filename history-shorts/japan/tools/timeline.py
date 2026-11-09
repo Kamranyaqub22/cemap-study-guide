@@ -8,7 +8,7 @@ C = json.load(open(os.path.join(D, 'content.json')))
 LINES = {l['id']: l for l in json.load(open(os.path.join(D, 'voice/lines.json')))}
 DUR = json.load(open(os.path.join(D, 'out/voice/dur.json')))
 WORDS = json.load(open(os.path.join(D, 'out/voice/words.json')))
-GAP, FIRST = .17, .45
+GAP, FIRST = .13, .15
 order = [C['intro']['line']] + [e['line'] for e in C['eras']] + [C['end']['line']]
 vo, t = {}, FIRST
 for lid in order: vo[lid] = round(t, 3); t += DUR[lid] + GAP
@@ -25,20 +25,20 @@ for i, e in enumerate(C['eras']):
     eras.append({**{k: v for k, v in e.items() if k != 'at'}, 'i': i, 'vo': vo[lid], 'sweep': sweep, 'swdur': .45 if not e.get('silence') else .7,
                  'label_t': round(land + .05, 3), 'year_t': round(land + .2, 3), 'snap_t': round(vo[lid] + b + .1, 3) if e.get('snap') else None})
 for i, e in enumerate(eras): e['t1'] = eras[i + 1]['sweep'] if i + 1 < len(eras) else vo[C['end']['line']] - .15
-first = eras[0]; first['sweep'] = None; first['land_t'] = round(first['vo'] - .25, 3); first['label_t'] = round(first['vo'] + .35, 3); first['year_t'] = round(first['vo'] + .55, 3)
+first = eras[0]; first['sweep'] = round(first['vo'] - .5, 3); first['land_t'] = first['sweep']   # the cold open is re-inked into the first era
 end_vo = vo[C['end']['line']]
-end = {'wall': round(end_vo - .15, 3), 'wall_dur': 1.2, 'card': round(end_vo + .85, 3), 'text': C['end']['text']}
-total = round(end['card'] + .45 + 3.0, 2)
+end = {'wall': round(end_vo - .15, 3), 'wall_dur': 1.1, 'card': round(end_vo + .5, 3), 'text': C['end']['text']}
+total = round(end['card'] + 3.2, 2)
 # subtitles: the line's own text ('sub'), split at '|'; the second part starts at the matching spoken word
 subs = []
 def norm(w): return re.sub(r'[^0-9a-z]', '', w.lower())
 for lid in order:
     parts = [p.strip() for p in LINES[lid]['sub'].split('|')]; ws = WORDS[lid]
-    starts = [vo[lid] - .08]
-    if len(parts) > 1:
-        key = norm(parts[1].split()[0]); n_before = len(parts[0].split())
-        cand = [i for i, w in enumerate(ws) if norm(w[0]).startswith(key[:4]) and i >= n_before - 3]
-        i = cand[0] if cand else n_before
+    starts = [vo[lid] - .08]; j = 0
+    for k in range(1, len(parts)):                                 # each later part starts at its first spoken word
+        key = norm(parts[k].split()[0]); j += len(parts[k - 1].split())
+        cand = [i for i, w in enumerate(ws) if norm(w[0]).startswith(key[:4]) and i >= j - 3]
+        i = cand[0] if cand else min(j, len(ws) - 1); j = i
         starts.append(vo[lid] + max(0, ws[i][1]) - .08)
     for k, txt in enumerate(parts):
         sp_end = vo[lid] + (ws[-1][2] if k == len(parts) - 1 else ws[max(0, [i for i, w in enumerate(ws) if vo[lid] + w[1] - .08 < starts[k + 1]][-1])][2])
@@ -47,7 +47,7 @@ for i, s in enumerate(subs):
     nxt = subs[i + 1]['t0'] - .04 if i + 1 < len(subs) else total
     s['t1'] = round(nxt if i + 1 < len(subs) else total, 3)
     if s['t1'] - s['t0'] < 1.8 - 1e-6: print('WARNING short cue', s)
-def wrap(txt, n=34):
+def wrap(txt, n=28):
     if len(txt) <= n: return [txt]
     ws = txt.split(); best = None
     for k in range(1, len(ws)):

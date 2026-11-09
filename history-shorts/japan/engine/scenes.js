@@ -43,17 +43,22 @@ function base(seed) {
   const hill = polyPath([[-BLEED, 1300], ...ridgeLine([-BLEED, 1050], [AW + BLEED, 1020], 70, 6, seed + 5), [AW + BLEED, 1300]]);
   const birds = new Path2D();
   for (const [x, y, s] of [[230, 470, 1], [282, 440, .75], [196, 420, .6]]) birds.addPath(polyPath([[x - 24 * s, y - 6 * s], [x - 11 * s, y - 10 * s], [x, y], [x + 11 * s, y - 10 * s], [x + 24 * s, y - 6 * s], [x + 11 * s, y - 5 * s], [x, y + 5 * s], [x - 11 * s, y - 5 * s]]));
+  const clouds = new Path2D();                         // flat-bottomed clouds that drift across the sky
+  for (const [x, y, w] of [[-260, 640, 300], [130, 760, 220], [-700, 560, 260], [1040, 700, 200]]) {
+    blob(clouds, x, y, w * .5, 34, Math.PI, Math.PI * 2); blob(clouds, x - w * .22, y, w * .3, 24, Math.PI, Math.PI * 2); blob(clouds, x + w * .25, y, w * .32, 46, Math.PI, Math.PI * 2);
+  }
   return {
     sky: [
       { pull: 'sky1', ink: 'sky1', path: FULL(), knock: sunKnock },
       { pull: 'sky2', ink: 'sky2', path: sky2 },
+      { pull: 'sky2', ink: 'sky1', path: clouds, drift: [30, 0] },
       { pull: 'sun', ink: 'sun', path: circlePath(SUN[0], SUN[1], SR) },
     ],
     far: [
       { pull: 'far', ink: 'far', path: fuji, knock: snow },
       { pull: 'far', ink: 'glow', path: fujiLit, cut: snow, lit: 1 },
     ],
-    mid: [{ pull: 'mid', ink: 'mid', path: hill }, { pull: 'mid', ink: 'near', path: birds }],
+    mid: [{ pull: 'mid', ink: 'mid', path: hill }, { pull: 'mid', ink: 'near', path: birds, drift: [42, -5] }],
   };
 }
 function bandPart() {
@@ -88,7 +93,7 @@ function rice(seed = 11) {
   hut.addPath(polyPath([[hx - 90, 1110], [hx + 90, 1110], [hx + 44, 1000], [hx - 44, 1000]])); hut.rect(hx - 46, 1100, 92, 60);
   return compose(seed, { focus: [700, 950], parts: [
     { pull: 'land', ink: 'mid', path: terr },
-    { pull: 'land', ink: 'glow', path: water, lit: 1 },
+    { pull: 'land', ink: 'glow', path: water, lit: 1, drift: [14, 0] },
     { pull: 'land', ink: 'near', path: unionPath([g, hut]) },
     { pull: 'acc', ink: 'far', path: ladder, lit: 1 },
     { pull: 'acc', ink: 'glow', path: lit, lit: 1 },
@@ -118,8 +123,10 @@ function nara(seed = 13) {
   const trees = new Path2D(); const r = mulberry(seed);
   for (let i = 0; i < 9; i++) blob(trees, 80 + i * 70 + r() * 30, 1120 - r() * 50, 70 + r() * 30, 50 + r() * 20);   // blossom clumps
   const trunks = new Path2D(); for (let i = 0; i < 4; i++) trunks.rect(110 + i * 150, 1110, 12, 80);
+  const petals = new Path2D(); for (let k = 0; k < 55; k++) { const x = r() * 1300 - 200, y = r() * 950 + 250, q = 1.6 + r() * 1.2; petals.addPath(polyPath([[x, y], [x + 9 * q, y - 5 * q], [x + 16 * q, y + 2 * q], [x + 6 * q, y + 7 * q]])); }
   return compose(seed, { focus: [760, 860], parts: [
     { pull: 'land', ink: 'sky2', path: trees },
+    { pull: 'acc', ink: 'sky2', path: petals, drift: [-26, 52] },
     { pull: 'land', ink: 'near', path: unionPath([P.body, trunks]), knock: P.doors },
     { pull: 'acc', ink: 'sun', path: P.rings },
     { pull: 'acc', ink: 'glow', path: P.lits, lit: 1 },
@@ -204,10 +211,10 @@ function ships(seed = 23) {
   const stripe = new Path2D(); stripe.rect(300, 1066, 690, 8);
   return compose(seed, { focus: [660, 900], parts: [
     { pull: 'land', ink: 'mid', path: sea },
-    { pull: 'land', ink: 'glow', path: glints, lit: 1 },
-    { pull: 'land', ink: 'far', path: smoke },
-    { pull: 'land', ink: 'near', path: unionPath([hull, cabin, paddle, funnel, masts, yards]), knock: ports },
-    { pull: 'acc', ink: 'sun', path: stripe },
+    { pull: 'land', ink: 'glow', path: glints, lit: 1, drift: [-14, 0] },
+    { pull: 'land', ink: 'far', path: smoke, drift: [14, -24] },
+    { pull: 'land', ink: 'near', path: unionPath([hull, cabin, paddle, funnel, masts, yards]), knock: ports, drift: [-16, 0] },
+    { pull: 'acc', ink: 'sun', path: stripe, drift: [-16, 0] },
   ] });
 }
 // 6 · 1945: a ruined domed hall, its dome stripped to the ribs
@@ -233,32 +240,32 @@ function ruin(seed = 29) {
 function train(seed = 31) {
   const via = new Path2D(); via.rect(-BLEED, 1104, AW + 2 * BLEED, 26);
   for (let x = -20; x < AW + BLEED; x += 150) via.addPath(polyPath([[x, 1130], [x + 44, 1130], [x + 36, GROUND + 10], [x + 8, GROUND + 10]]));
-  const body = new Path2D(); body.rect(-BLEED, 1000, 860 + BLEED, 96);
+  const body = new Path2D(); body.rect(-2400, 1000, 3200, 96);
   body.moveTo(800, 1000); body.bezierCurveTo(900, 1000, 1000, 1030, 1030, 1080); body.lineTo(1030, 1096); body.lineTo(800, 1096); body.closePath();
-  const stripe = new Path2D(); stripe.rect(-BLEED, 1066, 880 + BLEED, 14); stripe.moveTo(860, 1066); stripe.lineTo(1022, 1066); stripe.lineTo(1028, 1080); stripe.lineTo(860, 1080); stripe.closePath();
+  const stripe = new Path2D(); stripe.rect(-2400, 1066, 3260, 14); stripe.moveTo(860, 1066); stripe.lineTo(1022, 1066); stripe.lineTo(1028, 1080); stripe.lineTo(860, 1080); stripe.closePath();
   const skirt = new Path2D(); skirt.rect(-BLEED, 1090, 1090 + BLEED, 10);
-  const win = new Path2D(); for (let x = -40; x < 780; x += 34) win.rect(x, 1018, 22, 24);
+  const win = new Path2D(); for (let x = -2380; x < 780; x += 34) win.rect(x, 1018, 22, 24);
   win.addPath(polyPath([[840, 1010], [930, 1018], [952, 1038], [850, 1036]]));
-  const gaps = new Path2D(); for (let x = 150; x < 800; x += 260) gaps.rect(x, 1000, 5, 96);
+  const gaps = new Path2D(); for (let x = -2450; x < 800; x += 260) gaps.rect(x, 1000, 5, 96);
   const speed = new Path2D(); const r = mulberry(seed); for (let i = 0; i < 9; i++) speed.rect(-BLEED, 940 + i * 18 + r() * 8, 120 + r() * 260, 5);
   const light = new Path2D(); blob(light, 1008, 1068, 9, 6);
   return compose(seed, { focus: [640, 960], parts: [
     { pull: 'land', ink: 'near', path: unionPath([via, skirt, speed]) },
-    { pull: 'land', ink: 'paper', path: body, knock: gaps },
-    { pull: 'land', ink: 'mid', path: stripe },
-    { pull: 'land', ink: 'near', path: win },
-    { pull: 'acc', ink: 'sun', path: light },
+    { pull: 'land', ink: 'paper', path: body, knock: gaps, mov: 1 },
+    { pull: 'land', ink: 'mid', path: stripe, mov: 1 },
+    { pull: 'land', ink: 'near', path: win, mov: 1 },
+    { pull: 'acc', ink: 'sun', path: light, mov: 1 },
   ] });
 }
 // 8 · today: a night city, a lattice tower and an old pagoda among the towers
 function city(seed = 37) {
-  const r = mulberry(seed), blocks = new Path2D(), lit = new Path2D(), signs = new Path2D();
+  const r = mulberry(seed), blocks = new Path2D(), lits = [new Path2D(), new Path2D(), new Path2D()], signs = new Path2D();
   let x = -BLEED;
   while (x < AW + BLEED) {
     const w = 70 + r() * 90, h = 180 + r() * 330, y = GROUND - h;
     if (!(x > 140 && x < 340)) {
       blocks.rect(x, y, w - 6, h + 20);
-      for (let wy = y + 18; wy < GROUND - 20; wy += 28) for (let wx = x + 10; wx < x + w - 18; wx += 20) if (r() < .32) lit.rect(wx, wy, 10, 14);
+      for (let wy = y + 18; wy < GROUND - 20; wy += 28) for (let wx = x + 10; wx < x + w - 18; wx += 20) if (r() < .32) lits[Math.floor(r() * 3)].rect(wx, wy, 10, 14);
       if (r() < .45) signs.rect(x + 10, y + 30 + r() * 80, 14, 60 + r() * 50);
     }
     x += w;
@@ -272,7 +279,7 @@ function city(seed = 37) {
   return compose(seed, { focus: [600, 900], parts: [
     { pull: 'land', ink: 'paper', path: stars },
     { pull: 'land', ink: 'mid', path: blocks },
-    { pull: 'land', ink: 'glow', path: lit, lit: 1 },
+    ...lits.map((p, k) => ({ pull: 'land', ink: 'glow', path: p, lit: 1, blink: k })),
     { pull: 'acc', ink: 'sun', path: unionPath([tower, signs]), knock: holes },
     { pull: 'land', ink: 'near', path: P.body, knock: P.doors },
   ] });
