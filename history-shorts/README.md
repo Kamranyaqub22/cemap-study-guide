@@ -5,7 +5,9 @@ A YouTube Shorts series: one country's history per video, 60 seconds, vertical 1
 
 | Country | Video | Subtitles | Notes |
 |---|---|---|---|
-| Japan | [`japan/japan.mp4`](japan/japan.mp4) | [`japan/japan.srt`](japan/japan.srt) | [treatment](japan/TREATMENT.md) · [facts](japan/FACTS.md) · [credits](japan/CREDITS) |
+| Japan | [`japan/japan.mp4`](japan/japan.mp4) | [`japan/japan.srt`](japan/japan.srt) | [upload sheet](japan/UPLOAD.md) · [treatment](japan/TREATMENT.md) · [facts](japan/FACTS.md) · [credits](japan/CREDITS) |
+
+**Daily workflow, uploading and the country queue:** [`PRODUCTION.md`](PRODUCTION.md) · [`countries.csv`](countries.csv)
 
 ## How one episode is made
 

@@ -23,6 +23,11 @@ def scrape(d, bright=1.0, heavy=0.0, attack=.02):
     y = bp(n, 700 * bright, min(9000, 5200 * bright), 2) * grain + lp(noise(d), 380) * (.5 + heavy) * .6
     e = np.minimum(1, x / max(attack, 1e-3)) * np.minimum(1, (d - x) / .06) * (1 - .25 * x / d)
     return norm(y * e)
+def swish(d, pan_from=-.6, pan_to=.6):
+    """A soft paper swish for a scene change: low, warm filtered air that rises and falls (no hiss)."""
+    x = t_(d); n = lp(lp(noise(d), 1400, 4), 1400, 2) * .8 + lp(noise(d), 350) * .5
+    e = np.sin(np.pi * np.clip(x / d, 0, 1)) ** 2
+    return norm(hp(n, 120) * e)
 def squelch(f=140):
     d = .16; x = t_(d)
     return norm(np.sin(2 * np.pi * f * x * (1 - .9 * x)) * env_exp(d, .05) + lp(noise(d), 900) * env_exp(d, .03) * .5)
@@ -80,21 +85,21 @@ for e in EV:
     elif tp == 'item':
         add(fol, stamp(), t, .5 if not e.get('accent') else .65, .35); add(fol, tick(2400), t, .16, .35)
     elif tp == 'sweep':
-        add(fol, scrape(e['dur'] + .1, .85 if e['scene'] != 'ruin' else .6, .8), t, .6, 0); add(fol, squelch(95), t, .32, 0)
+        sw = swish(e['dur'] + .25); add(fol, sw, t - .05, .32 if e['scene'] != 'ruin' else .2, -.3); add(fol, np.roll(sw, 900), t - .05, .2, .3)
     elif tp == 'snap':
         d = .6; x = t_(d)
         wood = sum(a * np.sin(2 * np.pi * f * x) * env_exp(d, tau) for f, a, tau in [(480, 1, .03), (1100, .6, .02), (220, .9, .06)])
         add(fol, norm(wood + hp(noise(d), 3000) * env_exp(d, .002)), t, 1.0, 0); add(fol, thump(1, 55), t, .6, 0)
     elif tp == 'cold':                                                     # the train is already rushing past on frame one
-        d = 2.6; x = t_(d); rush = bp(noise(d), 250, 5000) * np.minimum(1, x / .05) * np.exp(-x / 1.4)
-        add(fol, rush, t, .5, -.4); add(fol, np.roll(rush, 1500), t, .4, .4)
+        d = 2.2; x = t_(d); rush = lp(lp(noise(d), 900, 4), 900) * np.minimum(1, x / .08) * np.exp(-x / .9)   # a low train rush, no hiss
+        add(fol, norm(rush), t, .3, -.5); add(fol, norm(np.roll(rush, 1500)), t, .22, .5)
     elif tp == 'wall':
         add(fol, whoosh(e['dur'], 1), t, .12, 0)
     elif tp == 'clip':
         d = .25; x = t_(d)
         add(fol, norm(sum(a * np.sin(2 * np.pi * f * x) * env_exp(d, tau) for f, a, tau in [(2400, .6, .05), (3900, .4, .03), (900, .8, .02)]) + hp(noise(d), 3000) * env_exp(d, .002)), t, .45, .3)
     elif tp == 'card':
-        add(fol, scrape(e['dur'], 1.1, .4), t, .42, 0); add(fol, squelch(120), t, .2, 0)
+        add(fol, swish(e['dur'] + .2), t, .22, 0)
 
 # ---------------- voice ----------------
 for lid, t0 in TL['vo'].items():

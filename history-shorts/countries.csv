@@ -1,0 +1,31 @@
+order,country,slug,status,notes
+1,Japan,japan,done,pilot
+2,Egypt,egypt,todo,pyramids → Ptolemies → Rome → Islam → Ottomans → British → Nasser → today
+3,Italy,italy,todo,Rome → Renaissance → unification 1861 → today
+4,United Kingdom,united-kingdom,todo,
+5,India,india,todo,
+6,United States,united-states,todo,
+7,Greece,greece,todo,
+8,Mexico,mexico,todo,
+9,France,france,todo,
+10,Turkey,turkey,todo,
+11,China,china,todo,sensitive: neutral wording, no maps
+12,Germany,germany,todo,
+13,Brazil,brazil,todo,
+14,South Korea,south-korea,todo,
+15,Spain,spain,todo,
+16,Russia,russia,todo,sensitive: neutral wording, no maps
+17,Peru,peru,todo,
+18,Pakistan,pakistan,todo,
+19,Iran,iran,todo,
+20,Vietnam,vietnam,todo,
+21,Nigeria,nigeria,todo,
+22,Ireland,ireland,todo,
+23,Poland,poland,todo,
+24,Saudi Arabia,saudi-arabia,todo,
+25,Indonesia,indonesia,todo,
+26,Morocco,morocco,todo,
+27,Canada,canada,todo,
+28,Australia,australia,todo,
+29,Ethiopia,ethiopia,todo,
+30,Norway,norway,todo,

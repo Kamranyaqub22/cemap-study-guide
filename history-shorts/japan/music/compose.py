@@ -98,6 +98,8 @@ for e in EV:
     if e['type'] == 'sweep' and not (sil_a <= e['t'] < sil_b - .01):
         land = e['t'] + e['dur']
         put(taiko(.9, 60 if e['scene'] != 'train' else 52, 1.4), land, .55 if e['scene'] != 'train' else .75, 0)
+        sc_ = IN if e['scene'] in ('ships', 'ruin') else YO              # a quick koto flourish carries the eye across the change
+        for k, m in enumerate([sc_[9], sc_[8], sc_[7], sc_[5]]): put(pluck('koto', m, vel=.55 - .05 * k), e['t'] + k * .07, .38, .5 - .3 * k)
     if e['type'] == 'snap':
         put(taiko(1.0, 48, 1.8), e['t'], 1.0, 0); put(taiko(1.0, 66, 1.2), e['t'] + .01, .6, -.3)
         put(strum('koto', [50, 57, 62, 64, 69, 74], 2.5, vel=.85, spread=.018), e['t'], .7, .2)
