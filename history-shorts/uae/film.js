@@ -51,7 +51,7 @@ function drawPrint(c, i, st) {
     ink(c, { paint: (g) => {
       g.textAlign = 'center'; g.textBaseline = 'alphabetic';
       g.font = `900 214px ${FONT_D}`; g.letterSpacing = '20px'; g.fillText(TL.country, AW / 2 + 10, 352);
-      g.font = `600 34px ${FONT_T}`; g.letterSpacing = '10px'; g.fillText(TL.sub, AW / 2 + 5, 408);
+      g.font = `700 38px ${FONT_T}`; g.letterSpacing = '12px'; g.fillText(TL.sub, AW / 2 + 6, 410);
     } }, { color: col, reg: R2(seed + 44, 1.4), clip });
   }
   // the band's text: era label and year (the band panel itself is a part of the scene)
@@ -209,6 +209,11 @@ function wall(t) {
     drawPrint(ctx, last, {});
     ctx.restore();
   }
+  if (TL.brand) {                                        // the channel name, printed above the drying line
+    const bp = seg(t, E.wall + .05, E.wall + .4);
+    if (bp > 0) ink(ctx, { paint: (g) => { g.textAlign = 'center'; g.textBaseline = 'alphabetic'; g.font = `600 40px ${FONT_T}`; g.letterSpacing = '14px'; g.fillText(TL.brand, 480, 196); } },
+      { color: pickInk('#17151F', [PAPER], 7), reg: [.6, .4], clip: bp < 1 ? wipeRegion([60, 140, 900, 80], 'right', bp, 11, 24) : null });
+  }
   // the card: printed straight onto the wall in two pulls
   const key = pickInk('#17151F', [pal.sun, pal.glow], 4.5), lo = pickInk('#17151F', [PAPER], 7);
   const p1 = seg(t, E.card, E.card + .35), p2 = seg(t, E.card + .1, E.card + .35);
@@ -254,6 +259,7 @@ export function texts(t) {
   const box = (b) => { const a = toScreen(b[0], b[1]), c = toScreen(b[2], b[3]); return { x0: a[0], y0: a[1], x1: c[0], y1: c[1] }; };
   if (t >= TL.end.wall) {
     if (t >= TL.end.card + .35) out.push({ id: 'card', text: TL.end.text.join(' '), x0: 90, y0: 1180, x1: 870, y1: 1470 });
+    if (TL.brand && t >= TL.end.wall + .4) out.push({ id: 'brand', text: TL.brand, x0: 160, y0: 150, x1: 800, y1: 205 });
     if (t >= TL.end.card + .35) out.push({ id: 'card2', text: 'TELL US IN THE COMMENTS', x0: 160, y0: 1500, x1: 800, y1: 1540 });
     return out;
   }

@@ -60,7 +60,7 @@ def wrap(txt, n=28):
         if best is None or score < best[0]: best = (score, [a, b])
     return best[1]
 for s in subs: s['lines'] = wrap(s['text'])
-TL = {'cold': C.get('cold'), 'dur': total, 'vo': vo, 'eras': eras, 'end': end, 'subs': subs, 'country': C['country'], 'sub': C['sub'], 'paper': C['paper'],
+TL = {'cold': C.get('cold'), 'dur': total, 'vo': vo, 'eras': eras, 'end': end, 'subs': subs, 'country': C['country'], 'sub': C['sub'], 'brand': C.get('brand', ''), 'paper': C['paper'],
       'intro': {'vo': vo[C['intro']['line']]}}
 json.dump(TL, open(os.path.join(D, 'timeline.json'), 'w'), indent=1)
 def ts(x): h = int(x // 3600); m = int(x % 3600 // 60); s = x % 60; return f'{h:02d}:{m:02d}:{int(s):02d},{int(round((s - int(s)) * 1000)):03d}'

@@ -1,6 +1,6 @@
 {
  "country": "UAE",
- "sub": "HISTORY IN 60 SECONDS",
+ "sub": "@PrintedHistory",
  "paper": "#F3EAD8",
  "intro": {
   "line": "L01"
@@ -164,5 +164,6 @@
    "WHICH COUNTRY",
    "NEXT?"
   ]
- }
+ },
+ "brand": "FOLLOW @PrintedHistory"
 }

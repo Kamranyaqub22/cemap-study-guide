@@ -18,17 +18,18 @@ Keep **5–7 finished videos scheduled ahead** in YouTube Studio. Then productio
 2. **Pick** the first `todo` row in `countries.csv`; `sh history-shorts/tools/new_country.sh <slug>`.
 3. **Research** 7–8 turning points from reliable sources (Britannica, national statistics offices, museum or university pages). Write each claim with its source in `FACTS.md`. Sensitive countries: neutral wording, dates and facts only, **no maps or borders**.
 4. **Script** `voice/lines.json`: a hook line, one line per era, a closing question; ≤ 140 words in total so it lands under 60 s. The `sub` field holds the subtitle text split with `|`; `asr` holds what the speech check should hear.
-5. **Eras** `content.json`: scene key, label, year, the spoken word the year lands on (`at`), a 6-ink palette per era. Mark at most one `silence` era (the darkest moment) and one `snap` era (the comeback); the cold open uses the `snap` era.
-6. **Picture** `engine/scenes.js`: replace the **base landscape** with the country's own (e.g. desert and Nile for Egypt, hills and sea for Greece) and draw one simple landmark per era. These are original silhouettes, not traced photos, logos or flags.
-7. **Build** `LIB=~/lemo-opuscar sh history-shorts/<slug>/build.sh`, then the checks:
+5. **Branding** `content.json`: keep `"sub": "@PrintedHistory"` (printed under the country name for the whole video) and `"brand": "FOLLOW @PrintedHistory"` (printed on the end wall).
+6. **Eras** `content.json`: scene key, label, year, the spoken word the year lands on (`at`), a 6-ink palette per era. Mark at most one `silence` era (the darkest moment) and one `snap` era (the comeback); the cold open uses the `snap` era.
+7. **Picture** `engine/scenes.js`: replace the **base landscape** with the country's own (e.g. desert and Nile for Egypt, hills and sea for Greece) and draw one simple landmark per era. These are original silhouettes, not traced photos, logos or flags.
+8. **Build** `LIB=~/lemo-opuscar sh history-shorts/<slug>/build.sh`, then the checks:
    - every narration line passes the speech check, and the final mix transcribes back correctly;
    - `readcheck ok`; −14 LUFS; no blank frames; length ≤ 60 s;
    - no frozen stretch ≥ 2 s; no text under the Shorts buttons (right ~130 px, bottom ~360 px, top ~140 px);
    - a contact sheet looked at frame by frame.
    - mastering needs ffmpeg 7+ (`build.sh` uses `/opt/ffmpeg7/bin` when present; the environment setup script installs it). With ffmpeg 6, `mux.sh` can wrongly reject the audio as cut off.
    - the bar to beat: at least as much motion as the last episode (share of frames that change), transition hiss below the rest of the track, every narration word transcribed back from the final file.
-8. **Upload sheet** `UPLOAD.md`: title, description with sources, hashtags, tags.
-9. **Commit and push** to the branch, set the row to `review`.
+9. **Upload sheet** `UPLOAD.md`: title, description with sources, hashtags, tags.
+10. **Commit and push** to the branch, set the row to `review`.
 
 ### Keep every video different
 
