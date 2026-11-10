@@ -22,6 +22,8 @@ Keep **5–7 finished videos scheduled ahead** in YouTube Studio. Then productio
 6. **Eras** `content.json`: scene key, label, year, the spoken word the year lands on (`at`), a 6-ink palette per era. Mark at most one `silence` era (the darkest moment) and one `snap` era (the comeback); the cold open uses the `snap` era.
 7. **Picture** `engine/scenes.js`: replace the **base landscape** with the country's own (e.g. desert and Nile for Egypt, hills and sea for Greece) and draw one simple landmark per era. These are original silhouettes, not traced photos, logos or flags.
 8. **Build** `LIB=~/lemo-opuscar sh history-shorts/<slug>/build.sh`, then the checks:
+   - the pronunciation check passes (`tools/phonemes.py`, run by `build.sh`): no known-bad words such as "live", and the phonemes of
+     every same-spelling, two-sound word read and confirmed (the speech check cannot hear these);
    - every narration line passes the speech check, and the final mix transcribes back correctly;
    - `readcheck ok`; −14 LUFS; no blank frames; length ≤ 60 s;
    - no frozen stretch ≥ 2 s; no text under the Shorts buttons (right ~130 px, bottom ~360 px, top ~140 px);

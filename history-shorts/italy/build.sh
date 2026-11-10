@@ -14,6 +14,8 @@ FFMPEG_DIR=${FFMPEG_DIR:-/opt/ffmpeg7/bin}; [ -x "$FFMPEG_DIR/ffmpeg" ] && PATH=
 SIZE=1080x1920
 cd "$LIB"
 mkdir -p "$HERE/out/voice"
+if "$PY" "$HERE/../tools/phonemes.py" "$HERE" > "$HERE/out/phonemes.txt"; then :; elif [ "${PHONEMES_OK:-0}" = "1" ]; then echo "phonemes: known issue accepted (PHONEMES_OK=1)"; else grep -E "^BAD" "$HERE/out/phonemes.txt"; echo "fix those words (PHONEMES_OK=1 only for an already-published episode)"; exit 1; fi   # heteronyms whisper cannot hear
+grep -E "^CHECK|phonemes:" "$HERE/out/phonemes.txt" || true
 if [ "${VOICE:-0}" = "1" ] || [ ! -f "$HERE/out/voice/dur.json" ]; then "$PY" core/tts/tts.py "$HERE/voice/lines.json" "$HERE/out/voice"; fi
 "$PY" core/tts/asr_check.py "$HERE/voice/lines.json" "$HERE/out/voice" --lang en       # every line must transcribe back; writes word timings
 "$PY" "$HERE/tools/timeline.py"                                                         # → timeline.json + $NAME.srt

@@ -26,6 +26,13 @@ instruments: koto+taiko / oud+darbuka / harp+sistrum / mandolin+accordion+tambur
 
 **Lessons learned**
 - Kokoro mispronounces some names: test, and reword or respell (Ramesses → "Ramses"; avoid "Ras Al Khaimah", "sheikhdoms"; "carves" sounds like "calves").
+- **Never use the word "live"** in narration: Kokoro says "people live here" like "live TV" (/laɪv/), and whisper can't hear the
+  difference, so asr_check passes it. Say "are home to", "call it home", "living here". (Japan, UAE, Egypt and Italy all have it in
+  their "Today" line; the owner accepted those, but it must not happen again.)
+- Same-spelling, two-sound words (heteronyms: read, lead, wind, tear, close, row, minute, present, record, desert, Polish/polish,
+  August, Nice…) are invisible to the speech check. `tools/phonemes.py` runs in `build.sh` before the voice: it stops the build on
+  known-bad words (`BAD`) and prints the phonemes of risky ones (`CHECK`) — read those phonemes and fix any that are wrong.
+  Add every new mispronunciation the owner reports to `BAD` in `tools/phonemes.py` and to this list.
 - Master with ffmpeg 7+ (`/opt/ffmpeg7/bin`, used automatically by `build.sh`); the system ffmpeg 6 wrongly rejects valid audio.
 - Facts: verify anything uncertain with a web search and cite it in `FACTS.md`; no maps or borders; no flags or logos.
 - Kokoro/whisper: "By eighty AD" came back as "By ATAD" — say "By the year eighty"; keep subtitles worded like the speech.
