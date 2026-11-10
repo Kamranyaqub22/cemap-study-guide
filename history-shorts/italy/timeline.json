@@ -1,0 +1,431 @@
+{
+ "cold": {
+  "scene": "colosseum",
+  "from": [
+   560,
+   1120,
+   1.9
+  ],
+  "to": [
+   540,
+   760
+  ],
+  "dur": 5.0
+ },
+ "dur": 55.44,
+ "vo": {
+  "L01": 0.3,
+  "L02": 5.851,
+  "L03": 12.259,
+  "L04": 17.98,
+  "L05": 23.217,
+  "L06": 28.87,
+  "L07": 34.441,
+  "L08": 39.805,
+  "L09": 45.3,
+  "L10": 51.743
+ },
+ "eras": [
+  {
+   "scene": "hills",
+   "line": "L02",
+   "label": "ROME IS FOUNDED",
+   "year": "753 BC",
+   "pal": {
+    "sky1": "#F6E6C4",
+    "sky2": "#E8B98A",
+    "far": "#B9A06A",
+    "mid": "#6E8A4A",
+    "near": "#2E2A1E",
+    "sun": "#C8452C",
+    "glow": "#F7E3B0"
+   },
+   "i": 0,
+   "vo": 5.851,
+   "sweep": 5.351,
+   "swdur": 0.45,
+   "label_t": 8.001,
+   "year_t": 8.151,
+   "snap_t": null,
+   "t1": 12.219,
+   "land_t": 5.351
+  },
+  {
+   "scene": "colosseum",
+   "line": "L03",
+   "label": "THE ROMAN EMPIRE",
+   "year": "AD 80",
+   "pal": {
+    "sky1": "#F4E2BE",
+    "sky2": "#EBAA6E",
+    "far": "#C99A5E",
+    "mid": "#7A8C4C",
+    "near": "#3A2318",
+    "sun": "#B8352A",
+    "glow": "#FBE7BE"
+   },
+   "i": 1,
+   "vo": 12.259,
+   "sweep": 12.219,
+   "swdur": 0.45,
+   "label_t": 12.689,
+   "year_t": 12.839,
+   "snap_t": null,
+   "t1": 17.64
+  },
+  {
+   "scene": "ruin",
+   "line": "L04",
+   "label": "THE WEST FALLS",
+   "year": "476",
+   "silence": true,
+   "pal": {
+    "sky1": "#C9CCC8",
+    "sky2": "#8E98A0",
+    "far": "#7C8070",
+    "mid": "#4E5A50",
+    "near": "#1E2224",
+    "sun": "#8C3A30",
+    "glow": "#D8D2BE"
+   },
+   "i": 2,
+   "vo": 17.98,
+   "sweep": 17.64,
+   "swdur": 0.7,
+   "label_t": 18.11,
+   "year_t": 18.26,
+   "snap_t": null,
+   "silence_t": 21.53,
+   "t1": 22.937
+  },
+  {
+   "scene": "florence",
+   "line": "L05",
+   "label": "THE RENAISSANCE",
+   "year": "1400s",
+   "pal": {
+    "sky1": "#F8E4C0",
+    "sky2": "#F0A878",
+    "far": "#C98F62",
+    "mid": "#5E7E4E",
+    "near": "#2C2420",
+    "sun": "#C9472E",
+    "glow": "#FCE8C0"
+   },
+   "i": 3,
+   "vo": 23.217,
+   "sweep": 22.937,
+   "swdur": 0.45,
+   "label_t": 23.407,
+   "year_t": 23.557,
+   "snap_t": null,
+   "t1": 28.51
+  },
+  {
+   "scene": "galileo",
+   "line": "L06",
+   "label": "GALILEO'S MOONS",
+   "year": "1610",
+   "pal": {
+    "sky1": "#2C3466",
+    "sky2": "#1C2350",
+    "far": "#3E4A7E",
+    "mid": "#2E3A5E",
+    "near": "#0E1226",
+    "sun": "#F1D27A",
+    "glow": "#F4E3A8"
+   },
+   "i": 4,
+   "vo": 28.87,
+   "sweep": 28.51,
+   "swdur": 0.45,
+   "label_t": 28.98,
+   "year_t": 29.13,
+   "snap_t": null,
+   "t1": 34.081
+  },
+  {
+   "scene": "unite",
+   "line": "L07",
+   "label": "ONE KINGDOM OF ITALY",
+   "year": "1861",
+   "mosaic": true,
+   "pal": {
+    "sky1": "#F1ECDD",
+    "sky2": "#BFD6C2",
+    "far": "#D9B98A",
+    "mid": "#3F7A55",
+    "near": "#1E2A26",
+    "sun": "#C63A2E",
+    "glow": "#F6E2B0"
+   },
+   "i": 5,
+   "vo": 34.441,
+   "sweep": 34.081,
+   "swdur": 0.45,
+   "label_t": 34.551,
+   "year_t": 34.701,
+   "snap_t": null,
+   "t1": 39.445
+  },
+  {
+   "scene": "piazza",
+   "line": "L08",
+   "label": "THE REPUBLIC",
+   "year": "1946",
+   "pal": {
+    "sky1": "#EAF2F2",
+    "sky2": "#9CCBD6",
+    "far": "#E2B48C",
+    "mid": "#5A8C7A",
+    "near": "#20303A",
+    "sun": "#E0573A",
+    "glow": "#F7E0A8"
+   },
+   "i": 6,
+   "vo": 39.805,
+   "sweep": 39.445,
+   "swdur": 0.45,
+   "label_t": 39.915,
+   "year_t": 40.065,
+   "snap_t": null,
+   "t1": 44.98
+  },
+  {
+   "scene": "today",
+   "line": "L09",
+   "label": "ABOUT 59 MILLION PEOPLE",
+   "year": "TODAY",
+   "pal": {
+    "sky1": "#F6D2A8",
+    "sky2": "#C77A86",
+    "far": "#8C6A8A",
+    "mid": "#4E5C7E",
+    "near": "#1A1A2C",
+    "sun": "#F3A23E",
+    "glow": "#F8D890"
+   },
+   "i": 7,
+   "vo": 45.3,
+   "sweep": 44.98,
+   "swdur": 0.45,
+   "label_t": 45.45,
+   "year_t": 45.6,
+   "snap_t": null,
+   "t1": 51.593
+  }
+ ],
+ "end": {
+  "wall": 51.593,
+  "wall_dur": 1.1,
+  "card": 52.243,
+  "text": [
+   "WHERE",
+   "NEXT?"
+  ]
+ },
+ "subs": [
+  {
+   "line": "L01",
+   "t0": 0.0,
+   "text": "Italy, as a country, is only 165 years old. So who built Rome?",
+   "speech_end": 5.26,
+   "t1": 5.731,
+   "lines": [
+    "Italy, as a country, is only 165",
+    "years old. So who built Rome?"
+   ]
+  },
+  {
+   "line": "L02",
+   "t0": 5.771,
+   "text": "Legend says Rome was founded in 753 BC,",
+   "speech_end": 9.211,
+   "t1": 9.091,
+   "lines": [
+    "Legend says Rome was",
+    "founded in 753 BC,"
+   ]
+  },
+  {
+   "line": "L02",
+   "t0": 9.131,
+   "text": "on seven hills beside the Tiber.",
+   "speech_end": 11.831,
+   "t1": 12.139,
+   "lines": [
+    "on seven hills",
+    "beside the Tiber."
+   ]
+  },
+  {
+   "line": "L03",
+   "t0": 12.179,
+   "text": "By the year 80, Rome rules the Mediterranean,",
+   "speech_end": 14.799,
+   "t1": 14.679,
+   "lines": [
+    "By the year 80, Rome",
+    "rules the Mediterranean,"
+   ]
+  },
+  {
+   "line": "L03",
+   "t0": 14.719,
+   "text": "and the Colosseum opens its gates.",
+   "speech_end": 17.339,
+   "t1": 17.86,
+   "lines": [
+    "and the Colosseum",
+    "opens its gates."
+   ]
+  },
+  {
+   "line": "L04",
+   "t0": 17.9,
+   "text": "In 476, the last Western emperor falls,",
+   "speech_end": 21.06,
+   "t1": 20.94,
+   "lines": [
+    "In 476, the last",
+    "Western emperor falls,"
+   ]
+  },
+  {
+   "line": "L04",
+   "t0": 20.98,
+   "text": "and Italy breaks apart.",
+   "speech_end": 22.64,
+   "t1": 23.097,
+   "lines": [
+    "and Italy breaks apart."
+   ]
+  },
+  {
+   "line": "L05",
+   "t0": 23.137,
+   "text": "In the 1400s, Florence sparks the Renaissance,",
+   "speech_end": 25.837,
+   "t1": 25.717,
+   "lines": [
+    "In the 1400s, Florence",
+    "sparks the Renaissance,"
+   ]
+  },
+  {
+   "line": "L05",
+   "t0": 25.757,
+   "text": "with Leonardo and Michelangelo.",
+   "speech_end": 28.357,
+   "t1": 28.75,
+   "lines": [
+    "with Leonardo",
+    "and Michelangelo."
+   ]
+  },
+  {
+   "line": "L06",
+   "t0": 28.79,
+   "text": "In 1610, Galileo points his telescope at Jupiter,",
+   "speech_end": 32.01,
+   "t1": 31.89,
+   "lines": [
+    "In 1610, Galileo points",
+    "his telescope at Jupiter,"
+   ]
+  },
+  {
+   "line": "L06",
+   "t0": 31.93,
+   "text": "and finds four moons.",
+   "speech_end": 33.83,
+   "t1": 34.321,
+   "lines": [
+    "and finds four moons."
+   ]
+  },
+  {
+   "line": "L07",
+   "t0": 34.361,
+   "text": "In 1861, the many states finally unite",
+   "speech_end": 37.521,
+   "t1": 37.401,
+   "lines": [
+    "In 1861, the many",
+    "states finally unite"
+   ]
+  },
+  {
+   "line": "L07",
+   "t0": 37.441,
+   "text": "as one Kingdom of Italy.",
+   "speech_end": 39.301,
+   "t1": 39.685,
+   "lines": [
+    "as one Kingdom of Italy."
+   ]
+  },
+  {
+   "line": "L08",
+   "t0": 39.725,
+   "text": "In 1946, Italians vote for a republic,",
+   "speech_end": 42.905,
+   "t1": 42.785,
+   "lines": [
+    "In 1946, Italians",
+    "vote for a republic,"
+   ]
+  },
+  {
+   "line": "L08",
+   "t0": 42.825,
+   "text": "and scooters fill the streets.",
+   "speech_end": 44.725,
+   "t1": 45.18,
+   "lines": [
+    "and scooters",
+    "fill the streets."
+   ]
+  },
+  {
+   "line": "L09",
+   "t0": 45.22,
+   "text": "Today, about 59 million people live here,",
+   "speech_end": 48.06,
+   "t1": 47.94,
+   "lines": [
+    "Today, about 59 million",
+    "people live here,"
+   ]
+  },
+  {
+   "line": "L09",
+   "t0": 47.98,
+   "text": "with more World Heritage Sites than any other country.",
+   "speech_end": 51.24,
+   "t1": 51.623,
+   "lines": [
+    "with more World Heritage",
+    "Sites than any other country."
+   ]
+  },
+  {
+   "line": "L10",
+   "t0": 51.663,
+   "text": "Where should we print next? Tell us below.",
+   "speech_end": 53.663,
+   "t1": 55.44,
+   "lines": [
+    "Where should we print",
+    "next? Tell us below."
+   ]
+  }
+ ],
+ "country": "ITALY",
+ "sub": "@PrintedHistory",
+ "brand": "FOLLOW @PrintedHistory",
+ "paper": "#F4ECDA",
+ "intro": {
+  "vo": 0.3
+ }
+}

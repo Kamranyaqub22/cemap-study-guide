@@ -82,7 +82,7 @@ let CAM = { z: 1, ax: 540, ay: 1290 };
 function cam(z, ax, ay) { CAM = { z, ax, ay }; ctx.setTransform(z, 0, 0, z, ax - ax * z, ay - ay * z); }
 const toScreen = (x, y) => [CAM.ax + (x - CAM.ax) * CAM.z, CAM.ay + (y - CAM.ay) * CAM.z];
 // push in on one era, ease out on the next: z is continuous across every sweep
-const ZK = [1.0, 1.05, 1.0, 1.05, 1.0, 1.08, 1.0, 1.0, 1.07];
+const ZK = [1.0, 1.06, 1.0, 1.06, 1.0, 1.08, 1.0, 1.07, 1.0];   // every era pushes in or eases out: no static camera
 function camEra(i, t) {
   const E = ERAS[i], t0 = E.sweep, z0 = ZK[i], z1 = ZK[i + 1];
   if (E.snap_t) {                                       // hold close while the layers float, then a fast pull-back on the snap

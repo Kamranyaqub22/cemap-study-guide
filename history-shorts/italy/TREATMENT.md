@@ -1,6 +1,6 @@
 # Italy in 60 Seconds — Treatment
 
-Series: History in 60 Seconds (@PrintedHistory) · Silkscreen Travel Poster · 1080×1920, 24 fps.
+Series: History in 60 Seconds (@PrintedHistory) · Silkscreen Travel Poster · 1080×1920, 24 fps, 55.4 s.
 
 | | Japan | UAE | Egypt | Italy |
 |---|---|---|---|---|
@@ -15,4 +15,4 @@ Series: History in 60 Seconds (@PrintedHistory) · Silkscreen Travel Poster · 1
 
 Eras: 753 BC Rome founded (seven hills, round huts, smoke, sheep, the Tiber) · AD 80 the Colosseum (three tiers of arches, an aqueduct behind, a light shaft crossing, a crowd) · 476 the West falls (broken columns, a fallen capital, grass, crows) · 1400s the Renaissance (ribbed dome, bell tower, red roofs, a bridge of shops over the river) · 1610 Galileo (night, a telescope on a hill, Jupiter with its four moons appearing one by one, twinkling stars) · 1861 one kingdom (the mosaic over an arcade) · 1946 the republic (a piazza, a fountain, café umbrellas, scooters crossing) · today (a lagoon city at dusk, bell tower, domes, gondolas) · the wall of prints.
 
-Voice notes: test "Tiber", "Colosseum", "Michelangelo", "Galileo" in the speech check; respell if Kokoro stumbles.
+Voice notes: "By eighty AD" was heard as "By ATAD", so the line says "By the year eighty"; Tiber, Colosseum, Michelangelo and Galileo all pass the speech check.

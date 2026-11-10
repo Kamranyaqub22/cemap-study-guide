@@ -3,7 +3,7 @@
   "id": "L01",
   "text": "Italy, as a country, is only a hundred and sixty-five years old. So who built Rome?",
   "asr": "Italy as a country is only 165 years old so who built Rome",
-  "sub": "Italy, as a country, is only 165 years old. | So who built Rome?",
+  "sub": "Italy, as a country, is only 165 years old. So who built Rome?",
   "voice": "bm_george",
   "speed": 1.1,
   "lang": "en-gb"
@@ -19,9 +19,9 @@
  },
  {
   "id": "L03",
-  "text": "By eighty AD, Rome rules the Mediterranean, and the Colosseum opens its gates.",
-  "asr": "by 80 AD Rome rules the Mediterranean and the Colosseum opens its gates",
-  "sub": "By AD 80, Rome rules the Mediterranean, | and the Colosseum opens its gates.",
+  "text": "By the year eighty, Rome rules the Mediterranean, and the Colosseum opens its gates.",
+  "asr": "by the year 80 Rome rules the Mediterranean and the Colosseum opens its gates",
+  "sub": "By the year 80, Rome rules the Mediterranean, | and the Colosseum opens its gates.",
   "voice": "bm_george",
   "speed": 1.1,
   "lang": "en-gb"

@@ -85,8 +85,9 @@ function hills(seed = 11) {
     ...water(seed, 1138, 'sky2', 1180),
     { pull: 'land', ink: 'far', path: huts, knock: doors },
     { pull: 'land', ink: 'near', path: unionPath([roofs, doors]) },
-    { pull: 'acc', ink: 'glow', path: smoke, lit: 1, drift: [10, -18] },
-    { pull: 'acc', ink: 'paper', path: sheep, drift: [14, 0] },
+    { pull: 'acc', ink: 'glow', path: smoke, lit: 1, drift: [16, -30] },
+    { pull: 'acc', ink: 'paper', path: sheep, drift: [26, 0] },
+    { pull: 'acc', ink: 'near', path: (() => { const p = new Path2D(); for (const [x, y, s] of [[-80, 700, 1], [-140, 660, .8], [-30, 640, .7], [-190, 720, .6], [-110, 600, .6]]) bird(p, x, y, s); return p; })(), drift: [120, -10] },
   ] });
 }
 // 2 · AD 80: the amphitheatre in three tiers of arches, an aqueduct on the hills behind, a shaft of light sweeping the facade
@@ -125,8 +126,8 @@ function ruin(seed = 17) {
     { pull: 'land', ink: 'far', path: cols },
     { pull: 'land', ink: 'near', path: flutes, lit: 1 },
     { pull: 'land', ink: 'far', path: fallen },
-    { pull: 'acc', ink: 'mid', path: grass, sway: [4, 1.1, .2] },
-    { pull: 'acc', ink: 'near', path: crows, drift: [-30, 6] },
+    { pull: 'acc', ink: 'mid', path: grass, sway: [7, 1.4, .2] },
+    { pull: 'acc', ink: 'near', path: crows, drift: [-70, 8] },
   ] });
 }
 // 4 · 1400s: the great ribbed dome, a bell tower, red roofs and a bridge of shops over the river
@@ -150,6 +151,8 @@ function florence(seed = 19) {
     ...water(seed, 1120, 'mid', 1180),
     { pull: 'acc', ink: 'near', path: bridge, knock: bh },
     { pull: 'acc', ink: 'glow', path: shops, blink: 1 },
+    { pull: 'acc', ink: 'near', path: polyPath([[60, 1150], [220, 1150], [200, 1166], [80, 1166]]), drift: [60, 0] },
+    { pull: 'acc', ink: 'near', path: (() => { const p = new Path2D(); for (const [x, y, s] of [[980, 640, .8], [1040, 600, .6], [1100, 660, .7]]) bird(p, x, y, s); return p; })(), drift: [-110, 6] },
   ] });
 }
 // 5 · 1610: night on a hill, a telescope on its tripod, Jupiter and its four moons appearing one by one, stars twinkling
@@ -209,9 +212,10 @@ function piazza(seed = 31) {
     { pull: 'land', ink: 'far', path: pal, knock: win },
     { pull: 'land', ink: 'near', path: win, lit: 1 },
     { pull: 'land', ink: 'paper', path: fount },
-    { pull: 'acc', ink: 'sky2', path: spray, blink: 0 },
-    { pull: 'acc', ink: 'sun', path: umb },
-    { pull: 'acc', ink: 'near', path: scoot, drift: [70, 0] },
+    { pull: 'acc', ink: 'sky2', path: spray, blink: 0 }, { pull: 'acc', ink: 'glow', path: spray, blink: 2, lit: 1 },
+    { pull: 'acc', ink: 'sun', path: umb, sway: [3, 2.2, .5] },
+    { pull: 'acc', ink: 'near', path: scoot, drift: [190, 0] },
+    { pull: 'acc', ink: 'near', path: (() => { const p = new Path2D(); for (const [x, y, s] of [[420, 900, .7], [470, 870, .6], [520, 910, .65], [560, 860, .55], [610, 890, .6]]) bird(p, x, y, s); return p; })(), drift: [80, -55] },
   ] });
 }
 // 8 · today: a lagoon city at dusk — a bell tower, domes, a palace arcade, gondolas gliding on the water

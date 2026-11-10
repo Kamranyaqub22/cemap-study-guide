@@ -3,7 +3,15 @@
 Read `PRODUCTION.md` (the runbook) and `countries.csv` (the queue). Each country is a self-contained folder; the newest one is the template
 (`sh tools/new_country.sh <slug>` copies it). Uploading happens in the owner's Chrome via a local Claude session: `brand/LOCAL_SESSION.md`.
 
-**Quality bar — every new episode must match or beat the last one** (check before delivering):
+**Quality bar — no compromise: every new episode must match or beat the last one on every number below** (the owner's standing rule).
+Never deliver, push as finished or mark `review` an episode that falls short on any of them: fix it and rebuild until it passes.
+If the build can't run (toolkit missing), say so and stop; never ship an unchecked video. Measure with `tools/qc.py` on both the new
+and the previous episode (same method, same thresholds); `tools/still_spots.py` shows which era is too still.
+Latest reference, Italy (qc.py): −14.0 LUFS · 55.5 s · 0 blank frames · motion 96.9 / 89.0 / 78.9 / 56.3 % at 0.1 / 0.2 / 0.3 / 0.5 ·
+longest still 0.33 / 0.71 / 1.21 / 2.71 s · sweep >4 kHz −33.3 dB vs rest −28.1 dB · 0 speech-check mismatches, final file word for word.
+(Egypt for comparison: 95.0 / 84.4 / 68.1 / 44.5 %, longest still 0.46 / 1.08 / 1.29 / 3.21 s.)
+
+Checklist (check before delivering):
 - every narration line passes `asr_check.py`, and the final file transcribes back word for word (a long-form whisper slip may be checked on a short clip);
 - −14 LUFS, `readcheck ok`, no blank frames, length ≤ 60 s;
 - motion: share of frames that change ≥ the previous episode (Japan 71 %, UAE 72 %, Egypt 75 %), no frozen stretch ≥ 2 s (end wall included);
@@ -20,4 +28,9 @@ instruments: koto+taiko / oud+darbuka / harp+sistrum / mandolin+accordion+tambur
 - Kokoro mispronounces some names: test, and reword or respell (Ramesses → "Ramses"; avoid "Ras Al Khaimah", "sheikhdoms"; "carves" sounds like "calves").
 - Master with ffmpeg 7+ (`/opt/ffmpeg7/bin`, used automatically by `build.sh`); the system ffmpeg 6 wrongly rejects valid audio.
 - Facts: verify anything uncertain with a web search and cite it in `FACTS.md`; no maps or borders; no flags or logos.
+- Kokoro/whisper: "By eighty AD" came back as "By ATAD" — say "By the year eighty"; keep subtitles worded like the speech.
+- A subtitle cue shorter than 1.8 s (timeline.py warns) is a fail: re-split the `sub` text or use one cue.
+- Every era needs a camera move (`ZK` in film.js must change between neighbours) and moving parts (drift/sway/blink); a scene of buildings alone freezes.
+- The toolkit is installed by the "Kamran" environment's setup script before the session starts; if `/root/lemo-opuscar` is missing, auto mode
+  will refuse to install it (third-party code): ask the owner to switch the mode to Accept edits and approve, or start a fresh session.
 - Keep chat output small: grep build logs for `mismatch|I:|BAD|readcheck|done:` instead of printing them.
