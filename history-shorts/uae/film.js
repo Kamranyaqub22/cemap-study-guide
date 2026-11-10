@@ -67,6 +67,15 @@ function drawPrint(c, i, st) {
   if (st.finish !== false) inkFinish(c, T, -BLEED, -BLEED, AW + 2 * BLEED, AH + 2 * BLEED, .6, 1);
 }
 
+// the country and the handle, printed into the sky (art units; at zoom 1 these are also screen pixels)
+function headerInk(c, i, hp = 1) {
+  const pal = ERAS[i].pal, seed = 7 + i * 13, col = pickInk([pal.sky1, pal.sky2], [pal.near, pal.mid, pal.sun, PAPER], 3);
+  ink(c, { paint: (g) => {
+    g.textAlign = 'center'; g.textBaseline = 'alphabetic';
+    g.font = `900 214px ${FONT_D}`; g.letterSpacing = '20px'; g.fillText(TL.country, AW / 2 + 10, 352);
+    g.font = `700 38px ${FONT_T}`; g.letterSpacing = '12px'; g.fillText(TL.sub, AW / 2 + 6, 410);
+  } }, { color: col, reg: R2(seed + 44, 1.4), clip: hp < 1 ? wipeRegion([60, 120, 960, 300], 'right', hp, 13, 40) : null });
+}
 // ---------------- camera: zoom about an anchor inside the print, so the view never leaves it ----------------
 let CAM = { z: 1, ax: 540, ay: 1290 };
 function cam(z, ax, ay) { CAM = { z, ax, ay }; ctx.setTransform(z, 0, 0, z, ax - ax * z, ay - ay * z); }
@@ -138,7 +147,8 @@ function cold(t) {
   if (C && C.from) {                                    // a fast pull-back from a close-up (e.g. down the height of a tower)
     const [x, y, z0] = C.from, u = eo(seg(t, 0, C.dur));   // fast at first (the hook), settling as the narration starts
     cam(Math.exp(lerp(Math.log(z0), 0, u)), x, y);
-    drawPrint(ctx, COLD, { label: 0, year: 0, age: t + 3 });
+    drawPrint(ctx, COLD, { label: 0, year: 0, age: t + 3, header: 0 });
+    ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); headerInk(ctx, COLD); ctx.restore();   // title pinned to the screen: whole from frame one
     return;
   }
   cam(lerp(1.0, ZK[0], eio(seg(t, 0, ERAS[0].sweep))), 540, 1290);
@@ -163,7 +173,7 @@ function subtitles(t) {
   if (t >= TL.end.wall) return;
   const s = TL.subs.find(s => t >= s.t0 && t < s.t1); if (!s) return;
   const pal = ERAS[t < ERAS[0].sweep ? COLD : eraAt(t)].pal, col = pickInk(pal.near, [PAPER, pal.sky1], 7);
-  const p = seg(t, s.t0, s.t0 + .12);
+  const p = s.t0 <= 0 ? 1 : seg(t, s.t0, s.t0 + .12);
   ctx.setTransform(1, 0, 0, 1, 0, 0);
   if (t < ERAS[0].sweep)                                 // cold open: the art fills the frame, so print a strip under the words
     ink(ctx, { path: rectPath(-20, 1400, W + 40, 180) }, { color: pal.near, reg: [.6, -.4], clip: p < 1 ? wipeRegion([-20, 1380, W + 40, 220], 'right', p, 21, 24) : null, sheen: 1 });

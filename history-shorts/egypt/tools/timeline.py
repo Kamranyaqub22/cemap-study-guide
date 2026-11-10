@@ -50,6 +50,7 @@ for lid in order:
     for k, txt in enumerate(parts):
         sp_end = vo[lid] + (ws[-1][2] if k == len(parts) - 1 else ws[max(0, [i for i, w in enumerate(ws) if vo[lid] + w[1] - .08 < starts[k + 1]][-1])][2])
         subs.append({'line': lid, 't0': round(starts[k], 3), 'text': txt, 'speech_end': round(sp_end, 3)})
+subs[0]['t0'] = 0.0                                                 # the hook's words are on the very first frame
 for i, s in enumerate(subs):
     nxt = subs[i + 1]['t0'] - .04 if i + 1 < len(subs) else total
     s['t1'] = round(nxt if i + 1 < len(subs) else total, 3)
