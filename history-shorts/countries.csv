@@ -2,7 +2,7 @@ order,country,slug,status,notes
 1,Japan,japan,published,pilot
 2,United Arab Emirates,uae,to-schedule 2026-11-10 17:00,pilot 2: fountain sweep for 1971; pearl-crash silence
 3,Egypt,egypt,to-schedule 2026-11-11 17:00,pyramids → Ptolemies → Rome → Islam → Ottomans → British → Nasser → today
-4,Italy,italy,todo,Rome → Renaissance → unification 1861 → today
+4,Italy,italy,in-progress,script + art + score written; needs build (toolkit setup) and checks
 5,United Kingdom,united-kingdom,todo,
 6,India,india,todo,
 7,United States,united-states,todo,

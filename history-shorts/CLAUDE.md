@@ -11,8 +11,8 @@ Read `PRODUCTION.md` (the runbook) and `countries.csv` (the queue). Each country
 - nothing important under the Shorts UI: top ~140 px, right ~130 px (y 980–1720), bottom ~360 px.
 
 **Keep every episode different** (YouTube "inauthentic content"): new hook style, cold-open camera move, base landscape, signature moment,
-instruments/mode. Used so far — hooks: contrast / surprising fact / list-of-three; signatures: snap / 7-ink fountain / route stamp;
-instruments: koto+taiko / oud+darbuka / harp+sistrum. See each folder's `TREATMENT.md`.
+instruments/mode. Used so far — hooks: contrast / surprising fact / list-of-three / paradox question (Italy); signatures: snap / 7-ink fountain / route stamp / mosaic set ring by ring (Italy);
+instruments: koto+taiko / oud+darbuka / harp+sistrum / mandolin+accordion+tamburello in 6/8 (Italy). Cold opens: slide / fall / glide / crane up (Italy). See each folder's `TREATMENT.md`.
 
 **Branding:** `content.json` → `"sub": "@PrintedHistory"`, `"brand": "FOLLOW @PrintedHistory"`. Daily slot: 5:00 PM (owner's time zone).
 

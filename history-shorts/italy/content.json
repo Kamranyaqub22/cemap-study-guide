@@ -1,0 +1,162 @@
+{
+ "country": "ITALY",
+ "sub": "@PrintedHistory",
+ "brand": "FOLLOW @PrintedHistory",
+ "paper": "#F4ECDA",
+ "intro": {
+  "line": "L01"
+ },
+ "cold": {
+  "scene": "colosseum",
+  "from": [
+   560,
+   1120,
+   1.9
+  ],
+  "to": [
+   540,
+   760
+  ],
+  "dur": 5.0
+ },
+ "eras": [
+  {
+   "scene": "hills",
+   "line": "L02",
+   "at": "753",
+   "label": "ROME IS FOUNDED",
+   "year": "753 BC",
+   "pal": {
+    "sky1": "#F6E6C4",
+    "sky2": "#E8B98A",
+    "far": "#B9A06A",
+    "mid": "#6E8A4A",
+    "near": "#2E2A1E",
+    "sun": "#C8452C",
+    "glow": "#F7E3B0"
+   }
+  },
+  {
+   "scene": "colosseum",
+   "line": "L03",
+   "at": "80",
+   "label": "THE ROMAN EMPIRE",
+   "year": "AD 80",
+   "pal": {
+    "sky1": "#F4E2BE",
+    "sky2": "#EBAA6E",
+    "far": "#C99A5E",
+    "mid": "#7A8C4C",
+    "near": "#3A2318",
+    "sun": "#B8352A",
+    "glow": "#FBE7BE"
+   }
+  },
+  {
+   "scene": "ruin",
+   "line": "L04",
+   "at": "476",
+   "label": "THE WEST FALLS",
+   "year": "476",
+   "silence": true,
+   "silence_at": "italy",
+   "pal": {
+    "sky1": "#C9CCC8",
+    "sky2": "#8E98A0",
+    "far": "#7C8070",
+    "mid": "#4E5A50",
+    "near": "#1E2224",
+    "sun": "#8C3A30",
+    "glow": "#D8D2BE"
+   }
+  },
+  {
+   "scene": "florence",
+   "line": "L05",
+   "at": "1400",
+   "label": "THE RENAISSANCE",
+   "year": "1400s",
+   "pal": {
+    "sky1": "#F8E4C0",
+    "sky2": "#F0A878",
+    "far": "#C98F62",
+    "mid": "#5E7E4E",
+    "near": "#2C2420",
+    "sun": "#C9472E",
+    "glow": "#FCE8C0"
+   }
+  },
+  {
+   "scene": "galileo",
+   "line": "L06",
+   "at": "1610",
+   "label": "GALILEO'S MOONS",
+   "year": "1610",
+   "pal": {
+    "sky1": "#2C3466",
+    "sky2": "#1C2350",
+    "far": "#3E4A7E",
+    "mid": "#2E3A5E",
+    "near": "#0E1226",
+    "sun": "#F1D27A",
+    "glow": "#F4E3A8"
+   }
+  },
+  {
+   "scene": "unite",
+   "line": "L07",
+   "at": "1861",
+   "label": "ONE KINGDOM OF ITALY",
+   "year": "1861",
+   "mosaic": true,
+   "pal": {
+    "sky1": "#F1ECDD",
+    "sky2": "#BFD6C2",
+    "far": "#D9B98A",
+    "mid": "#3F7A55",
+    "near": "#1E2A26",
+    "sun": "#C63A2E",
+    "glow": "#F6E2B0"
+   }
+  },
+  {
+   "scene": "piazza",
+   "line": "L08",
+   "at": "1946",
+   "label": "THE REPUBLIC",
+   "year": "1946",
+   "pal": {
+    "sky1": "#EAF2F2",
+    "sky2": "#9CCBD6",
+    "far": "#E2B48C",
+    "mid": "#5A8C7A",
+    "near": "#20303A",
+    "sun": "#E0573A",
+    "glow": "#F7E0A8"
+   }
+  },
+  {
+   "scene": "today",
+   "line": "L09",
+   "at": null,
+   "label": "ABOUT 59 MILLION PEOPLE",
+   "year": "TODAY",
+   "pal": {
+    "sky1": "#F6D2A8",
+    "sky2": "#C77A86",
+    "far": "#8C6A8A",
+    "mid": "#4E5C7E",
+    "near": "#1A1A2C",
+    "sun": "#F3A23E",
+    "glow": "#F8D890"
+   }
+  }
+ ],
+ "end": {
+  "line": "L10",
+  "text": [
+   "WHERE",
+   "NEXT?"
+  ]
+ }
+}

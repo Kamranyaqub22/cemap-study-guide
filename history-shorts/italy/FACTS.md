@@ -1,0 +1,13 @@
+# Facts — Italy
+
+| Claim (narration / print) | Source |
+|---|---|
+| The Kingdom of Italy is proclaimed on 17 March 1861, so the unified country turns 165 in 2026 (hook: "only 165 years old") | Britannica, "Italy — The Kingdom of Italy" / "Risorgimento" — https://www.britannica.com/event/Risorgimento |
+| 753 BC: traditional (legendary) founding date of Rome; the city of the seven hills on the Tiber | Britannica, "Ancient Rome — The founding of Rome" — https://www.britannica.com/place/ancient-Rome ; Britannica, "Seven Hills of Rome" — https://www.britannica.com/place/Seven-Hills-of-Rome |
+| AD 80: the Colosseum is dedicated by Titus (begun under Vespasian, c. 70–72) with 100 days of games; Rome controls the whole Mediterranean coast | Britannica, "Colosseum" — https://www.britannica.com/topic/Colosseum ; Britannica Q&A "Who built the Colosseum?" — https://www.britannica.com/question/Who-built-the-Colosseum |
+| 476: Romulus Augustulus, the last Western Roman emperor, is deposed by Odoacer; Italy is then divided among many rulers until 1861 | Britannica, "Romulus Augustulus" — https://www.britannica.com/biography/Romulus-Augustulus ; Britannica, "Fall of Rome" — https://www.britannica.com/question/What-led-to-the-fall-of-the-Roman-Empire |
+| 1400s: the Renaissance begins in Florence (Brunelleschi's dome completed 1436); Leonardo da Vinci and Michelangelo trained there | Britannica, "Renaissance" — https://www.britannica.com/event/Renaissance ; Britannica, "Florence Cathedral" — https://www.britannica.com/topic/Florence-Cathedral |
+| 1610: Galileo publishes *Sidereus Nuncius*, reporting four moons of Jupiter seen through his telescope (observed January 1610) | Britannica, "Galileo — Telescopic discoveries" — https://www.britannica.com/biography/Galileo-Galilei |
+| 2 June 1946: Italians vote in a referendum to abolish the monarchy and become a republic; the post-war boom of the 1950s puts motor scooters on the streets | Britannica, "Italy — The republic" — https://www.britannica.com/place/Italy/The-Italian-republic ; Britannica, "Italy — Economic miracle" — https://www.britannica.com/place/Italy/Economy |
+| Population about 59 million (58,934,177 resident on 1 January 2025, ISTAT, provisional) | ISTAT, "Demographic indicators – Year 2024" — https://www.istat.it/wp-content/uploads/2025/03/DEMOGRAPHIC-INDICATORS_YEAR-2024.pdf |
+| Italy has more UNESCO World Heritage Sites than any other country (61 in July 2025, ahead of China's 60) | Guinness World Records, "Most World Heritage Sites (country)" — https://www.guinnessworldrecords.com/world-records/681677-most-world-heritage-sites-country ; Italian Ministry of Foreign Affairs — https://www.esteri.it/en/temi/cultura/cooperculturale/litalia-e-lunesco/ |

@@ -1,0 +1,92 @@
+[
+ {
+  "id": "L01",
+  "text": "Italy, as a country, is only a hundred and sixty-five years old. So who built Rome?",
+  "asr": "Italy as a country is only 165 years old so who built Rome",
+  "sub": "Italy, as a country, is only 165 years old. | So who built Rome?",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L02",
+  "text": "Legend says Rome was founded in seven fifty-three BC, on seven hills beside the Tiber.",
+  "asr": "legend says Rome was founded in 753 BC on seven hills beside the Tiber",
+  "sub": "Legend says Rome was founded in 753 BC, | on seven hills beside the Tiber.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L03",
+  "text": "By eighty AD, Rome rules the Mediterranean, and the Colosseum opens its gates.",
+  "asr": "by 80 AD Rome rules the Mediterranean and the Colosseum opens its gates",
+  "sub": "By AD 80, Rome rules the Mediterranean, | and the Colosseum opens its gates.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L04",
+  "text": "In four seventy-six, the last Western emperor falls, and Italy breaks apart.",
+  "asr": "in 476 the last western emperor falls and Italy breaks apart",
+  "sub": "In 476, the last Western emperor falls, | and Italy breaks apart.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L05",
+  "text": "In the fourteen hundreds, Florence sparks the Renaissance, with Leonardo and Michelangelo.",
+  "asr": "in the 1400s Florence sparks the Renaissance with Leonardo and Michelangelo",
+  "sub": "In the 1400s, Florence sparks the Renaissance, | with Leonardo and Michelangelo.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L06",
+  "text": "In sixteen ten, Galileo points his telescope at Jupiter, and finds four moons.",
+  "asr": "in 1610 Galileo points his telescope at Jupiter and finds four moons",
+  "sub": "In 1610, Galileo points his telescope at Jupiter, | and finds four moons.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L07",
+  "text": "In eighteen sixty-one, the many states finally unite as one Kingdom of Italy.",
+  "asr": "in 1861 the many states finally unite as one kingdom of Italy",
+  "sub": "In 1861, the many states finally unite | as one Kingdom of Italy.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L08",
+  "text": "In nineteen forty-six, Italians vote for a republic, and scooters fill the streets.",
+  "asr": "in 1946 Italians vote for a republic and scooters fill the streets",
+  "sub": "In 1946, Italians vote for a republic, | and scooters fill the streets.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L09",
+  "text": "Today, about fifty-nine million people live here, with more World Heritage Sites than any other country.",
+  "asr": "today about 59 million people live here with more World Heritage Sites than any other country",
+  "sub": "Today, about 59 million people live here, | with more World Heritage Sites than any other country.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L10",
+  "text": "Where should we print next? Tell us below.",
+  "asr": "where should we print next tell us below",
+  "sub": "Where should we print next? Tell us below.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ }
+]
