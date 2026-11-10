@@ -1,0 +1,164 @@
+{
+ "country": "EGYPT",
+ "sub": "@PrintedHistory",
+ "brand": "FOLLOW @PrintedHistory",
+ "paper": "#F3EAD8",
+ "intro": {
+  "line": "L01"
+ },
+ "cold": {
+  "scene": "giza",
+  "from": [
+   180,
+   980,
+   1.75
+  ],
+  "to": [
+   900,
+   900
+  ],
+  "dur": 5.0
+ },
+ "eras": [
+  {
+   "scene": "unify",
+   "line": "L02",
+   "at": "3100",
+   "label": "TWO LANDS BECOME ONE",
+   "year": "3100 BC",
+   "pal": {
+    "sky1": "#F7DDA8",
+    "sky2": "#E9A06A",
+    "far": "#D3A86E",
+    "mid": "#4F7A4A",
+    "near": "#2B2020",
+    "sun": "#D2462C",
+    "glow": "#F6E2B4"
+   }
+  },
+  {
+   "scene": "giza",
+   "line": "L03",
+   "at": "2560",
+   "label": "THE GREAT PYRAMID",
+   "year": "2560 BC",
+   "pal": {
+    "sky1": "#F4E7C8",
+    "sky2": "#E5B066",
+    "far": "#D49C55",
+    "mid": "#3F6E58",
+    "near": "#2A1E18",
+    "sun": "#E0532C",
+    "glow": "#FBEFD2"
+   }
+  },
+  {
+   "scene": "temple",
+   "line": "L04",
+   "at": "1279",
+   "label": "RAMESSES II",
+   "year": "1279 BC",
+   "pal": {
+    "sky1": "#F3D9B0",
+    "sky2": "#DE8C5A",
+    "far": "#C77F4E",
+    "mid": "#5A7A46",
+    "near": "#2B1A16",
+    "sun": "#C8302A",
+    "glow": "#F2C77E"
+   }
+  },
+  {
+   "scene": "pharos",
+   "line": "L05",
+   "at": "332",
+   "label": "ALEXANDER TO CLEOPATRA",
+   "year": "332 BC",
+   "pal": {
+    "sky1": "#EAF0EC",
+    "sky2": "#8FC3CF",
+    "far": "#C9B48C",
+    "mid": "#2D7C8C",
+    "near": "#1B2836",
+    "sun": "#E3573A",
+    "glow": "#F4E2B8"
+   },
+   "silence": true,
+   "silence_at": "after"
+  },
+  {
+   "scene": "cairo",
+   "line": "L06",
+   "at": "641",
+   "label": "ISLAM AND CAIRO",
+   "year": "641",
+   "pal": {
+    "sky1": "#F2C99A",
+    "sky2": "#A26C8C",
+    "far": "#8A6A86",
+    "mid": "#4C5E7A",
+    "near": "#1D1A2C",
+    "sun": "#F07B3A",
+    "glow": "#F6D08A"
+   }
+  },
+  {
+   "scene": "suez",
+   "line": "L07",
+   "at": "1869",
+   "label": "THE SUEZ CANAL",
+   "year": "1869",
+   "route": true,
+   "pal": {
+    "sky1": "#EEF4EC",
+    "sky2": "#7FC7C2",
+    "far": "#D6B886",
+    "mid": "#2A8C8A",
+    "near": "#1B2A36",
+    "sun": "#E94E2F",
+    "glow": "#F6D67E"
+   }
+  },
+  {
+   "scene": "dam",
+   "line": "L08",
+   "at": "1952",
+   "snap_at": "dam",
+   "label": "REVOLUTION AND THE HIGH DAM",
+   "year": "1952",
+   "snap": true,
+   "pal": {
+    "sky1": "#E8E6DE",
+    "sky2": "#9FB4C2",
+    "far": "#A5927A",
+    "mid": "#4E6E86",
+    "near": "#1E2630",
+    "sun": "#D6452F",
+    "glow": "#E9D6A8"
+   }
+  },
+  {
+   "scene": "today",
+   "line": "L09",
+   "at": null,
+   "label": "OVER 100 MILLION PEOPLE",
+   "year": "TODAY",
+   "pal": {
+    "sky1": "#24305A",
+    "sky2": "#1A2245",
+    "far": "#3E4E7C",
+    "mid": "#2B3A66",
+    "near": "#0E1222",
+    "sun": "#F2C14E",
+    "glow": "#E9A64A"
+   }
+  }
+ ],
+ "end": {
+  "line": "L10",
+  "text": [
+   "WHICH COUNTRY",
+   "NEXT?"
+  ]
+ }
+}

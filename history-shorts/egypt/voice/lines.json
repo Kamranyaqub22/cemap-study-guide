@@ -1,0 +1,92 @@
+[
+ {
+  "id": "L01",
+  "text": "Pyramids. Cleopatra. The Suez Canal. All thanks to one river: the Nile.",
+  "asr": "pyramids Cleopatra the Suez Canal all thanks to one river the Nile",
+  "sub": "Pyramids. Cleopatra. The Suez Canal. | All thanks to one river: the Nile.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L02",
+  "text": "Around thirty-one hundred BC, Upper and Lower Egypt unite under one king.",
+  "asr": "around 3100 BC upper and lower Egypt unite under one king",
+  "sub": "Around 3100 BC, Upper and Lower Egypt | unite under one king.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L03",
+  "text": "Around twenty-five sixty BC, the Great Pyramid rises, the world's tallest structure for nearly four thousand years.",
+  "asr": "around 2560 BC the Great Pyramid rises the world's tallest structure for nearly 4000 years",
+  "sub": "Around 2560 BC, the Great Pyramid rises, | the world's tallest structure for nearly 4,000 years.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L04",
+  "text": "In twelve seventy-nine BC, Ramses the Second takes the throne, and cuts giant temples into cliffs.",
+  "asr": "in 1279 BC Ramses II takes the throne and cuts giant temples into cliffs",
+  "sub": "In 1279 BC, Ramesses II takes the throne, | and cuts giant temples into cliffs.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L05",
+  "text": "In three thirty-two BC, Alexander the Great arrives. After Cleopatra, Rome takes over.",
+  "asr": "in 332 BC Alexander the Great arrives after Cleopatra Rome takes over",
+  "sub": "In 332 BC, Alexander the Great arrives. | After Cleopatra, Rome takes over.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L06",
+  "text": "In six forty-one, Arab armies bring Islam, and Cairo grows into a great capital.",
+  "asr": "in 641 Arab armies bring Islam and Cairo grows into a great capital",
+  "sub": "In 641, Arab armies bring Islam, | and Cairo grows into a great capital.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L07",
+  "text": "In eighteen sixty-nine, Egypt opens the Suez Canal, linking the Mediterranean to the Red Sea.",
+  "asr": "in 1869 Egypt opens the Suez Canal linking the Mediterranean to the Red Sea",
+  "sub": "In 1869, Egypt opens the Suez Canal, | linking the Mediterranean to the Red Sea.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L08",
+  "text": "In nineteen fifty-two, a revolution ends the monarchy, and the Aswan High Dam later tames the Nile.",
+  "asr": "in 1952 a revolution ends the monarchy and the Aswan High Dam later tames the Nile",
+  "sub": "In 1952, a revolution ends the monarchy, | and the Aswan High Dam later tames the Nile.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L09",
+  "text": "Today, over a hundred million people live here, most of them along the Nile.",
+  "asr": "today over 100 million people live here most of them along the Nile",
+  "sub": "Today, over 100 million people live here, | most of them along the Nile.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L10",
+  "text": "Which country should we print next?",
+  "asr": "which country should we print next",
+  "sub": "Which country should we print next?",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ }
+]

@@ -1,0 +1,12 @@
+# Facts — Egypt
+
+| Claim (narration / print) | Source |
+|---|---|
+| c. 3100 BC: Upper and Lower Egypt unified under one king (traditionally Menes/Narmer); the double crown symbolises the two lands | Britannica, "Ancient Egypt — Early Dynastic period" — https://www.britannica.com/place/ancient-Egypt/The-Early-Dynastic-period-c-2925-c-2575-bce ; Britannica, "Narmer" — https://www.britannica.com/biography/Narmer |
+| c. 2560 BC: the Great Pyramid of Khufu at Giza; tallest human-made structure for roughly 3,800–4,000 years (until Lincoln Cathedral's spire, 1311) | Britannica, "Pyramids of Giza" — https://www.britannica.com/topic/Pyramids-of-Giza ; History Revealed — https://www.historyrevealed.com/feature/what-overtook-the-great-pyramid-of-giza-as-the-tallest-manmade-structure/ |
+| 1279 BC: Ramesses II becomes king; rock-cut temples at Abu Simbel | Britannica, "Ramses II" — https://www.britannica.com/biography/Ramses-II-king-of-Egypt ; Britannica, "Abu Simbel" — https://www.britannica.com/place/Abu-Simbel |
+| 332 BC: Alexander the Great takes Egypt; the Ptolemies rule until Cleopatra VII's death in 30 BC, when Egypt becomes a Roman province | Britannica, "Ancient Egypt — Macedonian and Ptolemaic Egypt" — https://www.britannica.com/place/ancient-Egypt/Macedonian-and-Ptolemaic-Egypt-332-30-bce ; Britannica, "Cleopatra" — https://www.britannica.com/biography/Cleopatra-queen-of-Egypt |
+| 639–642 (Babylon fortress falls 641): Arab conquest brings Islam; Cairo (founded 969) becomes the capital | Britannica, "Egypt — The Arab conquest" — https://www.britannica.com/place/Egypt/The-Arab-conquest ; Britannica, "Cairo" — https://www.britannica.com/place/Cairo |
+| 1869: the Suez Canal opens, linking the Mediterranean and the Red Sea | Britannica, "Suez Canal" — https://www.britannica.com/topic/Suez-Canal |
+| 1952 revolution (Free Officers) ends the monarchy (republic 1953); the Aswan High Dam is built 1960–1970 | Britannica, "Egypt — The revolution of 1952" — https://www.britannica.com/place/Egypt/The-revolution-of-1952 ; Britannica, "Aswan High Dam" — https://www.britannica.com/topic/Aswan-High-Dam |
+| Population over 100 million (≈108 million, CAPMAS, August 2025); most Egyptians live in the Nile valley and delta | Egypt Today (CAPMAS) — https://www.egypttoday.com/Article/1/141728/Egypt’s-population-reaches-108-million-domestically-CAPMAS ; Britannica, "Egypt — People" — https://www.britannica.com/place/Egypt/People |

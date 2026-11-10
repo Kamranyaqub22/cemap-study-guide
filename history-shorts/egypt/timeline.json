@@ -1,0 +1,444 @@
+{
+ "cold": {
+  "scene": "giza",
+  "from": [
+   180,
+   980,
+   1.75
+  ],
+  "to": [
+   900,
+   900
+  ],
+  "dur": 5.0
+ },
+ "dur": 59.7,
+ "vo": {
+  "L01": 0.3,
+  "L02": 5.325,
+  "L03": 10.674,
+  "L04": 18.44,
+  "L05": 25.484,
+  "L06": 32.002,
+  "L07": 37.753,
+  "L08": 44.563,
+  "L09": 51.228,
+  "L10": 55.997
+ },
+ "eras": [
+  {
+   "scene": "unify",
+   "line": "L02",
+   "label": "TWO LANDS BECOME ONE",
+   "year": "3100 BC",
+   "pal": {
+    "sky1": "#F7DDA8",
+    "sky2": "#E9A06A",
+    "far": "#D3A86E",
+    "mid": "#4F7A4A",
+    "near": "#2B2020",
+    "sun": "#D2462C",
+    "glow": "#F6E2B4"
+   },
+   "i": 0,
+   "vo": 5.325,
+   "sweep": 4.825,
+   "swdur": 0.45,
+   "label_t": 5.515,
+   "year_t": 5.665,
+   "snap_t": null,
+   "t1": 10.414,
+   "land_t": 4.825
+  },
+  {
+   "scene": "giza",
+   "line": "L03",
+   "label": "THE GREAT PYRAMID",
+   "year": "2560 BC",
+   "pal": {
+    "sky1": "#F4E7C8",
+    "sky2": "#E5B066",
+    "far": "#D49C55",
+    "mid": "#3F6E58",
+    "near": "#2A1E18",
+    "sun": "#E0532C",
+    "glow": "#FBEFD2"
+   },
+   "i": 1,
+   "vo": 10.674,
+   "sweep": 10.414,
+   "swdur": 0.45,
+   "label_t": 10.884,
+   "year_t": 11.034,
+   "snap_t": null,
+   "t1": 18.1
+  },
+  {
+   "scene": "temple",
+   "line": "L04",
+   "label": "RAMESSES II",
+   "year": "1279 BC",
+   "pal": {
+    "sky1": "#F3D9B0",
+    "sky2": "#DE8C5A",
+    "far": "#C77F4E",
+    "mid": "#5A7A46",
+    "near": "#2B1A16",
+    "sun": "#C8302A",
+    "glow": "#F2C77E"
+   },
+   "i": 2,
+   "vo": 18.44,
+   "sweep": 18.1,
+   "swdur": 0.45,
+   "label_t": 18.57,
+   "year_t": 18.72,
+   "snap_t": null,
+   "t1": 25.144
+  },
+  {
+   "scene": "pharos",
+   "line": "L05",
+   "label": "ALEXANDER TO CLEOPATRA",
+   "year": "332 BC",
+   "pal": {
+    "sky1": "#EAF0EC",
+    "sky2": "#8FC3CF",
+    "far": "#C9B48C",
+    "mid": "#2D7C8C",
+    "near": "#1B2836",
+    "sun": "#E3573A",
+    "glow": "#F4E2B8"
+   },
+   "silence": true,
+   "i": 3,
+   "vo": 25.484,
+   "sweep": 25.144,
+   "swdur": 0.7,
+   "label_t": 25.614,
+   "year_t": 25.764,
+   "snap_t": null,
+   "silence_t": 29.494,
+   "t1": 31.642
+  },
+  {
+   "scene": "cairo",
+   "line": "L06",
+   "label": "ISLAM AND CAIRO",
+   "year": "641",
+   "pal": {
+    "sky1": "#F2C99A",
+    "sky2": "#A26C8C",
+    "far": "#8A6A86",
+    "mid": "#4C5E7A",
+    "near": "#1D1A2C",
+    "sun": "#F07B3A",
+    "glow": "#F6D08A"
+   },
+   "i": 4,
+   "vo": 32.002,
+   "sweep": 31.642,
+   "swdur": 0.45,
+   "label_t": 32.112,
+   "year_t": 32.262,
+   "snap_t": null,
+   "t1": 37.393
+  },
+  {
+   "scene": "suez",
+   "line": "L07",
+   "label": "THE SUEZ CANAL",
+   "year": "1869",
+   "route": true,
+   "pal": {
+    "sky1": "#EEF4EC",
+    "sky2": "#7FC7C2",
+    "far": "#D6B886",
+    "mid": "#2A8C8A",
+    "near": "#1B2A36",
+    "sun": "#E94E2F",
+    "glow": "#F6D67E"
+   },
+   "i": 5,
+   "vo": 37.753,
+   "sweep": 37.393,
+   "swdur": 0.45,
+   "label_t": 37.863,
+   "year_t": 38.013,
+   "snap_t": null,
+   "t1": 44.203
+  },
+  {
+   "scene": "dam",
+   "line": "L08",
+   "label": "REVOLUTION AND THE HIGH DAM",
+   "year": "1952",
+   "snap": true,
+   "pal": {
+    "sky1": "#E8E6DE",
+    "sky2": "#9FB4C2",
+    "far": "#A5927A",
+    "mid": "#4E6E86",
+    "near": "#1E2630",
+    "sun": "#D6452F",
+    "glow": "#E9D6A8"
+   },
+   "i": 6,
+   "vo": 44.563,
+   "sweep": 44.203,
+   "swdur": 0.45,
+   "label_t": 44.673,
+   "year_t": 44.823,
+   "snap_t": 49.413,
+   "t1": 50.908
+  },
+  {
+   "scene": "today",
+   "line": "L09",
+   "label": "OVER 100 MILLION PEOPLE",
+   "year": "TODAY",
+   "pal": {
+    "sky1": "#24305A",
+    "sky2": "#1A2245",
+    "far": "#3E4E7C",
+    "mid": "#2B3A66",
+    "near": "#0E1222",
+    "sun": "#F2C14E",
+    "glow": "#E9A64A"
+   },
+   "i": 7,
+   "vo": 51.228,
+   "sweep": 50.908,
+   "swdur": 0.45,
+   "label_t": 51.378,
+   "year_t": 51.528,
+   "snap_t": null,
+   "t1": 55.847
+  }
+ ],
+ "end": {
+  "wall": 55.847,
+  "wall_dur": 1.1,
+  "card": 56.497,
+  "text": [
+   "WHICH COUNTRY",
+   "NEXT?"
+  ]
+ },
+ "subs": [
+  {
+   "line": "L01",
+   "t0": 0.22,
+   "text": "Pyramids. Cleopatra. The Suez Canal.",
+   "speech_end": 2.64,
+   "t1": 2.92,
+   "lines": [
+    "Pyramids. Cleopatra.",
+    "The Suez Canal."
+   ]
+  },
+  {
+   "line": "L01",
+   "t0": 2.96,
+   "text": "All thanks to one river: the Nile.",
+   "speech_end": 4.78,
+   "t1": 5.205,
+   "lines": [
+    "All thanks to one",
+    "river: the Nile."
+   ]
+  },
+  {
+   "line": "L02",
+   "t0": 5.245,
+   "text": "Around 3100 BC, Upper and Lower Egypt",
+   "speech_end": 8.805,
+   "t1": 8.685,
+   "lines": [
+    "Around 3100 BC,",
+    "Upper and Lower Egypt"
+   ]
+  },
+  {
+   "line": "L02",
+   "t0": 8.725,
+   "text": "unite under one king.",
+   "speech_end": 10.205,
+   "t1": 10.554,
+   "lines": [
+    "unite under one king."
+   ]
+  },
+  {
+   "line": "L03",
+   "t0": 10.594,
+   "text": "Around 2560 BC, the Great Pyramid rises,",
+   "speech_end": 14.174,
+   "t1": 14.614,
+   "lines": [
+    "Around 2560 BC, the",
+    "Great Pyramid rises,"
+   ]
+  },
+  {
+   "line": "L03",
+   "t0": 14.654,
+   "text": "the world's tallest structure for nearly 4,000 years.",
+   "speech_end": 17.934,
+   "t1": 18.32,
+   "lines": [
+    "the world's tallest structure",
+    "for nearly 4,000 years."
+   ]
+  },
+  {
+   "line": "L04",
+   "t0": 18.36,
+   "text": "In 1279 BC, Ramesses II takes the throne,",
+   "speech_end": 22.56,
+   "t1": 22.44,
+   "lines": [
+    "In 1279 BC, Ramesses",
+    "II takes the throne,"
+   ]
+  },
+  {
+   "line": "L04",
+   "t0": 22.48,
+   "text": "and cuts giant temples into cliffs.",
+   "speech_end": 24.9,
+   "t1": 25.364,
+   "lines": [
+    "and cuts giant",
+    "temples into cliffs."
+   ]
+  },
+  {
+   "line": "L05",
+   "t0": 25.404,
+   "text": "In 332 BC, Alexander the Great arrives.",
+   "speech_end": 28.684,
+   "t1": 29.524,
+   "lines": [
+    "In 332 BC, Alexander",
+    "the Great arrives."
+   ]
+  },
+  {
+   "line": "L05",
+   "t0": 29.564,
+   "text": "After Cleopatra, Rome takes over.",
+   "speech_end": 31.604,
+   "t1": 31.882,
+   "lines": [
+    "After Cleopatra,",
+    "Rome takes over."
+   ]
+  },
+  {
+   "line": "L06",
+   "t0": 31.922,
+   "text": "In 641, Arab armies bring Islam,",
+   "speech_end": 34.582,
+   "t1": 34.462,
+   "lines": [
+    "In 641, Arab",
+    "armies bring Islam,"
+   ]
+  },
+  {
+   "line": "L06",
+   "t0": 34.502,
+   "text": "and Cairo grows into a great capital.",
+   "speech_end": 37.202,
+   "t1": 37.633,
+   "lines": [
+    "and Cairo grows into",
+    "a great capital."
+   ]
+  },
+  {
+   "line": "L07",
+   "t0": 37.673,
+   "text": "In 1869, Egypt opens the Suez Canal,",
+   "speech_end": 41.133,
+   "t1": 41.553,
+   "lines": [
+    "In 1869, Egypt opens",
+    "the Suez Canal,"
+   ]
+  },
+  {
+   "line": "L07",
+   "t0": 41.593,
+   "text": "linking the Mediterranean to the Red Sea.",
+   "speech_end": 44.053,
+   "t1": 44.443,
+   "lines": [
+    "linking the Mediterranean",
+    "to the Red Sea."
+   ]
+  },
+  {
+   "line": "L08",
+   "t0": 44.483,
+   "text": "In 1952, a revolution ends the monarchy,",
+   "speech_end": 47.623,
+   "t1": 48.143,
+   "lines": [
+    "In 1952, a revolution",
+    "ends the monarchy,"
+   ]
+  },
+  {
+   "line": "L08",
+   "t0": 48.183,
+   "text": "and the Aswan High Dam later tames the Nile.",
+   "speech_end": 50.743,
+   "t1": 51.108,
+   "lines": [
+    "and the Aswan High Dam",
+    "later tames the Nile."
+   ]
+  },
+  {
+   "line": "L09",
+   "t0": 51.148,
+   "text": "Today, over 100 million people live here,",
+   "speech_end": 53.788,
+   "t1": 54.028,
+   "lines": [
+    "Today, over 100 million",
+    "people live here,"
+   ]
+  },
+  {
+   "line": "L09",
+   "t0": 54.068,
+   "text": "most of them along the Nile.",
+   "speech_end": 55.488,
+   "t1": 55.877,
+   "lines": [
+    "most of them along the Nile."
+   ]
+  },
+  {
+   "line": "L10",
+   "t0": 55.917,
+   "text": "Which country should we print next?",
+   "speech_end": 57.477,
+   "t1": 59.7,
+   "lines": [
+    "Which country should",
+    "we print next?"
+   ]
+  }
+ ],
+ "country": "EGYPT",
+ "sub": "@PrintedHistory",
+ "brand": "FOLLOW @PrintedHistory",
+ "paper": "#F3EAD8",
+ "intro": {
+  "vo": 0.3
+ }
+}

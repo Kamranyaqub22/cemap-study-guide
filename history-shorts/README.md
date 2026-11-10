@@ -7,6 +7,7 @@ A YouTube Shorts series: one country's history per video, 60 seconds, vertical 1
 |---|---|---|---|
 | Japan | [`japan/japan.mp4`](japan/japan.mp4) | [`japan/japan.srt`](japan/japan.srt) | [upload sheet](japan/UPLOAD.md) · [treatment](japan/TREATMENT.md) · [facts](japan/FACTS.md) · [credits](japan/CREDITS) |
 | United Arab Emirates | [`uae/uae.mp4`](uae/uae.mp4) | [`uae/uae.srt`](uae/uae.srt) | [upload sheet](uae/UPLOAD.md) · [treatment](uae/TREATMENT.md) · [facts](uae/FACTS.md) · [credits](uae/CREDITS) |
+| Egypt | [`egypt/egypt.mp4`](egypt/egypt.mp4) | [`egypt/egypt.srt`](egypt/egypt.srt) | [upload sheet](egypt/UPLOAD.md) · [treatment](egypt/TREATMENT.md) · [facts](egypt/FACTS.md) · [credits](egypt/CREDITS) |
 
 **Daily workflow, uploading and the country queue:** [`PRODUCTION.md`](PRODUCTION.md) · [`countries.csv`](countries.csv)
 
