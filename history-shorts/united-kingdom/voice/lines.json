@@ -1,0 +1,92 @@
+[
+ {
+  "id": "L01",
+  "text": "Its empire once covered a quarter of the world's land. But it all began with a ring of stones.",
+  "asr": "its empire once covered a quarter of the world's land but it all began with a ring of stones",
+  "sub": "Its empire once covered a quarter of the world's land. | But it all began with a ring of stones.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L02",
+  "text": "Around twenty-five hundred BC, the giant stones of Stonehenge rise on Salisbury Plain.",
+  "asr": "around 2500 BC the giant stones of Stonehenge rise on Salisbury Plain",
+  "sub": "Around 2500 BC, the giant stones of Stonehenge | rise on Salisbury Plain.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L03",
+  "text": "In the year one twenty-two, Roman soldiers build Hadrian's Wall, from coast to coast.",
+  "asr": "in the year 122 Roman soldiers build Hadrian's Wall from coast to coast",
+  "sub": "In the year 122, Roman soldiers | build Hadrian's Wall, from coast to coast.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L04",
+  "text": "In ten sixty-six, William the Conqueror wins at Hastings, and stone castles rise.",
+  "asr": "in 1066 William the Conqueror wins at Hastings and stone castles rise",
+  "sub": "In 1066, William the Conqueror wins at Hastings, | and stone castles rise.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L05",
+  "text": "In fifteen ninety-nine, Shakespeare's Globe theatre opens beside the Thames.",
+  "asr": "in 1599 Shakespeare's Globe theatre opens beside the Thames",
+  "sub": "In 1599, Shakespeare's Globe theatre | opens beside the Thames.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L06",
+  "text": "In seventeen-oh-seven, England and Scotland unite as Great Britain.",
+  "asr": "in 1707 England and Scotland unite as Great Britain",
+  "sub": "In 1707, England and Scotland | unite as Great Britain.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L07",
+  "text": "In eighteen thirty, the first railway between two cities opens, from Liverpool to Manchester.",
+  "asr": "in 1830 the first railway between two cities opens from Liverpool to Manchester",
+  "sub": "In 1830, the first railway between two cities opens, | from Liverpool to Manchester.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L08",
+  "text": "In nineteen forty, bombs fall on London night after night, but the city carries on.",
+  "asr": "in 1940 bombs fall on London night after night but the city carries on",
+  "sub": "In 1940, bombs fall on London | night after night, but the city carries on.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L09",
+  "text": "Today, about sixty-nine million people call it home, in England, Scotland, Wales and Northern Ireland.",
+  "asr": "today about 69 million people call it home in England Scotland Wales and Northern Ireland",
+  "sub": "Today, about 69 million people call it home, | in England, Scotland, Wales and Northern Ireland.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L10",
+  "text": "Which era would you visit? Tell us below.",
+  "asr": "which era would you visit tell us below",
+  "sub": "Which era would you visit? Tell us below.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ }
+]

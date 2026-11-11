@@ -1,0 +1,159 @@
+{
+ "country": "UK",
+ "sub": "@PrintedHistory",
+ "brand": "FOLLOW @PrintedHistory",
+ "paper": "#F4ECDA",
+ "intro": {
+  "line": "L01"
+ },
+ "cold": {
+  "scene": "today",
+  "push": [
+   640,
+   800,
+   1.75
+  ],
+  "roll": -2.5,
+  "dur": 5.6
+ },
+ "eras": [
+  {
+   "scene": "stones",
+   "line": "L02",
+   "at": "2500",
+   "label": "STONEHENGE RISES",
+   "year": "2500 BC",
+   "pal": {
+    "sky1": "#F3E3C8",
+    "sky2": "#E4B58E",
+    "far": "#A8A08C",
+    "mid": "#5F7A4E",
+    "near": "#2A2622",
+    "sun": "#C4562E",
+    "glow": "#F8E2B4"
+   }
+  },
+  {
+   "scene": "wall",
+   "line": "L03",
+   "at": "122",
+   "label": "HADRIAN'S WALL",
+   "year": "AD 122",
+   "pal": {
+    "sky1": "#E6E9E2",
+    "sky2": "#AFC1C2",
+    "far": "#8C9C80",
+    "mid": "#4E6E50",
+    "near": "#23282A",
+    "sun": "#B0452E",
+    "glow": "#EDE6CC"
+   }
+  },
+  {
+   "scene": "castle",
+   "line": "L04",
+   "at": "1066",
+   "label": "THE NORMAN CONQUEST",
+   "year": "1066",
+   "pal": {
+    "sky1": "#EDE3CF",
+    "sky2": "#C9B79A",
+    "far": "#A89A7C",
+    "mid": "#5B6E4A",
+    "near": "#2B2420",
+    "sun": "#9E2F2A",
+    "glow": "#F2E2B8"
+   }
+  },
+  {
+   "scene": "globe",
+   "line": "L05",
+   "at": "1599",
+   "label": "SHAKESPEARE'S GLOBE",
+   "year": "1599",
+   "pal": {
+    "sky1": "#F5E6C6",
+    "sky2": "#E7C07E",
+    "far": "#B49268",
+    "mid": "#6F7F52",
+    "near": "#2E2218",
+    "sun": "#B5482C",
+    "glow": "#FAE6B8"
+   }
+  },
+  {
+   "scene": "union",
+   "line": "L06",
+   "at": "1707",
+   "label": "GREAT BRITAIN",
+   "year": "1707",
+   "pal": {
+    "sky1": "#E9EEF0",
+    "sky2": "#B6CAD8",
+    "far": "#8C93A8",
+    "mid": "#4F7458",
+    "near": "#1F2733",
+    "sun": "#B23A48",
+    "glow": "#F1E4C4"
+   }
+  },
+  {
+   "scene": "railway",
+   "line": "L07",
+   "at": "1830",
+   "label": "THE FIRST INTERCITY LINE",
+   "year": "1830",
+   "steam": true,
+   "pal": {
+    "sky1": "#EDE2D2",
+    "sky2": "#C8B0A0",
+    "far": "#9C8478",
+    "mid": "#5E6A5A",
+    "near": "#262222",
+    "sun": "#A8402A",
+    "glow": "#F4DCC0"
+   }
+  },
+  {
+   "scene": "blitz",
+   "line": "L08",
+   "at": "1940",
+   "label": "THE BLITZ",
+   "year": "1940",
+   "silence": true,
+   "silence_at": "bombs",
+   "pal": {
+    "sky1": "#2E3448",
+    "sky2": "#1E2234",
+    "far": "#454A5E",
+    "mid": "#2C3042",
+    "near": "#0E1018",
+    "sun": "#E07A3A",
+    "glow": "#F2C27A"
+   }
+  },
+  {
+   "scene": "today",
+   "line": "L09",
+   "at": null,
+   "label": "ABOUT 69 MILLION PEOPLE",
+   "year": "TODAY",
+   "pal": {
+    "sky1": "#F2DCC4",
+    "sky2": "#A8B8D2",
+    "far": "#7C8AA8",
+    "mid": "#3E5478",
+    "near": "#161C2C",
+    "sun": "#D9473A",
+    "glow": "#F6D58E"
+   }
+  }
+ ],
+ "end": {
+  "line": "L10",
+  "text": [
+   "WHICH",
+   "ERA?"
+  ]
+ }
+}

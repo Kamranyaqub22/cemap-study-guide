@@ -1,0 +1,438 @@
+{
+ "cold": {
+  "scene": "today",
+  "push": [
+   640,
+   800,
+   1.75
+  ],
+  "roll": -2.5,
+  "dur": 5.6
+ },
+ "dur": 55.21,
+ "vo": {
+  "L01": 0.3,
+  "L02": 6.191,
+  "L03": 12.339,
+  "L04": 17.968,
+  "L05": 23.807,
+  "L06": 28.722,
+  "L07": 33.366,
+  "L08": 39.509,
+  "L09": 44.857,
+  "L10": 51.505
+ },
+ "eras": [
+  {
+   "scene": "stones",
+   "line": "L02",
+   "label": "STONEHENGE RISES",
+   "year": "2500 BC",
+   "pal": {
+    "sky1": "#F3E3C8",
+    "sky2": "#E4B58E",
+    "far": "#A8A08C",
+    "mid": "#5F7A4E",
+    "near": "#2A2622",
+    "sun": "#C4562E",
+    "glow": "#F8E2B4"
+   },
+   "i": 0,
+   "vo": 6.191,
+   "sweep": 5.691,
+   "swdur": 0.45,
+   "label_t": 6.421,
+   "year_t": 6.571,
+   "snap_t": null,
+   "t1": 12.279,
+   "land_t": 5.691
+  },
+  {
+   "scene": "wall",
+   "line": "L03",
+   "label": "HADRIAN'S WALL",
+   "year": "AD 122",
+   "pal": {
+    "sky1": "#E6E9E2",
+    "sky2": "#AFC1C2",
+    "far": "#8C9C80",
+    "mid": "#4E6E50",
+    "near": "#23282A",
+    "sun": "#B0452E",
+    "glow": "#EDE6CC"
+   },
+   "i": 1,
+   "vo": 12.339,
+   "sweep": 12.279,
+   "swdur": 0.45,
+   "label_t": 12.749,
+   "year_t": 12.899,
+   "snap_t": null,
+   "t1": 17.648
+  },
+  {
+   "scene": "castle",
+   "line": "L04",
+   "label": "THE NORMAN CONQUEST",
+   "year": "1066",
+   "pal": {
+    "sky1": "#EDE3CF",
+    "sky2": "#C9B79A",
+    "far": "#A89A7C",
+    "mid": "#5B6E4A",
+    "near": "#2B2420",
+    "sun": "#9E2F2A",
+    "glow": "#F2E2B8"
+   },
+   "i": 2,
+   "vo": 17.968,
+   "sweep": 17.648,
+   "swdur": 0.45,
+   "label_t": 18.118,
+   "year_t": 18.268,
+   "snap_t": null,
+   "t1": 23.447
+  },
+  {
+   "scene": "globe",
+   "line": "L05",
+   "label": "SHAKESPEARE'S GLOBE",
+   "year": "1599",
+   "pal": {
+    "sky1": "#F5E6C6",
+    "sky2": "#E7C07E",
+    "far": "#B49268",
+    "mid": "#6F7F52",
+    "near": "#2E2218",
+    "sun": "#B5482C",
+    "glow": "#FAE6B8"
+   },
+   "i": 3,
+   "vo": 23.807,
+   "sweep": 23.447,
+   "swdur": 0.45,
+   "label_t": 23.917,
+   "year_t": 24.067,
+   "snap_t": null,
+   "t1": 28.382
+  },
+  {
+   "scene": "union",
+   "line": "L06",
+   "label": "GREAT BRITAIN",
+   "year": "1707",
+   "pal": {
+    "sky1": "#E9EEF0",
+    "sky2": "#B6CAD8",
+    "far": "#8C93A8",
+    "mid": "#4F7458",
+    "near": "#1F2733",
+    "sun": "#B23A48",
+    "glow": "#F1E4C4"
+   },
+   "i": 4,
+   "vo": 28.722,
+   "sweep": 28.382,
+   "swdur": 0.45,
+   "label_t": 28.852,
+   "year_t": 29.002,
+   "snap_t": null,
+   "t1": 32.446
+  },
+  {
+   "scene": "railway",
+   "line": "L07",
+   "label": "THE FIRST INTERCITY LINE",
+   "year": "1830",
+   "steam": true,
+   "pal": {
+    "sky1": "#EDE2D2",
+    "sky2": "#C8B0A0",
+    "far": "#9C8478",
+    "mid": "#5E6A5A",
+    "near": "#262222",
+    "sun": "#A8402A",
+    "glow": "#F4DCC0"
+   },
+   "i": 5,
+   "vo": 33.366,
+   "sweep": 32.446,
+   "swdur": 1.2,
+   "label_t": 33.496,
+   "year_t": 33.646,
+   "snap_t": null,
+   "t1": 39.169
+  },
+  {
+   "scene": "blitz",
+   "line": "L08",
+   "label": "THE BLITZ",
+   "year": "1940",
+   "silence": true,
+   "pal": {
+    "sky1": "#2E3448",
+    "sky2": "#1E2234",
+    "far": "#454A5E",
+    "mid": "#2C3042",
+    "near": "#0E1018",
+    "sun": "#E07A3A",
+    "glow": "#F2C27A"
+   },
+   "i": 6,
+   "vo": 39.509,
+   "sweep": 39.169,
+   "swdur": 0.7,
+   "label_t": 39.639,
+   "year_t": 39.789,
+   "snap_t": null,
+   "silence_t": 40.559,
+   "t1": 44.537
+  },
+  {
+   "scene": "today",
+   "line": "L09",
+   "label": "ABOUT 69 MILLION PEOPLE",
+   "year": "TODAY",
+   "pal": {
+    "sky1": "#F2DCC4",
+    "sky2": "#A8B8D2",
+    "far": "#7C8AA8",
+    "mid": "#3E5478",
+    "near": "#161C2C",
+    "sun": "#D9473A",
+    "glow": "#F6D58E"
+   },
+   "i": 7,
+   "vo": 44.857,
+   "sweep": 44.537,
+   "swdur": 0.45,
+   "label_t": 45.007,
+   "year_t": 45.157,
+   "snap_t": null,
+   "t1": 51.355000000000004
+  }
+ ],
+ "end": {
+  "wall": 51.355,
+  "wall_dur": 1.1,
+  "card": 52.005,
+  "text": [
+   "WHICH",
+   "ERA?"
+  ]
+ },
+ "subs": [
+  {
+   "line": "L01",
+   "t0": 0.0,
+   "text": "Its empire once covered a quarter of the world's land.",
+   "speech_end": 2.98,
+   "t1": 3.44,
+   "lines": [
+    "Its empire once covered a",
+    "quarter of the world's land."
+   ]
+  },
+  {
+   "line": "L01",
+   "t0": 3.48,
+   "text": "But it all began with a ring of stones.",
+   "speech_end": 5.5,
+   "t1": 6.071,
+   "lines": [
+    "But it all began with",
+    "a ring of stones."
+   ]
+  },
+  {
+   "line": "L02",
+   "t0": 6.111,
+   "text": "Around 2500 BC, the giant stones of Stonehenge",
+   "speech_end": 10.111,
+   "t1": 9.991,
+   "lines": [
+    "Around 2500 BC, the giant",
+    "stones of Stonehenge"
+   ]
+  },
+  {
+   "line": "L02",
+   "t0": 10.031,
+   "text": "rise on Salisbury Plain.",
+   "speech_end": 11.751,
+   "t1": 12.219,
+   "lines": [
+    "rise on Salisbury Plain."
+   ]
+  },
+  {
+   "line": "L03",
+   "t0": 12.259,
+   "text": "In the year 122, Roman soldiers",
+   "speech_end": 14.579,
+   "t1": 14.459,
+   "lines": [
+    "In the year 122,",
+    "Roman soldiers"
+   ]
+  },
+  {
+   "line": "L03",
+   "t0": 14.499,
+   "text": "build Hadrian's Wall, from coast to coast.",
+   "speech_end": 17.539,
+   "t1": 17.848,
+   "lines": [
+    "build Hadrian's Wall,",
+    "from coast to coast."
+   ]
+  },
+  {
+   "line": "L04",
+   "t0": 17.888,
+   "text": "In 1066, William the Conqueror wins at Hastings,",
+   "speech_end": 21.168,
+   "t1": 21.048,
+   "lines": [
+    "In 1066, William the",
+    "Conqueror wins at Hastings,"
+   ]
+  },
+  {
+   "line": "L04",
+   "t0": 21.088,
+   "text": "and stone castles rise.",
+   "speech_end": 23.168,
+   "t1": 23.687,
+   "lines": [
+    "and stone castles rise."
+   ]
+  },
+  {
+   "line": "L05",
+   "t0": 23.727,
+   "text": "In 1599, Shakespeare's Globe theatre",
+   "speech_end": 26.527,
+   "t1": 26.407,
+   "lines": [
+    "In 1599, Shakespeare's",
+    "Globe theatre"
+   ]
+  },
+  {
+   "line": "L05",
+   "t0": 26.447,
+   "text": "opens beside the Thames.",
+   "speech_end": 28.127,
+   "t1": 28.602,
+   "lines": [
+    "opens beside the Thames."
+   ]
+  },
+  {
+   "line": "L06",
+   "t0": 28.642,
+   "text": "In 1707, England and Scotland",
+   "speech_end": 31.122,
+   "t1": 31.002,
+   "lines": [
+    "In 1707, England",
+    "and Scotland"
+   ]
+  },
+  {
+   "line": "L06",
+   "t0": 31.042,
+   "text": "unite as Great Britain.",
+   "speech_end": 32.882,
+   "t1": 33.246,
+   "lines": [
+    "unite as Great Britain."
+   ]
+  },
+  {
+   "line": "L07",
+   "t0": 33.286,
+   "text": "In 1830, the first railway between two cities opens,",
+   "speech_end": 36.886,
+   "t1": 36.766,
+   "lines": [
+    "In 1830, the first railway",
+    "between two cities opens,"
+   ]
+  },
+  {
+   "line": "L07",
+   "t0": 36.806,
+   "text": "from Liverpool to Manchester.",
+   "speech_end": 38.786,
+   "t1": 39.389,
+   "lines": [
+    "from Liverpool",
+    "to Manchester."
+   ]
+  },
+  {
+   "line": "L08",
+   "t0": 39.429,
+   "text": "In 1940, bombs fall on London",
+   "speech_end": 41.789,
+   "t1": 41.669,
+   "lines": [
+    "In 1940, bombs",
+    "fall on London"
+   ]
+  },
+  {
+   "line": "L08",
+   "t0": 41.709,
+   "text": "night after night, but the city carries on.",
+   "speech_end": 44.409,
+   "t1": 44.737,
+   "lines": [
+    "night after night,",
+    "but the city carries on."
+   ]
+  },
+  {
+   "line": "L09",
+   "t0": 44.777,
+   "text": "Today, about 69 million people call it home,",
+   "speech_end": 47.597,
+   "t1": 47.477,
+   "lines": [
+    "Today, about 69 million",
+    "people call it home,"
+   ]
+  },
+  {
+   "line": "L09",
+   "t0": 47.517,
+   "text": "in England, Scotland, Wales and Northern Ireland.",
+   "speech_end": 50.917,
+   "t1": 51.385,
+   "lines": [
+    "in England, Scotland,",
+    "Wales and Northern Ireland."
+   ]
+  },
+  {
+   "line": "L10",
+   "t0": 51.425,
+   "text": "Which era would you visit? Tell us below.",
+   "speech_end": 53.545,
+   "t1": 55.21,
+   "lines": [
+    "Which era would you",
+    "visit? Tell us below."
+   ]
+  }
+ ],
+ "country": "UK",
+ "sub": "@PrintedHistory",
+ "brand": "FOLLOW @PrintedHistory",
+ "paper": "#F4ECDA",
+ "intro": {
+  "vo": 0.3
+ }
+}
