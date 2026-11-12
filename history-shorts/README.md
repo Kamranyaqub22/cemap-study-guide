@@ -9,6 +9,8 @@ A YouTube Shorts series: one country's history per video, 60 seconds, vertical 1
 | United Arab Emirates | [`uae/uae.mp4`](uae/uae.mp4) | [`uae/uae.srt`](uae/uae.srt) | [upload sheet](uae/UPLOAD.md) · [treatment](uae/TREATMENT.md) · [facts](uae/FACTS.md) · [credits](uae/CREDITS) |
 | Egypt | [`egypt/egypt.mp4`](egypt/egypt.mp4) | [`egypt/egypt.srt`](egypt/egypt.srt) | [upload sheet](egypt/UPLOAD.md) · [treatment](egypt/TREATMENT.md) · [facts](egypt/FACTS.md) · [credits](egypt/CREDITS) |
 | Italy | [`italy/italy.mp4`](italy/italy.mp4) | [`italy/italy.srt`](italy/italy.srt) | [upload sheet](italy/UPLOAD.md) · [treatment](italy/TREATMENT.md) · [facts](italy/FACTS.md) · [credits](italy/CREDITS) |
+| United Kingdom | [`united-kingdom/united-kingdom.mp4`](united-kingdom/united-kingdom.mp4) | [`united-kingdom/united-kingdom.srt`](united-kingdom/united-kingdom.srt) | [upload sheet](united-kingdom/UPLOAD.md) · [treatment](united-kingdom/TREATMENT.md) · [facts](united-kingdom/FACTS.md) · [credits](united-kingdom/CREDITS) |
+| India | [`india/india.mp4`](india/india.mp4) | [`india/india.srt`](india/india.srt) | [upload sheet](india/UPLOAD.md) · [treatment](india/TREATMENT.md) · [facts](india/FACTS.md) · [credits](india/CREDITS) |
 
 **Daily workflow, uploading and the country queue:** [`PRODUCTION.md`](PRODUCTION.md) · [`countries.csv`](countries.csv)
 

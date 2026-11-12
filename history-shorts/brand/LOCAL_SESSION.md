@@ -5,7 +5,7 @@ Chrome, where they are already signed in. Never enter passwords; if Google asks 
 Ask the owner to confirm before anything is published or made public; scheduling is fine once they've confirmed the time.
 
 ## Files
-They live in the GitHub repo `kamranyaqub22/cemap-study-guide`, branch `claude/blissful-maxwell-08bbnj`, folder `history-shorts/`.
+They live in the GitHub repo `kamranyaqub22/cemap-study-guide`, branch `claude/funny-archimedes-5c5a7l` (newest; earlier episodes are on it too), folder `history-shorts/`.
 If they are not on this computer, clone that branch or ask the owner to download them into one folder.
 
 ## 1. Channel setup (once)

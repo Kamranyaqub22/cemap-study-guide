@@ -1,0 +1,164 @@
+{
+ "country": "INDIA",
+ "sub": "@PrintedHistory",
+ "brand": "FOLLOW @PrintedHistory",
+ "paper": "#F4ECDA",
+ "intro": {
+  "line": "L01"
+ },
+ "cold": {
+  "scene": "taj",
+  "from": [
+   540,
+   560,
+   2.1
+  ],
+  "to": [
+   540,
+   1000
+  ],
+  "dur": 5.0,
+  "arc": -150
+ },
+ "eras": [
+  {
+   "scene": "indus",
+   "line": "L02",
+   "at": "2500",
+   "label": "THE INDUS CITIES",
+   "year": "2500 BC",
+   "pal": {
+    "sky1": "#F7E7C6",
+    "sky2": "#E9B27A",
+    "far": "#C7925C",
+    "mid": "#8C6A3E",
+    "near": "#3A2418",
+    "sun": "#C2502E",
+    "glow": "#F8E1A6"
+   }
+  },
+  {
+   "scene": "zero",
+   "line": "L03",
+   "at": "628",
+   "label": "ZERO BECOMES A NUMBER",
+   "year": "628",
+   "zero": true,
+   "pal": {
+    "sky1": "#2A2550",
+    "sky2": "#3E2E6A",
+    "far": "#5A4A8A",
+    "mid": "#3A6E78",
+    "near": "#141228",
+    "sun": "#F0A93A",
+    "glow": "#F6DFA0"
+   },
+   "pause": 1.1
+  },
+  {
+   "scene": "taj",
+   "line": "L04",
+   "at": "1632",
+   "label": "THE TAJ MAHAL",
+   "year": "1632",
+   "pal": {
+    "sky1": "#FBE6D2",
+    "sky2": "#F2B6A0",
+    "far": "#D9A6A0",
+    "mid": "#6E9A84",
+    "near": "#2A2230",
+    "sun": "#D9573E",
+    "glow": "#FFF1D8"
+   }
+  },
+  {
+   "scene": "raj",
+   "line": "L05",
+   "at": "1858",
+   "label": "BRITISH CROWN RULE",
+   "year": "1858",
+   "silence": true,
+   "silence_at": "ruled",
+   "pal": {
+    "sky1": "#C8C9C2",
+    "sky2": "#8E9590",
+    "far": "#7E7466",
+    "mid": "#4E5A52",
+    "near": "#1E2222",
+    "sun": "#8A3F2C",
+    "glow": "#D9D0B8"
+   }
+  },
+  {
+   "scene": "salt",
+   "line": "L06",
+   "at": "1930",
+   "label": "THE SALT MARCH",
+   "year": "1930",
+   "pal": {
+    "sky1": "#F9EBC8",
+    "sky2": "#F4C46E",
+    "far": "#E2A24C",
+    "mid": "#3E8A8A",
+    "near": "#2A2018",
+    "sun": "#D2452A",
+    "glow": "#FFF4DA"
+   }
+  },
+  {
+   "scene": "freedom",
+   "line": "L07",
+   "at": "1947",
+   "label": "INDEPENDENCE",
+   "year": "1947",
+   "pal": {
+    "sky1": "#1E2A4E",
+    "sky2": "#2E3C6C",
+    "far": "#6A4E7E",
+    "mid": "#2E6A5A",
+    "near": "#0E1222",
+    "sun": "#F08A2E",
+    "glow": "#F8E2A0"
+   }
+  },
+  {
+   "scene": "moon",
+   "line": "L08",
+   "at": "2023",
+   "label": "THE MOON'S SOUTH POLE",
+   "year": "2023",
+   "pal": {
+    "sky1": "#101830",
+    "sky2": "#1C2A4C",
+    "far": "#8C8EA0",
+    "mid": "#4A5068",
+    "near": "#06080E",
+    "sun": "#E8DCC0",
+    "glow": "#F4E9C8"
+   }
+  },
+  {
+   "scene": "today",
+   "line": "L09",
+   "at": null,
+   "label": "OVER 1.4 BILLION PEOPLE",
+   "year": "TODAY",
+   "pal": {
+    "sky1": "#FCE0C0",
+    "sky2": "#F09A6A",
+    "far": "#C8508A",
+    "mid": "#2E8A86",
+    "near": "#2A1A2E",
+    "sun": "#F2B230",
+    "glow": "#FFE6A8"
+   }
+  }
+ ],
+ "end": {
+  "line": "L10",
+  "text": [
+   "WHAT",
+   "SURPRISED YOU?"
+  ]
+ }
+}

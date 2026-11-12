@@ -1,0 +1,92 @@
+[
+ {
+  "id": "L01",
+  "text": "Every time you write a zero, you're using an idea from India.",
+  "asr": "every time you write a zero you're using an idea from India",
+  "sub": "Every time you write a zero, | you're using an idea from India.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L02",
+  "text": "By twenty-five hundred BC, Indus Valley cities have brick streets and covered drains.",
+  "asr": "by 2500 BC Indus Valley cities have brick streets and covered drains",
+  "sub": "By 2500 BC, Indus Valley cities | have brick streets and covered drains.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L03",
+  "text": "In six twenty-eight, Brahmagupta writes the rules for zero, as a number of its own.",
+  "asr": "in 628 Brahma Gupta writes the rules for zero as a number of its own",
+  "sub": "In 628, Brahmagupta writes the rules for zero, | as a number of its own.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L04",
+  "text": "In sixteen thirty-two, Shah Jahan begins the Taj Mahal, in memory of his wife.",
+  "asr": "in 1632 Shah Jahan begins the Taj Mahal in memory of his wife",
+  "sub": "In 1632, Shah Jahan begins the Taj Mahal, | in memory of his wife.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L05",
+  "text": "By eighteen fifty-eight, India is ruled by the British Crown.",
+  "asr": "by 1858 India is ruled by the British Crown",
+  "sub": "By 1858, India is ruled by the British Crown.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L06",
+  "text": "In nineteen thirty, Gandhi marches to the sea, to make his own salt.",
+  "asr": "in 1930 Gandhi marches to the sea to make his own salt",
+  "sub": "In 1930, Gandhi marches to the sea, | to make his own salt.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L07",
+  "text": "In nineteen forty-seven, at the stroke of midnight, India becomes independent.",
+  "asr": "in 1947 at the stroke of midnight India becomes independent",
+  "sub": "In 1947, at the stroke of midnight, | India becomes independent.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L08",
+  "text": "In twenty twenty-three, India becomes the first to land near the Moon's south pole.",
+  "asr": "in 2023 India becomes the first to land near the moon's south pole",
+  "sub": "In 2023, India becomes the first | to land near the Moon's south pole.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L09",
+  "text": "Today, more than one point four billion people call India home, more than any other country.",
+  "asr": "today more than 1.4 billion people call India home more than any other country",
+  "sub": "Today, more than 1.4 billion people call India home, | more than any other country.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L10",
+  "text": "What surprised you most? Tell us below.",
+  "asr": "what surprised you most tell us below",
+  "sub": "What surprised you most? Tell us below.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ }
+]

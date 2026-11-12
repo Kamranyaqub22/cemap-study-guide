@@ -1,0 +1,430 @@
+{
+ "cold": {
+  "scene": "taj",
+  "from": [
+   540,
+   560,
+   2.1
+  ],
+  "to": [
+   540,
+   1000
+  ],
+  "dur": 5.0,
+  "arc": -150
+ },
+ "dur": 50.25,
+ "vo": {
+  "L01": 0.3,
+  "L02": 4.373,
+  "L03": 11.289,
+  "L04": 16.595,
+  "L05": 22.366,
+  "L06": 26.265,
+  "L07": 30.614,
+  "L08": 35.758,
+  "L09": 40.855,
+  "L10": 46.55
+ },
+ "eras": [
+  {
+   "scene": "indus",
+   "line": "L02",
+   "label": "THE INDUS CITIES",
+   "year": "2500 BC",
+   "pal": {
+    "sky1": "#F7E7C6",
+    "sky2": "#E9B27A",
+    "far": "#C7925C",
+    "mid": "#8C6A3E",
+    "near": "#3A2418",
+    "sun": "#C2502E",
+    "glow": "#F8E1A6"
+   },
+   "i": 0,
+   "vo": 4.373,
+   "sweep": 3.873,
+   "swdur": 0.45,
+   "label_t": 4.503,
+   "year_t": 4.653,
+   "snap_t": null,
+   "t1": 10.039,
+   "land_t": 3.873
+  },
+  {
+   "scene": "zero",
+   "line": "L03",
+   "label": "ZERO BECOMES A NUMBER",
+   "year": "628",
+   "zero": true,
+   "pal": {
+    "sky1": "#2A2550",
+    "sky2": "#3E2E6A",
+    "far": "#5A4A8A",
+    "mid": "#3A6E78",
+    "near": "#141228",
+    "sun": "#F0A93A",
+    "glow": "#F6DFA0"
+   },
+   "pause": 1.1,
+   "i": 1,
+   "vo": 11.289,
+   "sweep": 10.039,
+   "swdur": 1.2,
+   "label_t": 11.419,
+   "year_t": 11.569,
+   "snap_t": null,
+   "t1": 16.255
+  },
+  {
+   "scene": "taj",
+   "line": "L04",
+   "label": "THE TAJ MAHAL",
+   "year": "1632",
+   "pal": {
+    "sky1": "#FBE6D2",
+    "sky2": "#F2B6A0",
+    "far": "#D9A6A0",
+    "mid": "#6E9A84",
+    "near": "#2A2230",
+    "sun": "#D9573E",
+    "glow": "#FFF1D8"
+   },
+   "i": 2,
+   "vo": 16.595,
+   "sweep": 16.255,
+   "swdur": 0.45,
+   "label_t": 16.725,
+   "year_t": 16.875,
+   "snap_t": null,
+   "t1": 22.026
+  },
+  {
+   "scene": "raj",
+   "line": "L05",
+   "label": "BRITISH CROWN RULE",
+   "year": "1858",
+   "silence": true,
+   "pal": {
+    "sky1": "#C8C9C2",
+    "sky2": "#8E9590",
+    "far": "#7E7466",
+    "mid": "#4E5A52",
+    "near": "#1E2222",
+    "sun": "#8A3F2C",
+    "glow": "#D9D0B8"
+   },
+   "i": 3,
+   "vo": 22.366,
+   "sweep": 22.026,
+   "swdur": 0.7,
+   "label_t": 22.496,
+   "year_t": 22.646,
+   "snap_t": null,
+   "silence_t": 24.256,
+   "t1": 25.925
+  },
+  {
+   "scene": "salt",
+   "line": "L06",
+   "label": "THE SALT MARCH",
+   "year": "1930",
+   "pal": {
+    "sky1": "#F9EBC8",
+    "sky2": "#F4C46E",
+    "far": "#E2A24C",
+    "mid": "#3E8A8A",
+    "near": "#2A2018",
+    "sun": "#D2452A",
+    "glow": "#FFF4DA"
+   },
+   "i": 4,
+   "vo": 26.265,
+   "sweep": 25.925,
+   "swdur": 0.45,
+   "label_t": 26.395,
+   "year_t": 26.545,
+   "snap_t": null,
+   "t1": 30.254
+  },
+  {
+   "scene": "freedom",
+   "line": "L07",
+   "label": "INDEPENDENCE",
+   "year": "1947",
+   "pal": {
+    "sky1": "#1E2A4E",
+    "sky2": "#2E3C6C",
+    "far": "#6A4E7E",
+    "mid": "#2E6A5A",
+    "near": "#0E1222",
+    "sun": "#F08A2E",
+    "glow": "#F8E2A0"
+   },
+   "i": 5,
+   "vo": 30.614,
+   "sweep": 30.254,
+   "swdur": 0.45,
+   "label_t": 30.724,
+   "year_t": 30.874,
+   "snap_t": null,
+   "t1": 35.398
+  },
+  {
+   "scene": "moon",
+   "line": "L08",
+   "label": "THE MOON'S SOUTH POLE",
+   "year": "2023",
+   "pal": {
+    "sky1": "#101830",
+    "sky2": "#1C2A4C",
+    "far": "#8C8EA0",
+    "mid": "#4A5068",
+    "near": "#06080E",
+    "sun": "#E8DCC0",
+    "glow": "#F4E9C8"
+   },
+   "i": 6,
+   "vo": 35.758,
+   "sweep": 35.398,
+   "swdur": 0.45,
+   "label_t": 35.868,
+   "year_t": 36.018,
+   "snap_t": null,
+   "t1": 40.335
+  },
+  {
+   "scene": "today",
+   "line": "L09",
+   "label": "OVER 1.4 BILLION PEOPLE",
+   "year": "TODAY",
+   "pal": {
+    "sky1": "#FCE0C0",
+    "sky2": "#F09A6A",
+    "far": "#C8508A",
+    "mid": "#2E8A86",
+    "near": "#2A1A2E",
+    "sun": "#F2B230",
+    "glow": "#FFE6A8"
+   },
+   "i": 7,
+   "vo": 40.855,
+   "sweep": 40.335,
+   "swdur": 0.45,
+   "label_t": 40.805,
+   "year_t": 40.955,
+   "snap_t": null,
+   "t1": 46.4
+  }
+ ],
+ "end": {
+  "wall": 46.4,
+  "wall_dur": 1.1,
+  "card": 47.05,
+  "text": [
+   "WHAT",
+   "SURPRISED YOU?"
+  ]
+ },
+ "subs": [
+  {
+   "line": "L01",
+   "t0": 0.0,
+   "text": "Every time you write a zero,",
+   "speech_end": 1.8,
+   "t1": 2.1,
+   "lines": [
+    "Every time you write a zero,"
+   ]
+  },
+  {
+   "line": "L01",
+   "t0": 2.14,
+   "text": "you're using an idea from India.",
+   "speech_end": 3.78,
+   "t1": 4.253,
+   "lines": [
+    "you're using an",
+    "idea from India."
+   ]
+  },
+  {
+   "line": "L02",
+   "t0": 4.293,
+   "text": "By 2500 BC, Indus Valley cities",
+   "speech_end": 7.333,
+   "t1": 7.213,
+   "lines": [
+    "By 2500 BC,",
+    "Indus Valley cities"
+   ]
+  },
+  {
+   "line": "L02",
+   "t0": 7.253,
+   "text": "have brick streets and covered drains.",
+   "speech_end": 9.553,
+   "t1": 11.169,
+   "lines": [
+    "have brick streets",
+    "and covered drains."
+   ]
+  },
+  {
+   "line": "L03",
+   "t0": 11.209,
+   "text": "In 628, Brahmagupta writes the rules for zero,",
+   "speech_end": 14.629,
+   "t1": 14.509,
+   "lines": [
+    "In 628, Brahmagupta",
+    "writes the rules for zero,"
+   ]
+  },
+  {
+   "line": "L03",
+   "t0": 14.549,
+   "text": "as a number of its own.",
+   "speech_end": 16.129,
+   "t1": 16.475,
+   "lines": [
+    "as a number of its own."
+   ]
+  },
+  {
+   "line": "L04",
+   "t0": 16.515,
+   "text": "In 1632, Shah Jahan begins the Taj Mahal,",
+   "speech_end": 20.455,
+   "t1": 20.335,
+   "lines": [
+    "In 1632, Shah Jahan",
+    "begins the Taj Mahal,"
+   ]
+  },
+  {
+   "line": "L04",
+   "t0": 20.375,
+   "text": "in memory of his wife.",
+   "speech_end": 21.815,
+   "t1": 22.246,
+   "lines": [
+    "in memory of his wife."
+   ]
+  },
+  {
+   "line": "L05",
+   "t0": 22.286,
+   "text": "By 1858, India is ruled by the British Crown.",
+   "speech_end": 25.666,
+   "t1": 26.145,
+   "lines": [
+    "By 1858, India is ruled",
+    "by the British Crown."
+   ]
+  },
+  {
+   "line": "L06",
+   "t0": 26.185,
+   "text": "In 1930, Gandhi marches to the sea,",
+   "speech_end": 28.125,
+   "t1": 28.005,
+   "lines": [
+    "In 1930, Gandhi",
+    "marches to the sea,"
+   ]
+  },
+  {
+   "line": "L06",
+   "t0": 28.045,
+   "text": "to make his own salt.",
+   "speech_end": 30.145,
+   "t1": 30.494,
+   "lines": [
+    "to make his own salt."
+   ]
+  },
+  {
+   "line": "L07",
+   "t0": 30.534,
+   "text": "In 1947, at the stroke of midnight,",
+   "speech_end": 33.174,
+   "t1": 33.714,
+   "lines": [
+    "In 1947, at the",
+    "stroke of midnight,"
+   ]
+  },
+  {
+   "line": "L07",
+   "t0": 33.754,
+   "text": "India becomes independent.",
+   "speech_end": 35.054,
+   "t1": 35.638,
+   "lines": [
+    "India becomes independent."
+   ]
+  },
+  {
+   "line": "L08",
+   "t0": 35.678,
+   "text": "In 2023, India becomes the first",
+   "speech_end": 38.238,
+   "t1": 38.118,
+   "lines": [
+    "In 2023, India",
+    "becomes the first"
+   ]
+  },
+  {
+   "line": "L08",
+   "t0": 38.158,
+   "text": "to land near the Moon's south pole.",
+   "speech_end": 40.318,
+   "t1": 40.735,
+   "lines": [
+    "to land near the",
+    "Moon's south pole."
+   ]
+  },
+  {
+   "line": "L09",
+   "t0": 40.775,
+   "text": "Today, more than 1.4 billion people call India home,",
+   "speech_end": 44.515,
+   "t1": 44.395,
+   "lines": [
+    "Today, more than 1.4 billion",
+    "people call India home,"
+   ]
+  },
+  {
+   "line": "L09",
+   "t0": 44.435,
+   "text": "more than any other country.",
+   "speech_end": 46.075,
+   "t1": 46.43,
+   "lines": [
+    "more than any other country."
+   ]
+  },
+  {
+   "line": "L10",
+   "t0": 46.47,
+   "text": "What surprised you most? Tell us below.",
+   "speech_end": 48.71,
+   "t1": 50.25,
+   "lines": [
+    "What surprised you",
+    "most? Tell us below."
+   ]
+  }
+ ],
+ "country": "INDIA",
+ "sub": "@PrintedHistory",
+ "brand": "FOLLOW @PrintedHistory",
+ "paper": "#F4ECDA",
+ "intro": {
+  "vo": 0.3
+ }
+}

@@ -1,0 +1,21 @@
+India in 60 Seconds · History in 60 Seconds series · Silkscreen Travel Poster style
+
+Picture: drawn in code (Canvas 2D). Print engine engine/silk.js from the Lemo-Opuscar library (MIT).
+Landmarks (a brick city with a stepped bath and street drains, a stepped temple tower with a scholar and a slate of digits,
+a domed marble tomb with minarets and a pool, a clock tower and arcade in the rain, walkers on a shore with salt heaps,
+a sandstone fort wall under fireworks, a lander and rover on the Moon, a city with a metro and kites) are original stylised
+silhouettes drawn as simple paths, not traced from photographs. No logos, no flags or emblems, no maps or borders.
+
+Fonts (SIL Open Font License 1.1; licence texts in fonts/):
+  Big Shoulders Display — Patric King / Google Fonts
+  Outfit — Rodrigo Fuenzalida / Google Fonts
+
+Voice: Kokoro-82M v1.0 (hexgrad, Apache-2.0) via kokoro-onnx, voice bm_george. Checked with faster-whisper (MIT), model base.en.
+
+Music (original score, music/compose.py): sitar and tanpura by physical modelling (core/audio/pluck.py, Lemo-Opuscar, MIT);
+tabla (dayan and bayan) synthesised in code. No samples.
+Sound (mix.py): paper swish, stamps, a brush on paper, river, crickets, fountains, monsoon rain and thunder, surf, footsteps,
+crowd, fireworks, radio beeps, city traffic: synthesised in code.
+Mastering: FFmpeg (LGPL/GPL) via imageio-ffmpeg.
+
+Facts and sources: FACTS.md.
