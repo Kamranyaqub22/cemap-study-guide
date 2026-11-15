@@ -1,0 +1,20 @@
+USA in 60 Seconds · History in 60 Seconds series · Silkscreen Travel Poster style
+
+Picture: drawn in code (Canvas 2D). Print engine engine/silk.js from the Lemo-Opuscar library (MIT).
+Landmarks (a platform mound with a timber hall, a brick hall with a steeple, a parchment with a quill, a cannon by a rail fence,
+an early biplane over dunes, an Art Deco tower, a rocket above its tower, a suspension bridge in fog) are original stylised
+silhouettes drawn as simple paths, not traced from photographs. No logos, no flags or emblems, no maps or borders.
+
+Fonts (SIL Open Font License 1.1; licence texts in fonts/):
+  Big Shoulders Display — Patric King / Google Fonts
+  Outfit — Rodrigo Fuenzalida / Google Fonts
+
+Voice: Kokoro-82M v1.0 (hexgrad, Apache-2.0) via kokoro-onnx, voice bm_george. Checked with faster-whisper (MIT), model base.en.
+
+Music (original score, music/compose.py): banjo and upright bass by physical modelling (core/audio/pluck.py, Lemo-Opuscar, MIT);
+fiddle and washboard synthesised in code. No samples.
+Sound (mix.py): paper swish, stamps, a rocket's rumble, river, wind, birds, hooves, a quill and a clock, distant guns, surf,
+an aircraft engine, city hum and riveting, a crowd, a foghorn: synthesised in code.
+Mastering: FFmpeg (LGPL/GPL) via imageio-ffmpeg.
+
+Facts and sources: FACTS.md.

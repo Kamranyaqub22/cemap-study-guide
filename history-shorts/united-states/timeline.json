@@ -1,0 +1,427 @@
+{
+ "cold": {
+  "scene": "skyline",
+  "punch": [
+   520,
+   560,
+   1.9
+  ],
+  "dur": 5.2
+ },
+ "dur": 53.07,
+ "vo": {
+  "L01": 0.3,
+  "L02": 5.328,
+  "L03": 11.799,
+  "L04": 17.263,
+  "L05": 22.979,
+  "L06": 27.239,
+  "L07": 31.811,
+  "L08": 38.627,
+  "L09": 43.67,
+  "L10": 49.368
+ },
+ "eras": [
+  {
+   "scene": "cahokia",
+   "line": "L02",
+   "label": "CAHOKIA",
+   "year": "1050",
+   "pal": {
+    "sky1": "#F7E6C8",
+    "sky2": "#E8B07C",
+    "far": "#9C8E8A",
+    "mid": "#7E8A4A",
+    "near": "#2E2418",
+    "sun": "#B8452A",
+    "glow": "#F8DFA8"
+   },
+   "i": 0,
+   "vo": 5.328,
+   "sweep": 4.828,
+   "swdur": 0.45,
+   "label_t": 5.438,
+   "year_t": 5.588,
+   "snap_t": null,
+   "t1": 11.359,
+   "land_t": 4.828
+  },
+  {
+   "scene": "hall",
+   "line": "L03",
+   "label": "INDEPENDENCE DECLARED",
+   "year": "1776",
+   "pal": {
+    "sky1": "#EEF0E6",
+    "sky2": "#B9CBD6",
+    "far": "#8EA0B4",
+    "mid": "#5E7A5A",
+    "near": "#1C2638",
+    "sun": "#B23A2E",
+    "glow": "#F4E4B8"
+   },
+   "i": 1,
+   "vo": 11.799,
+   "sweep": 11.359,
+   "swdur": 0.45,
+   "label_t": 11.829,
+   "year_t": 11.979,
+   "snap_t": null,
+   "t1": 16.823
+  },
+  {
+   "scene": "charter",
+   "line": "L04",
+   "label": "THE CONSTITUTION",
+   "year": "1787",
+   "pal": {
+    "sky1": "#F3E5C8",
+    "sky2": "#D9B98A",
+    "far": "#A88C70",
+    "mid": "#6E7A62",
+    "near": "#2A1E1A",
+    "sun": "#9E3326",
+    "glow": "#F8E8C0"
+   },
+   "i": 2,
+   "vo": 17.263,
+   "sweep": 16.823,
+   "swdur": 0.45,
+   "label_t": 17.293,
+   "year_t": 17.443,
+   "snap_t": null,
+   "t1": 22.539
+  },
+  {
+   "scene": "war",
+   "line": "L05",
+   "label": "THE CIVIL WAR",
+   "year": "1861",
+   "silence": true,
+   "pal": {
+    "sky1": "#CFCBC2",
+    "sky2": "#9A9890",
+    "far": "#7C7A72",
+    "mid": "#5A5E54",
+    "near": "#1E1E20",
+    "sun": "#7E3A2C",
+    "glow": "#E2DCCC"
+   },
+   "i": 3,
+   "vo": 22.979,
+   "sweep": 22.539,
+   "swdur": 0.7,
+   "label_t": 23.009,
+   "year_t": 23.159,
+   "snap_t": null,
+   "silence_t": 24.969,
+   "t1": 26.799
+  },
+  {
+   "scene": "flight",
+   "line": "L06",
+   "label": "THE FIRST POWERED FLIGHT",
+   "year": "1903",
+   "pal": {
+    "sky1": "#EEF5F4",
+    "sky2": "#A8D2DE",
+    "far": "#8EB0C0",
+    "mid": "#6E9A70",
+    "near": "#22303C",
+    "sun": "#E2B04A",
+    "glow": "#FFF4D6"
+   },
+   "i": 4,
+   "vo": 27.239,
+   "sweep": 26.799,
+   "swdur": 0.45,
+   "label_t": 27.269,
+   "year_t": 27.419,
+   "snap_t": null,
+   "t1": 31.351
+  },
+  {
+   "scene": "skyline",
+   "line": "L07",
+   "label": "THE WORLD'S TALLEST",
+   "year": "1931",
+   "pal": {
+    "sky1": "#F6E2C0",
+    "sky2": "#E3A66A",
+    "far": "#B07A5E",
+    "mid": "#4A6878",
+    "near": "#1A2230",
+    "sun": "#D2502E",
+    "glow": "#FAE2A6"
+   },
+   "i": 5,
+   "vo": 31.811,
+   "sweep": 31.351,
+   "swdur": 0.45,
+   "label_t": 31.821,
+   "year_t": 31.971,
+   "snap_t": null,
+   "t1": 37.377
+  },
+  {
+   "scene": "launch",
+   "line": "L08",
+   "label": "APOLLO 11",
+   "year": "1969",
+   "rocket": true,
+   "pause": 1.1,
+   "pal": {
+    "sky1": "#E6EEF6",
+    "sky2": "#9EC0E0",
+    "far": "#7E9AB8",
+    "mid": "#3E6E7E",
+    "near": "#141C2C",
+    "sun": "#E8562E",
+    "glow": "#FFEAB8"
+   },
+   "i": 6,
+   "vo": 38.627,
+   "sweep": 37.377,
+   "swdur": 1.2,
+   "label_t": 38.657,
+   "year_t": 38.807,
+   "snap_t": null,
+   "t1": 43.15
+  },
+  {
+   "scene": "today",
+   "line": "L09",
+   "label": "ABOUT 340 MILLION PEOPLE",
+   "year": "TODAY",
+   "pal": {
+    "sky1": "#FBDCC4",
+    "sky2": "#E9A08A",
+    "far": "#8C7A9C",
+    "mid": "#3E6A86",
+    "near": "#1E2236",
+    "sun": "#C8402E",
+    "glow": "#FFE2A0"
+   },
+   "i": 7,
+   "vo": 43.67,
+   "sweep": 43.15,
+   "swdur": 0.45,
+   "label_t": 43.62,
+   "year_t": 43.77,
+   "snap_t": null,
+   "t1": 49.218
+  }
+ ],
+ "end": {
+  "wall": 49.218,
+  "wall_dur": 1.1,
+  "card": 49.868,
+  "text": [
+   "GOT IT",
+   "RIGHT?"
+  ]
+ },
+ "subs": [
+  {
+   "line": "L01",
+   "t0": 0.0,
+   "text": "Quick quiz: which country has the oldest",
+   "speech_end": 2.48,
+   "t1": 2.36,
+   "lines": [
+    "Quick quiz: which",
+    "country has the oldest"
+   ]
+  },
+  {
+   "line": "L01",
+   "t0": 2.4,
+   "text": "written constitution still in use?",
+   "speech_end": 4.58,
+   "t1": 5.208,
+   "lines": [
+    "written constitution",
+    "still in use?"
+   ]
+  },
+  {
+   "line": "L02",
+   "t0": 5.248,
+   "text": "Around 1050, Cahokia, beside the Mississippi,",
+   "speech_end": 8.288,
+   "t1": 8.168,
+   "lines": [
+    "Around 1050, Cahokia,",
+    "beside the Mississippi,"
+   ]
+  },
+  {
+   "line": "L02",
+   "t0": 8.208,
+   "text": "grows into a city of great earth mounds.",
+   "speech_end": 11.028,
+   "t1": 11.679,
+   "lines": [
+    "grows into a city of",
+    "great earth mounds."
+   ]
+  },
+  {
+   "line": "L03",
+   "t0": 11.719,
+   "text": "In 1776, thirteen colonies",
+   "speech_end": 14.379,
+   "t1": 14.259,
+   "lines": [
+    "In 1776, thirteen colonies"
+   ]
+  },
+  {
+   "line": "L03",
+   "t0": 14.299,
+   "text": "declare independence from Britain.",
+   "speech_end": 16.439,
+   "t1": 17.143,
+   "lines": [
+    "declare independence",
+    "from Britain."
+   ]
+  },
+  {
+   "line": "L04",
+   "t0": 17.183,
+   "text": "In 1787, the Constitution is signed,",
+   "speech_end": 20.343,
+   "t1": 20.223,
+   "lines": [
+    "In 1787, the",
+    "Constitution is signed,"
+   ]
+  },
+  {
+   "line": "L04",
+   "t0": 20.263,
+   "text": "and it is still the law today.",
+   "speech_end": 22.243,
+   "t1": 22.859,
+   "lines": [
+    "and it is still",
+    "the law today."
+   ]
+  },
+  {
+   "line": "L05",
+   "t0": 22.899,
+   "text": "In 1861, a civil war splits the nation in two.",
+   "speech_end": 26.499,
+   "t1": 27.119,
+   "lines": [
+    "In 1861, a civil war",
+    "splits the nation in two."
+   ]
+  },
+  {
+   "line": "L06",
+   "t0": 27.159,
+   "text": "In 1903, the Wright brothers",
+   "speech_end": 29.339,
+   "t1": 29.219,
+   "lines": [
+    "In 1903, the Wright brothers"
+   ]
+  },
+  {
+   "line": "L06",
+   "t0": 29.259,
+   "text": "make the first powered flight.",
+   "speech_end": 30.999,
+   "t1": 31.691,
+   "lines": [
+    "make the first",
+    "powered flight."
+   ]
+  },
+  {
+   "line": "L07",
+   "t0": 31.731,
+   "text": "In 1931, the Empire State Building",
+   "speech_end": 34.671,
+   "t1": 34.551,
+   "lines": [
+    "In 1931, the Empire",
+    "State Building"
+   ]
+  },
+  {
+   "line": "L07",
+   "t0": 34.591,
+   "text": "becomes the tallest in the world.",
+   "speech_end": 36.791,
+   "t1": 38.507,
+   "lines": [
+    "becomes the tallest",
+    "in the world."
+   ]
+  },
+  {
+   "line": "L08",
+   "t0": 38.547,
+   "text": "In 1969, Apollo 11 lands",
+   "speech_end": 41.467,
+   "t1": 41.347,
+   "lines": [
+    "In 1969, Apollo 11 lands"
+   ]
+  },
+  {
+   "line": "L08",
+   "t0": 41.387,
+   "text": "the first people on the Moon.",
+   "speech_end": 42.887,
+   "t1": 43.55,
+   "lines": [
+    "the first people",
+    "on the Moon."
+   ]
+  },
+  {
+   "line": "L09",
+   "t0": 43.59,
+   "text": "Today, about 340 million people call it home,",
+   "speech_end": 47.05,
+   "t1": 46.93,
+   "lines": [
+    "Today, about 340 million",
+    "people call it home,"
+   ]
+  },
+  {
+   "line": "L09",
+   "t0": 46.97,
+   "text": "across 50 states.",
+   "speech_end": 48.53,
+   "t1": 49.248,
+   "lines": [
+    "across 50 states."
+   ]
+  },
+  {
+   "line": "L10",
+   "t0": 49.288,
+   "text": "Did you get the quiz right? Tell us below.",
+   "speech_end": 51.288,
+   "t1": 53.07,
+   "lines": [
+    "Did you get the quiz",
+    "right? Tell us below."
+   ]
+  }
+ ],
+ "country": "USA",
+ "sub": "@PrintedHistory",
+ "brand": "FOLLOW @PrintedHistory",
+ "paper": "#F4ECDA",
+ "intro": {
+  "vo": 0.3
+ }
+}

@@ -1,0 +1,159 @@
+{
+ "country": "USA",
+ "sub": "@PrintedHistory",
+ "brand": "FOLLOW @PrintedHistory",
+ "paper": "#F4ECDA",
+ "intro": {
+  "line": "L01"
+ },
+ "cold": {
+  "scene": "skyline",
+  "punch": [
+   520,
+   560,
+   1.9
+  ],
+  "dur": 5.2
+ },
+ "eras": [
+  {
+   "scene": "cahokia",
+   "line": "L02",
+   "at": "1050",
+   "label": "CAHOKIA",
+   "year": "1050",
+   "pal": {
+    "sky1": "#F7E6C8",
+    "sky2": "#E8B07C",
+    "far": "#9C8E8A",
+    "mid": "#7E8A4A",
+    "near": "#2E2418",
+    "sun": "#B8452A",
+    "glow": "#F8DFA8"
+   }
+  },
+  {
+   "scene": "hall",
+   "line": "L03",
+   "at": "1776",
+   "label": "INDEPENDENCE DECLARED",
+   "year": "1776",
+   "pal": {
+    "sky1": "#EEF0E6",
+    "sky2": "#B9CBD6",
+    "far": "#8EA0B4",
+    "mid": "#5E7A5A",
+    "near": "#1C2638",
+    "sun": "#B23A2E",
+    "glow": "#F4E4B8"
+   }
+  },
+  {
+   "scene": "charter",
+   "line": "L04",
+   "at": "1787",
+   "label": "THE CONSTITUTION",
+   "year": "1787",
+   "pal": {
+    "sky1": "#F3E5C8",
+    "sky2": "#D9B98A",
+    "far": "#A88C70",
+    "mid": "#6E7A62",
+    "near": "#2A1E1A",
+    "sun": "#9E3326",
+    "glow": "#F8E8C0"
+   }
+  },
+  {
+   "scene": "war",
+   "line": "L05",
+   "at": "1861",
+   "label": "THE CIVIL WAR",
+   "year": "1861",
+   "silence": true,
+   "silence_at": "splits",
+   "pal": {
+    "sky1": "#CFCBC2",
+    "sky2": "#9A9890",
+    "far": "#7C7A72",
+    "mid": "#5A5E54",
+    "near": "#1E1E20",
+    "sun": "#7E3A2C",
+    "glow": "#E2DCCC"
+   }
+  },
+  {
+   "scene": "flight",
+   "line": "L06",
+   "at": "1903",
+   "label": "THE FIRST POWERED FLIGHT",
+   "year": "1903",
+   "pal": {
+    "sky1": "#EEF5F4",
+    "sky2": "#A8D2DE",
+    "far": "#8EB0C0",
+    "mid": "#6E9A70",
+    "near": "#22303C",
+    "sun": "#E2B04A",
+    "glow": "#FFF4D6"
+   }
+  },
+  {
+   "scene": "skyline",
+   "line": "L07",
+   "at": "1931",
+   "label": "THE WORLD'S TALLEST",
+   "year": "1931",
+   "pal": {
+    "sky1": "#F6E2C0",
+    "sky2": "#E3A66A",
+    "far": "#B07A5E",
+    "mid": "#4A6878",
+    "near": "#1A2230",
+    "sun": "#D2502E",
+    "glow": "#FAE2A6"
+   }
+  },
+  {
+   "scene": "launch",
+   "line": "L08",
+   "at": "1969",
+   "label": "APOLLO 11",
+   "year": "1969",
+   "rocket": true,
+   "pause": 1.1,
+   "pal": {
+    "sky1": "#E6EEF6",
+    "sky2": "#9EC0E0",
+    "far": "#7E9AB8",
+    "mid": "#3E6E7E",
+    "near": "#141C2C",
+    "sun": "#E8562E",
+    "glow": "#FFEAB8"
+   }
+  },
+  {
+   "scene": "today",
+   "line": "L09",
+   "at": null,
+   "label": "ABOUT 340 MILLION PEOPLE",
+   "year": "TODAY",
+   "pal": {
+    "sky1": "#FBDCC4",
+    "sky2": "#E9A08A",
+    "far": "#8C7A9C",
+    "mid": "#3E6A86",
+    "near": "#1E2236",
+    "sun": "#C8402E",
+    "glow": "#FFE2A0"
+   }
+  }
+ ],
+ "end": {
+  "line": "L10",
+  "text": [
+   "GOT IT",
+   "RIGHT?"
+  ]
+ }
+}

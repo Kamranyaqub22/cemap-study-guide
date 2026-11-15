@@ -1,0 +1,92 @@
+[
+ {
+  "id": "L01",
+  "text": "Quick quiz: which country has the oldest written constitution still in use?",
+  "asr": "quick quiz which country has the oldest written constitution still in use",
+  "sub": "Quick quiz: which country has the oldest | written constitution still in use?",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L02",
+  "text": "Around ten fifty, Cahokia, beside the Mississippi, grows into a city of great earth mounds.",
+  "asr": "around 1050 Cahokia beside the Mississippi grows into a city of great earth mounds",
+  "sub": "Around 1050, Cahokia, beside the Mississippi, | grows into a city of great earth mounds.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L03",
+  "text": "In seventeen seventy-six, thirteen colonies declare independence from Britain.",
+  "asr": "in 1776 13 colonies declare independence from Britain",
+  "sub": "In 1776, thirteen colonies | declare independence from Britain.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L04",
+  "text": "In seventeen eighty-seven, the Constitution is signed, and it is still the law today.",
+  "asr": "in 1787 the Constitution is signed and it is still the law today",
+  "sub": "In 1787, the Constitution is signed, | and it is still the law today.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L05",
+  "text": "In eighteen sixty-one, a civil war splits the nation in two.",
+  "asr": "in 1861 a civil war splits the nation in two",
+  "sub": "In 1861, a civil war splits the nation in two.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L06",
+  "text": "In nineteen oh-three, the Wright brothers make the first powered flight.",
+  "asr": "in 1903 the Wright brothers make the first powered flight",
+  "sub": "In 1903, the Wright brothers | make the first powered flight.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L07",
+  "text": "In nineteen thirty-one, the Empire State Building becomes the tallest in the world.",
+  "asr": "in 1931 the Empire State Building becomes the tallest in the world",
+  "sub": "In 1931, the Empire State Building | becomes the tallest in the world.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L08",
+  "text": "In nineteen sixty-nine, Apollo eleven lands the first people on the Moon.",
+  "asr": "in 1969 Apollo 11 lands the first people on the moon",
+  "sub": "In 1969, Apollo 11 lands | the first people on the Moon.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L09",
+  "text": "Today, about three hundred and forty million people call it home, across fifty states.",
+  "asr": "today about 340 million people call it home across 50 states",
+  "sub": "Today, about 340 million people call it home, | across 50 states.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L10",
+  "text": "Did you get the quiz right? Tell us below.",
+  "asr": "did you get the quiz right tell us below",
+  "sub": "Did you get the quiz right? Tell us below.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ }
+]
