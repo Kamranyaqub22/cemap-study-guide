@@ -1,0 +1,92 @@
+[
+ {
+  "id": "L01",
+  "text": "Legend says two gods competed for one city. Athena won it, with an olive tree.",
+  "asr": "legend says two gods competed for one city Athena won it with an olive tree",
+  "sub": "Legend says two gods competed for one city. | Athena won it, with an olive tree.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L02",
+  "text": "Around nineteen hundred BC, people on Crete build the great palace of Knossus.",
+  "asr": "around 1900 BC people on Crete build the great palace of Nossos",
+  "sub": "Around 1900 BC, people on Crete | build the great palace of Knossos.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L03",
+  "text": "In five oh-eight BC, Athens tries something new: democracy, where citizens vote.",
+  "asr": "in 508 BC Athens tries something new democracy where citizens vote",
+  "sub": "In 508 BC, Athens tries something new: | democracy, where citizens vote.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L04",
+  "text": "In four thirty-eight BC, the Parthenon is dedicated to Athena, high on the Acropolice.",
+  "asr": "in 438 BC the Parthenon is dedicated to Athena high on the Acropolis",
+  "sub": "In 438 BC, the Parthenon is dedicated to Athena, | high on the Acropolis.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L05",
+  "text": "In three thirty-four BC, Alexander the Great sets out, and conquers all the way to India.",
+  "asr": "in 334 BC Alexander the Great sets out and conquers all the way to India",
+  "sub": "In 334 BC, Alexander the Great sets out, | and conquers all the way to India.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L06",
+  "text": "By fourteen sixty, Greece is under Ottoman rule, for centuries.",
+  "asr": "by 1460 Greece is under Ottoman rule for centuries",
+  "sub": "By 1460, Greece is under Ottoman rule, for centuries.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L07",
+  "text": "In eighteen thirty, after a long war, Greece becomes independent.",
+  "asr": "in 1830 after a long war Greece becomes independent",
+  "sub": "In 1830, after a long war, | Greece becomes independent.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L08",
+  "text": "In eighteen ninety-six, Athens hosts the first modern Olympic Games.",
+  "asr": "in 1896 Athens hosts the first modern Olympic Games",
+  "sub": "In 1896, Athens hosts | the first modern Olympic Games.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L09",
+  "text": "Today, about ten million people call Greece home, between the mountains and the sea.",
+  "asr": "today about 10 million people call Greece home between the mountains and the sea",
+  "sub": "Today, about 10 million people call Greece home, | between the mountains and the sea.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L10",
+  "text": "Would you have voted in ancient Athens? Tell us below.",
+  "asr": "would you have voted in ancient Athens tell us below",
+  "sub": "Would you have voted in ancient Athens? Tell us below.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ }
+]

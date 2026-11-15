@@ -1,0 +1,160 @@
+{
+ "country": "GREECE",
+ "sub": "@PrintedHistory",
+ "brand": "FOLLOW @PrintedHistory",
+ "paper": "#F4ECDA",
+ "intro": {
+  "line": "L01"
+ },
+ "cold": {
+  "scene": "parthenon",
+  "spiral": [
+   540,
+   760,
+   2.0,
+   14
+  ],
+  "dur": 6.5
+ },
+ "eras": [
+  {
+   "scene": "knossos",
+   "line": "L02",
+   "at": "1900",
+   "label": "THE PALACE OF KNOSSOS",
+   "year": "1900 BC",
+   "pal": {
+    "sky1": "#F8EAD0",
+    "sky2": "#EEC08E",
+    "far": "#B08A6E",
+    "mid": "#2E6E8E",
+    "near": "#2A1E26",
+    "sun": "#B8382A",
+    "glow": "#FBE4B0"
+   }
+  },
+  {
+   "scene": "demos",
+   "line": "L03",
+   "at": "508",
+   "label": "DEMOCRACY",
+   "year": "508 BC",
+   "ox": true,
+   "pause": 1.1,
+   "pal": {
+    "sky1": "#F2EEE2",
+    "sky2": "#C9D6D2",
+    "far": "#A89878",
+    "mid": "#7C8E5A",
+    "near": "#1E2430",
+    "sun": "#C9622E",
+    "glow": "#F6E6BA"
+   }
+  },
+  {
+   "scene": "parthenon",
+   "line": "L04",
+   "at": "438",
+   "label": "THE PARTHENON",
+   "year": "438 BC",
+   "pal": {
+    "sky1": "#F6E8D2",
+    "sky2": "#E8B894",
+    "far": "#B88A6A",
+    "mid": "#3C7090",
+    "near": "#262230",
+    "sun": "#C24A2E",
+    "glow": "#FFF0D2"
+   }
+  },
+  {
+   "scene": "alexander",
+   "line": "L05",
+   "at": "334",
+   "label": "ALEXANDER THE GREAT",
+   "year": "334 BC",
+   "pal": {
+    "sky1": "#F4DEB4",
+    "sky2": "#E09A5C",
+    "far": "#9C7A5A",
+    "mid": "#36607A",
+    "near": "#22180E",
+    "sun": "#B6402A",
+    "glow": "#FAD99A"
+   }
+  },
+  {
+   "scene": "harbour",
+   "line": "L06",
+   "at": "1460",
+   "label": "UNDER OTTOMAN RULE",
+   "year": "1460",
+   "silence": true,
+   "silence_at": "ottoman",
+   "pal": {
+    "sky1": "#C9C6C8",
+    "sky2": "#8E8C98",
+    "far": "#6E6A74",
+    "mid": "#4A5866",
+    "near": "#1A1C24",
+    "sun": "#7A3A34",
+    "glow": "#D8D0C6"
+   }
+  },
+  {
+   "scene": "ships",
+   "line": "L07",
+   "at": "1830",
+   "label": "INDEPENDENCE",
+   "year": "1830",
+   "pal": {
+    "sky1": "#EAF2F6",
+    "sky2": "#A6CCE0",
+    "far": "#7C9AA8",
+    "mid": "#1E6A9A",
+    "near": "#141E2E",
+    "sun": "#D6452E",
+    "glow": "#FFF2D0"
+   }
+  },
+  {
+   "scene": "stadium",
+   "line": "L08",
+   "at": "1896",
+   "label": "THE FIRST MODERN OLYMPICS",
+   "year": "1896",
+   "pal": {
+    "sky1": "#F6F0E2",
+    "sky2": "#D8E4E8",
+    "far": "#B4A890",
+    "mid": "#2E7898",
+    "near": "#202630",
+    "sun": "#D8A23A",
+    "glow": "#FFF0C8"
+   }
+  },
+  {
+   "scene": "today",
+   "line": "L09",
+   "at": null,
+   "label": "ABOUT 10 MILLION PEOPLE",
+   "year": "TODAY",
+   "pal": {
+    "sky1": "#FBE2C2",
+    "sky2": "#F2A27A",
+    "far": "#C07068",
+    "mid": "#1E5E96",
+    "near": "#1A1E36",
+    "sun": "#E8603A",
+    "glow": "#FFE4A6"
+   }
+  }
+ ],
+ "end": {
+  "line": "L10",
+  "text": [
+   "YOUR",
+   "VOTE?"
+  ]
+ }
+}

@@ -1,0 +1,428 @@
+{
+ "cold": {
+  "scene": "parthenon",
+  "spiral": [
+   540,
+   760,
+   2.0,
+   14
+  ],
+  "dur": 6.5
+ },
+ "dur": 54.63,
+ "vo": {
+  "L01": 0.3,
+  "L02": 6.095,
+  "L03": 12.719,
+  "L04": 18.832,
+  "L05": 25.305,
+  "L06": 31.621,
+  "L07": 36.066,
+  "L08": 40.722,
+  "L09": 45.489,
+  "L10": 50.926
+ },
+ "eras": [
+  {
+   "scene": "knossos",
+   "line": "L02",
+   "label": "THE PALACE OF KNOSSOS",
+   "year": "1900 BC",
+   "pal": {
+    "sky1": "#F8EAD0",
+    "sky2": "#EEC08E",
+    "far": "#B08A6E",
+    "mid": "#2E6E8E",
+    "near": "#2A1E26",
+    "sun": "#B8382A",
+    "glow": "#FBE4B0"
+   },
+   "i": 0,
+   "vo": 6.095,
+   "sweep": 5.595,
+   "swdur": 0.45,
+   "label_t": 6.225,
+   "year_t": 6.375,
+   "snap_t": null,
+   "t1": 11.469,
+   "land_t": 5.595
+  },
+  {
+   "scene": "demos",
+   "line": "L03",
+   "label": "DEMOCRACY",
+   "year": "508 BC",
+   "ox": true,
+   "pause": 1.1,
+   "pal": {
+    "sky1": "#F2EEE2",
+    "sky2": "#C9D6D2",
+    "far": "#A89878",
+    "mid": "#7C8E5A",
+    "near": "#1E2430",
+    "sun": "#C9622E",
+    "glow": "#F6E6BA"
+   },
+   "i": 1,
+   "vo": 12.719,
+   "sweep": 11.469,
+   "swdur": 1.2,
+   "label_t": 12.749,
+   "year_t": 12.899,
+   "snap_t": null,
+   "t1": 18.392
+  },
+  {
+   "scene": "parthenon",
+   "line": "L04",
+   "label": "THE PARTHENON",
+   "year": "438 BC",
+   "pal": {
+    "sky1": "#F6E8D2",
+    "sky2": "#E8B894",
+    "far": "#B88A6A",
+    "mid": "#3C7090",
+    "near": "#262230",
+    "sun": "#C24A2E",
+    "glow": "#FFF0D2"
+   },
+   "i": 2,
+   "vo": 18.832,
+   "sweep": 18.392,
+   "swdur": 0.45,
+   "label_t": 18.862,
+   "year_t": 19.012,
+   "snap_t": null,
+   "t1": 24.865
+  },
+  {
+   "scene": "alexander",
+   "line": "L05",
+   "label": "ALEXANDER THE GREAT",
+   "year": "334 BC",
+   "pal": {
+    "sky1": "#F4DEB4",
+    "sky2": "#E09A5C",
+    "far": "#9C7A5A",
+    "mid": "#36607A",
+    "near": "#22180E",
+    "sun": "#B6402A",
+    "glow": "#FAD99A"
+   },
+   "i": 3,
+   "vo": 25.305,
+   "sweep": 24.865,
+   "swdur": 0.45,
+   "label_t": 25.335,
+   "year_t": 25.485,
+   "snap_t": null,
+   "t1": 31.201
+  },
+  {
+   "scene": "harbour",
+   "line": "L06",
+   "label": "UNDER OTTOMAN RULE",
+   "year": "1460",
+   "silence": true,
+   "pal": {
+    "sky1": "#C9C6C8",
+    "sky2": "#8E8C98",
+    "far": "#6E6A74",
+    "mid": "#4A5866",
+    "near": "#1A1C24",
+    "sun": "#7A3A34",
+    "glow": "#D8D0C6"
+   },
+   "i": 4,
+   "vo": 31.621,
+   "sweep": 31.201,
+   "swdur": 0.7,
+   "label_t": 31.671,
+   "year_t": 31.821,
+   "snap_t": null,
+   "silence_t": 33.551,
+   "t1": 35.626
+  },
+  {
+   "scene": "ships",
+   "line": "L07",
+   "label": "INDEPENDENCE",
+   "year": "1830",
+   "pal": {
+    "sky1": "#EAF2F6",
+    "sky2": "#A6CCE0",
+    "far": "#7C9AA8",
+    "mid": "#1E6A9A",
+    "near": "#141E2E",
+    "sun": "#D6452E",
+    "glow": "#FFF2D0"
+   },
+   "i": 5,
+   "vo": 36.066,
+   "sweep": 35.626,
+   "swdur": 0.45,
+   "label_t": 36.096,
+   "year_t": 36.246,
+   "snap_t": null,
+   "t1": 40.282
+  },
+  {
+   "scene": "stadium",
+   "line": "L08",
+   "label": "THE FIRST MODERN OLYMPICS",
+   "year": "1896",
+   "pal": {
+    "sky1": "#F6F0E2",
+    "sky2": "#D8E4E8",
+    "far": "#B4A890",
+    "mid": "#2E7898",
+    "near": "#202630",
+    "sun": "#D8A23A",
+    "glow": "#FFF0C8"
+   },
+   "i": 6,
+   "vo": 40.722,
+   "sweep": 40.282,
+   "swdur": 0.45,
+   "label_t": 40.752,
+   "year_t": 40.902,
+   "snap_t": null,
+   "t1": 44.969
+  },
+  {
+   "scene": "today",
+   "line": "L09",
+   "label": "ABOUT 10 MILLION PEOPLE",
+   "year": "TODAY",
+   "pal": {
+    "sky1": "#FBE2C2",
+    "sky2": "#F2A27A",
+    "far": "#C07068",
+    "mid": "#1E5E96",
+    "near": "#1A1E36",
+    "sun": "#E8603A",
+    "glow": "#FFE4A6"
+   },
+   "i": 7,
+   "vo": 45.489,
+   "sweep": 44.969,
+   "swdur": 0.45,
+   "label_t": 45.439,
+   "year_t": 45.589,
+   "snap_t": null,
+   "t1": 50.776
+  }
+ ],
+ "end": {
+  "wall": 50.776,
+  "wall_dur": 1.1,
+  "card": 51.426,
+  "text": [
+   "YOUR",
+   "VOTE?"
+  ]
+ },
+ "subs": [
+  {
+   "line": "L01",
+   "t0": 0.0,
+   "text": "Legend says two gods competed for one city.",
+   "speech_end": 2.84,
+   "t1": 3.3,
+   "lines": [
+    "Legend says two gods",
+    "competed for one city."
+   ]
+  },
+  {
+   "line": "L01",
+   "t0": 3.34,
+   "text": "Athena won it, with an olive tree.",
+   "speech_end": 5.3,
+   "t1": 5.975,
+   "lines": [
+    "Athena won it,",
+    "with an olive tree."
+   ]
+  },
+  {
+   "line": "L02",
+   "t0": 6.015,
+   "text": "Around 1900 BC, people on Crete",
+   "speech_end": 9.055,
+   "t1": 8.935,
+   "lines": [
+    "Around 1900 BC,",
+    "people on Crete"
+   ]
+  },
+  {
+   "line": "L02",
+   "t0": 8.975,
+   "text": "build the great palace of Knossos.",
+   "speech_end": 10.895,
+   "t1": 12.599,
+   "lines": [
+    "build the great",
+    "palace of Knossos."
+   ]
+  },
+  {
+   "line": "L03",
+   "t0": 12.639,
+   "text": "In 508 BC, Athens tries something new:",
+   "speech_end": 15.719,
+   "t1": 16.059,
+   "lines": [
+    "In 508 BC, Athens",
+    "tries something new:"
+   ]
+  },
+  {
+   "line": "L03",
+   "t0": 16.099,
+   "text": "democracy, where citizens vote.",
+   "speech_end": 18.079,
+   "t1": 18.712,
+   "lines": [
+    "democracy, where",
+    "citizens vote."
+   ]
+  },
+  {
+   "line": "L04",
+   "t0": 18.752,
+   "text": "In 438 BC, the Parthenon is dedicated to Athena,",
+   "speech_end": 22.552,
+   "t1": 23.092,
+   "lines": [
+    "In 438 BC, the Parthenon",
+    "is dedicated to Athena,"
+   ]
+  },
+  {
+   "line": "L04",
+   "t0": 23.132,
+   "text": "high on the Acropolis.",
+   "speech_end": 24.492,
+   "t1": 25.185,
+   "lines": [
+    "high on the Acropolis."
+   ]
+  },
+  {
+   "line": "L05",
+   "t0": 25.225,
+   "text": "In 334 BC, Alexander the Great sets out,",
+   "speech_end": 28.845,
+   "t1": 28.725,
+   "lines": [
+    "In 334 BC, Alexander",
+    "the Great sets out,"
+   ]
+  },
+  {
+   "line": "L05",
+   "t0": 28.765,
+   "text": "and conquers all the way to India.",
+   "speech_end": 30.905,
+   "t1": 31.501,
+   "lines": [
+    "and conquers all",
+    "the way to India."
+   ]
+  },
+  {
+   "line": "L06",
+   "t0": 31.541,
+   "text": "By 1460, Greece is under Ottoman rule, for centuries.",
+   "speech_end": 35.081,
+   "t1": 35.946,
+   "lines": [
+    "By 1460, Greece is under",
+    "Ottoman rule, for centuries."
+   ]
+  },
+  {
+   "line": "L07",
+   "t0": 35.986,
+   "text": "In 1830, after a long war,",
+   "speech_end": 38.226,
+   "t1": 38.406,
+   "lines": [
+    "In 1830, after a long war,"
+   ]
+  },
+  {
+   "line": "L07",
+   "t0": 38.446,
+   "text": "Greece becomes independent.",
+   "speech_end": 39.866,
+   "t1": 40.602,
+   "lines": [
+    "Greece becomes independent."
+   ]
+  },
+  {
+   "line": "L08",
+   "t0": 40.642,
+   "text": "In 1896, Athens hosts",
+   "speech_end": 42.922,
+   "t1": 42.802,
+   "lines": [
+    "In 1896, Athens hosts"
+   ]
+  },
+  {
+   "line": "L08",
+   "t0": 42.842,
+   "text": "the first modern Olympic Games.",
+   "speech_end": 44.662,
+   "t1": 45.369,
+   "lines": [
+    "the first modern",
+    "Olympic Games."
+   ]
+  },
+  {
+   "line": "L09",
+   "t0": 45.409,
+   "text": "Today, about 10 million people call Greece home,",
+   "speech_end": 48.129,
+   "t1": 48.009,
+   "lines": [
+    "Today, about 10 million",
+    "people call Greece home,"
+   ]
+  },
+  {
+   "line": "L09",
+   "t0": 48.049,
+   "text": "between the mountains and the sea.",
+   "speech_end": 50.169,
+   "t1": 50.806,
+   "lines": [
+    "between the mountains",
+    "and the sea."
+   ]
+  },
+  {
+   "line": "L10",
+   "t0": 50.846,
+   "text": "Would you have voted in ancient Athens? Tell us below.",
+   "speech_end": 53.946,
+   "t1": 54.63,
+   "lines": [
+    "Would you have voted in",
+    "ancient Athens? Tell us below."
+   ]
+  }
+ ],
+ "country": "GREECE",
+ "sub": "@PrintedHistory",
+ "brand": "FOLLOW @PrintedHistory",
+ "paper": "#F4ECDA",
+ "intro": {
+  "vo": 0.3
+ }
+}
