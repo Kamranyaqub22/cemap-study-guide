@@ -1,0 +1,20 @@
+Mexico in 60 Seconds · History in 60 Seconds series · Silkscreen Travel Poster style
+
+Picture: drawn in code (Canvas 2D). Print engine engine/silk.js from the Lemo-Opuscar library (MIT).
+Landmarks (a colossal stone head, a stepped pyramid, a twin-shrined temple on an island, a broken temple in smoke, a village church
+with banners, riders on the plain, a painted mural on a scaffold, a city with a tower and a winged column) are original stylised
+silhouettes drawn as simple paths, not traced from photographs. No logos, no flags or emblems, no maps or borders.
+
+Fonts (SIL Open Font License 1.1; licence texts in fonts/):
+  Big Shoulders Display — Patric King / Google Fonts
+  Outfit — Rodrigo Fuenzalida / Google Fonts
+
+Voice: Kokoro-82M v1.0 (hexgrad, Apache-2.0) via kokoro-onnx, voice bm_george. Checked with faster-whisper (MIT), model base.en.
+
+Music (original score, music/compose.py): guitar and guitarrón by physical modelling (core/audio/pluck.py, Lemo-Opuscar, MIT);
+marimba (modal bars), maracas and box drum synthesised in code. No samples.
+Sound (mix.py): paper swish, stamps, paper banners rustling, jungle river and insects, wind, a conch, lake water and a market,
+embers, a crowd, hooves, a brush on plaster, city traffic: synthesised in code.
+Mastering: FFmpeg (LGPL/GPL) via imageio-ffmpeg.
+
+Facts and sources: FACTS.md.

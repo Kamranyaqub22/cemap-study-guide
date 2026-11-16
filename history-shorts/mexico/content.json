@@ -1,0 +1,160 @@
+{
+ "country": "MEXICO",
+ "sub": "@PrintedHistory",
+ "brand": "FOLLOW @PrintedHistory",
+ "paper": "#F4ECDA",
+ "intro": {
+  "line": "L01"
+ },
+ "cold": {
+  "scene": "lake",
+  "bounce": [
+   540,
+   860,
+   2.6
+  ],
+  "dur": 6.0
+ },
+ "eras": [
+  {
+   "scene": "olmec",
+   "line": "L02",
+   "at": "1200",
+   "label": "THE OLMEC HEADS",
+   "year": "1200 BC",
+   "pal": {
+    "sky1": "#F2E8C8",
+    "sky2": "#C9D79A",
+    "far": "#8E9C76",
+    "mid": "#3E7A4A",
+    "near": "#1E2A1E",
+    "sun": "#C8642E",
+    "glow": "#F4E6A6"
+   }
+  },
+  {
+   "scene": "sunpyr",
+   "line": "L03",
+   "at": null,
+   "label": "THE PYRAMID OF THE SUN",
+   "year": "AD 200",
+   "pal": {
+    "sky1": "#F8E2C2",
+    "sky2": "#F0A86E",
+    "far": "#B87A5A",
+    "mid": "#7E8A4A",
+    "near": "#2E1E18",
+    "sun": "#D2502A",
+    "glow": "#FFE2A8"
+   },
+   "year_at": "200"
+  },
+  {
+   "scene": "lake",
+   "line": "L04",
+   "at": "1325",
+   "label": "TENOCHTITLAN",
+   "year": "1325",
+   "pal": {
+    "sky1": "#EEF2E6",
+    "sky2": "#A9D2CC",
+    "far": "#7EA49A",
+    "mid": "#3C7E7A",
+    "near": "#1C2A2E",
+    "sun": "#D4462E",
+    "glow": "#F6EEC4"
+   }
+  },
+  {
+   "scene": "fall",
+   "line": "L05",
+   "at": "1521",
+   "label": "THE AZTEC CAPITAL FALLS",
+   "year": "1521",
+   "silence": true,
+   "silence_at": "falls",
+   "pal": {
+    "sky1": "#C8C4BE",
+    "sky2": "#9A928C",
+    "far": "#7A706A",
+    "mid": "#5A5450",
+    "near": "#1E1A1C",
+    "sun": "#8A3428",
+    "glow": "#DCD2C4"
+   }
+  },
+  {
+   "scene": "grito",
+   "line": "L06",
+   "at": "1810",
+   "label": "THE CALL FOR INDEPENDENCE",
+   "year": "1810",
+   "papel": true,
+   "pause": 1.1,
+   "pal": {
+    "sky1": "#FCE6CC",
+    "sky2": "#F2A0A0",
+    "far": "#C86A9C",
+    "mid": "#2E8A7A",
+    "near": "#2A1830",
+    "sun": "#E8452E",
+    "glow": "#FFD86A"
+   }
+  },
+  {
+   "scene": "revolution",
+   "line": "L07",
+   "at": "1910",
+   "label": "THE REVOLUTION",
+   "year": "1910",
+   "pal": {
+    "sky1": "#F6DFB0",
+    "sky2": "#E6A45C",
+    "far": "#B0784E",
+    "mid": "#8C7A3E",
+    "near": "#2A1A10",
+    "sun": "#B8402A",
+    "glow": "#FBE0A0"
+   }
+  },
+  {
+   "scene": "mural",
+   "line": "L08",
+   "at": "1920",
+   "label": "THE MURALISTS",
+   "year": "1920s",
+   "pal": {
+    "sky1": "#F4EAD6",
+    "sky2": "#D6C2A0",
+    "far": "#2E6E8A",
+    "mid": "#C8762E",
+    "near": "#22202A",
+    "sun": "#D23A2E",
+    "glow": "#F2C04A"
+   }
+  },
+  {
+   "scene": "today",
+   "line": "L09",
+   "at": null,
+   "label": "OVER 130 MILLION PEOPLE",
+   "year": "TODAY",
+   "pal": {
+    "sky1": "#FCE0D0",
+    "sky2": "#E8A0B8",
+    "far": "#9A78B8",
+    "mid": "#4E6E8E",
+    "near": "#1E1A30",
+    "sun": "#F2A23A",
+    "glow": "#FFE6B0"
+   }
+  }
+ ],
+ "end": {
+  "line": "L10",
+  "text": [
+   "BEEN",
+   "THERE?"
+  ]
+ }
+}

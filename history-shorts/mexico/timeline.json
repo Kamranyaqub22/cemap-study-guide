@@ -1,0 +1,427 @@
+{
+ "cold": {
+  "scene": "lake",
+  "bounce": [
+   540,
+   860,
+   2.6
+  ],
+  "dur": 6.0
+ },
+ "dur": 52.26,
+ "vo": {
+  "L01": 0.3,
+  "L02": 5.41,
+  "L03": 11.188,
+  "L04": 17.061,
+  "L05": 22.567,
+  "L06": 28.476,
+  "L07": 33.217,
+  "L08": 37.637,
+  "L09": 43.563,
+  "L10": 48.56
+ },
+ "eras": [
+  {
+   "scene": "olmec",
+   "line": "L02",
+   "label": "THE OLMEC HEADS",
+   "year": "1200 BC",
+   "pal": {
+    "sky1": "#F2E8C8",
+    "sky2": "#C9D79A",
+    "far": "#8E9C76",
+    "mid": "#3E7A4A",
+    "near": "#1E2A1E",
+    "sun": "#C8642E",
+    "glow": "#F4E6A6"
+   },
+   "i": 0,
+   "vo": 5.41,
+   "sweep": 4.91,
+   "swdur": 0.45,
+   "label_t": 5.5,
+   "year_t": 5.65,
+   "snap_t": null,
+   "t1": 10.668,
+   "land_t": 4.91
+  },
+  {
+   "scene": "sunpyr",
+   "line": "L03",
+   "label": "THE PYRAMID OF THE SUN",
+   "year": "AD 200",
+   "pal": {
+    "sky1": "#F8E2C2",
+    "sky2": "#F0A86E",
+    "far": "#B87A5A",
+    "mid": "#7E8A4A",
+    "near": "#2E1E18",
+    "sun": "#D2502A",
+    "glow": "#FFE2A8"
+   },
+   "i": 1,
+   "vo": 11.188,
+   "sweep": 10.668,
+   "swdur": 0.45,
+   "label_t": 11.658,
+   "year_t": 11.808,
+   "snap_t": null,
+   "silence_t": 11.558,
+   "t1": 16.621
+  },
+  {
+   "scene": "lake",
+   "line": "L04",
+   "label": "TENOCHTITLAN",
+   "year": "1325",
+   "pal": {
+    "sky1": "#EEF2E6",
+    "sky2": "#A9D2CC",
+    "far": "#7EA49A",
+    "mid": "#3C7E7A",
+    "near": "#1C2A2E",
+    "sun": "#D4462E",
+    "glow": "#F6EEC4"
+   },
+   "i": 2,
+   "vo": 17.061,
+   "sweep": 16.621,
+   "swdur": 0.45,
+   "label_t": 17.091,
+   "year_t": 17.241,
+   "snap_t": null,
+   "t1": 21.847
+  },
+  {
+   "scene": "fall",
+   "line": "L05",
+   "label": "THE AZTEC CAPITAL FALLS",
+   "year": "1521",
+   "silence": true,
+   "pal": {
+    "sky1": "#C8C4BE",
+    "sky2": "#9A928C",
+    "far": "#7A706A",
+    "mid": "#5A5450",
+    "near": "#1E1A1C",
+    "sun": "#8A3428",
+    "glow": "#DCD2C4"
+   },
+   "i": 3,
+   "vo": 22.567,
+   "sweep": 21.847,
+   "swdur": 0.7,
+   "label_t": 22.597,
+   "year_t": 22.747,
+   "snap_t": null,
+   "silence_t": 24.777,
+   "t1": 27.226
+  },
+  {
+   "scene": "grito",
+   "line": "L06",
+   "label": "THE CALL FOR INDEPENDENCE",
+   "year": "1810",
+   "papel": true,
+   "pause": 1.1,
+   "pal": {
+    "sky1": "#FCE6CC",
+    "sky2": "#F2A0A0",
+    "far": "#C86A9C",
+    "mid": "#2E8A7A",
+    "near": "#2A1830",
+    "sun": "#E8452E",
+    "glow": "#FFD86A"
+   },
+   "i": 4,
+   "vo": 28.476,
+   "sweep": 27.226,
+   "swdur": 1.2,
+   "label_t": 28.506,
+   "year_t": 28.656,
+   "snap_t": null,
+   "t1": 32.777
+  },
+  {
+   "scene": "revolution",
+   "line": "L07",
+   "label": "THE REVOLUTION",
+   "year": "1910",
+   "pal": {
+    "sky1": "#F6DFB0",
+    "sky2": "#E6A45C",
+    "far": "#B0784E",
+    "mid": "#8C7A3E",
+    "near": "#2A1A10",
+    "sun": "#B8402A",
+    "glow": "#FBE0A0"
+   },
+   "i": 5,
+   "vo": 33.217,
+   "sweep": 32.777,
+   "swdur": 0.45,
+   "label_t": 33.247,
+   "year_t": 33.397,
+   "snap_t": null,
+   "t1": 37.257
+  },
+  {
+   "scene": "mural",
+   "line": "L08",
+   "label": "THE MURALISTS",
+   "year": "1920s",
+   "pal": {
+    "sky1": "#F4EAD6",
+    "sky2": "#D6C2A0",
+    "far": "#2E6E8A",
+    "mid": "#C8762E",
+    "near": "#22202A",
+    "sun": "#D23A2E",
+    "glow": "#F2C04A"
+   },
+   "i": 6,
+   "vo": 37.637,
+   "sweep": 37.257,
+   "swdur": 0.45,
+   "label_t": 37.727,
+   "year_t": 37.877,
+   "snap_t": null,
+   "t1": 43.043
+  },
+  {
+   "scene": "today",
+   "line": "L09",
+   "label": "OVER 130 MILLION PEOPLE",
+   "year": "TODAY",
+   "pal": {
+    "sky1": "#FCE0D0",
+    "sky2": "#E8A0B8",
+    "far": "#9A78B8",
+    "mid": "#4E6E8E",
+    "near": "#1E1A30",
+    "sun": "#F2A23A",
+    "glow": "#FFE6B0"
+   },
+   "i": 7,
+   "vo": 43.563,
+   "sweep": 43.043,
+   "swdur": 0.45,
+   "label_t": 43.513,
+   "year_t": 43.663,
+   "snap_t": null,
+   "t1": 48.410000000000004
+  }
+ ],
+ "end": {
+  "wall": 48.41,
+  "wall_dur": 1.1,
+  "card": 49.06,
+  "text": [
+   "BEEN",
+   "THERE?"
+  ]
+ },
+ "subs": [
+  {
+   "line": "L01",
+   "t0": 0.0,
+   "text": "Under Mexico City lies another city,",
+   "speech_end": 2.68,
+   "t1": 2.56,
+   "lines": [
+    "Under Mexico City",
+    "lies another city,"
+   ]
+  },
+  {
+   "line": "L01",
+   "t0": 2.6,
+   "text": "built on an island in a lake.",
+   "speech_end": 4.7,
+   "t1": 5.29,
+   "lines": [
+    "built on an",
+    "island in a lake."
+   ]
+  },
+  {
+   "line": "L02",
+   "t0": 5.33,
+   "text": "Around 1200 BC, the Olmecs make",
+   "speech_end": 8.13,
+   "t1": 8.01,
+   "lines": [
+    "Around 1200 BC,",
+    "the Olmecs make"
+   ]
+  },
+  {
+   "line": "L02",
+   "t0": 8.05,
+   "text": "giant stone heads, taller than a person.",
+   "speech_end": 10.35,
+   "t1": 11.068,
+   "lines": [
+    "giant stone heads,",
+    "taller than a person."
+   ]
+  },
+  {
+   "line": "L03",
+   "t0": 11.108,
+   "text": "Around the year 200, the great Pyramid of the Sun",
+   "speech_end": 14.328,
+   "t1": 14.208,
+   "lines": [
+    "Around the year 200, the",
+    "great Pyramid of the Sun"
+   ]
+  },
+  {
+   "line": "L03",
+   "t0": 14.248,
+   "text": "rises at Teotihuacan.",
+   "speech_end": 16.308,
+   "t1": 16.941,
+   "lines": [
+    "rises at Teotihuacan."
+   ]
+  },
+  {
+   "line": "L04",
+   "t0": 16.981,
+   "text": "In 1325, the Aztecs build their capital,",
+   "speech_end": 20.001,
+   "t1": 19.881,
+   "lines": [
+    "In 1325, the Aztecs",
+    "build their capital,"
+   ]
+  },
+  {
+   "line": "L04",
+   "t0": 19.921,
+   "text": "on an island in a lake.",
+   "speech_end": 21.821,
+   "t1": 22.447,
+   "lines": [
+    "on an island in a lake."
+   ]
+  },
+  {
+   "line": "L05",
+   "t0": 22.487,
+   "text": "In 1521, the Aztec capital falls to Spanish forces.",
+   "speech_end": 26.467,
+   "t1": 28.356,
+   "lines": [
+    "In 1521, the Aztec capital",
+    "falls to Spanish forces."
+   ]
+  },
+  {
+   "line": "L06",
+   "t0": 28.396,
+   "text": "In 1810, Father Hidalgo's call",
+   "speech_end": 30.696,
+   "t1": 30.576,
+   "lines": [
+    "In 1810, Father",
+    "Hidalgo's call"
+   ]
+  },
+  {
+   "line": "L06",
+   "t0": 30.616,
+   "text": "for independence rings out.",
+   "speech_end": 32.496,
+   "t1": 33.097,
+   "lines": [
+    "for independence rings out."
+   ]
+  },
+  {
+   "line": "L07",
+   "t0": 33.137,
+   "text": "In 1910, a revolution begins,",
+   "speech_end": 35.377,
+   "t1": 35.257,
+   "lines": [
+    "In 1910,",
+    "a revolution begins,"
+   ]
+  },
+  {
+   "line": "L07",
+   "t0": 35.297,
+   "text": "and lasts ten years.",
+   "speech_end": 36.877,
+   "t1": 37.517,
+   "lines": [
+    "and lasts ten years."
+   ]
+  },
+  {
+   "line": "L08",
+   "t0": 37.557,
+   "text": "In the 1920s, Diego Rivera paints",
+   "speech_end": 40.457,
+   "t1": 40.337,
+   "lines": [
+    "In the 1920s,",
+    "Diego Rivera paints"
+   ]
+  },
+  {
+   "line": "L08",
+   "t0": 40.377,
+   "text": "giant murals of Mexico's story.",
+   "speech_end": 42.777,
+   "t1": 43.443,
+   "lines": [
+    "giant murals of",
+    "Mexico's story."
+   ]
+  },
+  {
+   "line": "L09",
+   "t0": 43.483,
+   "text": "Today, more than 130 million people",
+   "speech_end": 46.423,
+   "t1": 46.303,
+   "lines": [
+    "Today, more than",
+    "130 million people"
+   ]
+  },
+  {
+   "line": "L09",
+   "t0": 46.343,
+   "text": "call Mexico home.",
+   "speech_end": 47.823,
+   "t1": 48.44,
+   "lines": [
+    "call Mexico home."
+   ]
+  },
+  {
+   "line": "L10",
+   "t0": 48.48,
+   "text": "Have you been to Mexico? Tell us below.",
+   "speech_end": 50.74,
+   "t1": 52.26,
+   "lines": [
+    "Have you been to",
+    "Mexico? Tell us below."
+   ]
+  }
+ ],
+ "country": "MEXICO",
+ "sub": "@PrintedHistory",
+ "brand": "FOLLOW @PrintedHistory",
+ "paper": "#F4ECDA",
+ "intro": {
+  "vo": 0.3
+ }
+}

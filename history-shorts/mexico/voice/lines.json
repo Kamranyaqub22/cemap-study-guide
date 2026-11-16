@@ -1,0 +1,92 @@
+[
+ {
+  "id": "L01",
+  "text": "Under Mexico City lies another city, built on an island in a lake.",
+  "asr": "under Mexico City lies another city built on an island in a lake",
+  "sub": "Under Mexico City lies another city, | built on an island in a lake.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L02",
+  "text": "Around twelve hundred BC, the Olmecs make giant stone heads, taller than a person.",
+  "asr": "around 1200 BC the Olmecs make giant stone heads taller than a person",
+  "sub": "Around 1200 BC, the Olmecs make | giant stone heads, taller than a person.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L03",
+  "text": "Around the year two hundred, the great Pyramid of the Sun rises at Tayo-teewa-kahn.",
+  "asr": "around the year 200 the great Pyramid of the Sun rises at Teotihuacan",
+  "sub": "Around the year 200, the great Pyramid of the Sun | rises at Teotihuacan.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L04",
+  "text": "In thirteen twenty-five, the Aztecs build their capital, on an island in a lake.",
+  "asr": "in 1325 the Aztecs build their capital on an island in a lake",
+  "sub": "In 1325, the Aztecs build their capital, | on an island in a lake.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L05",
+  "text": "In fifteen twenty-one, the Aztec capital falls to Spanish forces.",
+  "asr": "in 1521 the Aztec capital falls to Spanish forces",
+  "sub": "In 1521, the Aztec capital falls to Spanish forces.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L06",
+  "text": "In eighteen ten, Father Hidalgo's call for independence rings out.",
+  "asr": "in 1810 Father Hidalgo's call for independence rings out",
+  "sub": "In 1810, Father Hidalgo's call | for independence rings out.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L07",
+  "text": "In nineteen ten, a revolution begins, and lasts ten years.",
+  "asr": "in 1910 a revolution begins and lasts 10 years",
+  "sub": "In 1910, a revolution begins, | and lasts ten years.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L08",
+  "text": "In the nineteen twenties, Diego Rivera paints giant murals of Mexico's story.",
+  "asr": "in the 1920s Diego Rivera paints giant murals of Mexico's story",
+  "sub": "In the 1920s, Diego Rivera paints | giant murals of Mexico's story.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L09",
+  "text": "Today, more than one hundred and thirty million people call Mexico home.",
+  "asr": "today more than 130 million people call Mexico home",
+  "sub": "Today, more than 130 million people | call Mexico home.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L10",
+  "text": "Have you been to Mexico? Tell us below.",
+  "asr": "have you been to Mexico tell us below",
+  "sub": "Have you been to Mexico? Tell us below.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ }
+]
