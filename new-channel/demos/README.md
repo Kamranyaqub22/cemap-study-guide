@@ -7,6 +7,7 @@ Three test clips for a possible second channel. None of this touches `history-sh
 | `demo_glass.mp4` | Lost Empires (Mali, 1324) | stained glass: leads draw, panes light up, caravan walks | af_heart |
 | `demo_blue.mp4` | One Thing, All of History (coffee) | blueprint: pen draws, dimensions, counter, timeline ruler | am_michael |
 | `demo_titanic.mp4` | Minute by Minute (Titanic, 11:40 PM) | low-poly 3D (three.js): crow's nest, tracking shots, map board, lookout, impact | bm_lewis + am_puck (telephone) |
+| `demo_electra.mp4` | 3D reconstruction (Earhart, Lae, 2 July 1937) | three.js with haze, soft shadows, ambient occlusion, depth of field; date card, aircraft data block, big phrase captions, map cut | am_michael |
 | `demo_wood.mp4` | A Day in the Life (Roman legionary) | woodcut: blocks stamped, soldier marches, milestone passes | bm_daniel |
 
 3D demo: serve this folder (`python3 -m http.server 8765`), copy `three.module.js` (three 0.170) into `out/`, and render
@@ -20,3 +21,4 @@ coffee banned in Mecca in 1511; ~2 billion cups drunk a day worldwide (commonly 
 coffee in Brazil 1727; Vegetius: recruits trained to march 20 Roman miles in 5 hours.
 Titanic: lookout's warning "Iceberg, right ahead!" at about 11:40 PM on 14 April 1912, moonless calm night, about 22 knots, bow turned to port,
 struck on the starboard side (US and British inquiries).
+Electra: NR16020, Lockheed 10-E, took off from Lae about 10:00 AM local on 2 July 1937 for Howland Island (about 2,556 miles), crew Earhart and Noonan.
