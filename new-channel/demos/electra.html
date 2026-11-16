@@ -1,0 +1,198 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Last Take-off demo</title>
+<style>html,body{margin:0;background:#000}canvas{display:block}#g{position:absolute;left:-9999px}</style>
+<script type="importmap">{"imports":{"three":"./out/three.module.js","three/addons/":"./out/addons/"}}</script>
+</head><body><canvas id="c" width="1080" height="1920"></canvas><canvas id="g" width="1080" height="1920"></canvas>
+<script src="common.js"></script>
+<script type="module">
+// 3D RECONSTRUCTION — Lae, New Guinea, 2 July 1937, 10:00 AM: Amelia Earhart and Fred Noonan board Lockheed 10-E Electra NR16020.
+// Look: hazy tropical morning, soft shadows, aerial perspective, depth of field; blocky characters with face pieces.
+import * as THREE from 'three';
+import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import { makePost } from './out/post.js';
+
+const out = document.getElementById('c').getContext('2d');
+const gl = document.getElementById('g');
+const renderer = new THREE.WebGLRenderer({ canvas: gl, antialias: false, preserveDrawingBuffer: true });
+renderer.setSize(1080, 1920, false); renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.05;
+renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+const scene = new THREE.Scene();
+const HAZE = new THREE.Color('#e9d9bf');
+scene.fog = new THREE.Fog(HAZE, 90, 2600);
+const pm = new THREE.PMREMGenerator(renderer); scene.environment = pm.fromScene(new RoomEnvironment(), .04).texture; scene.environmentIntensity = .35;
+const cam = new THREE.PerspectiveCamera(40, 1080 / 1920, .1, 4000);
+const post = makePost(renderer, scene, cam, 1080, 1920, { ssaa: 1, ao: true, aoRadius: .5, aoAmt: .7 });
+post.bloom.strength = .12; post.vig.uniforms.amt.value = .28; post.vig.uniforms.warm.value = .35; post.vig.uniforms.contrast.value = .08;
+
+const mat = (c, o = {}) => new THREE.MeshStandardMaterial({ color: c, roughness: .9, metalness: 0, flatShading: true, ...o });
+const R = rng(31);
+function mesh(geo, m, x = 0, y = 0, z = 0, parent = scene, cast = true) { const o = new THREE.Mesh(geo, m); o.position.set(x, y, z); o.castShadow = cast; o.receiveShadow = true; parent.add(o); return o; }
+
+// sky dome: warm haze at the horizon, soft blue above
+{ const g = new THREE.SphereGeometry(3000, 32, 16);
+  const m = new THREE.ShaderMaterial({ side: THREE.BackSide, depthWrite: false, fog: false, uniforms: { top: { value: new THREE.Color('#7fa7cf') }, mid: { value: new THREE.Color('#bcd0dc') }, bot: { value: HAZE } },
+    vertexShader: 'varying vec3 p; void main(){ p = normalize(position); gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.); }',
+    fragmentShader: 'varying vec3 p; uniform vec3 top, mid, bot; void main(){ float h = clamp(p.y, 0., 1.); vec3 c = mix(bot, mid, smoothstep(0., .12, h)); c = mix(c, top, smoothstep(.12, .6, h)); gl_FragColor = vec4(c, 1.); }' });
+  scene.add(new THREE.Mesh(g, m)); }
+// light: low morning sun from the east, sky fill
+const sun = new THREE.DirectionalLight('#ffe0b5', 3.2); sun.position.set(60, 55, 40); sun.castShadow = true; sun.shadow.mapSize.set(2048, 2048); sun.shadow.bias = -.0004; sun.shadow.normalBias = .03; sun.shadow.radius = 4;
+scene.add(sun, sun.target);
+scene.add(new THREE.HemisphereLight('#cfe0f0', '#6b6a3e', 1.15));
+
+// ground, runway, beach, sea (the strip at Lae ran out to the Huon Gulf)
+mesh(new THREE.PlaneGeometry(4000, 4000).rotateX(-Math.PI / 2), mat('#76844a'), 0, 0, 0, scene, false);
+mesh(new THREE.PlaneGeometry(520, 34).rotateX(-Math.PI / 2), mat('#aaa07a'), -60, .02, 0, scene, false);
+for (let i = 0; i < 26; i++) mesh(new THREE.PlaneGeometry(14, 1.2).rotateX(-Math.PI / 2), mat('#9e8f5d'), -300 + i * 20, .03, (R() - .5) * 20, scene, false);
+mesh(new THREE.PlaneGeometry(60, 4000).rotateX(-Math.PI / 2), mat('#d8c79b'), -350, .04, 0, scene, false);
+const sea = mesh(new THREE.PlaneGeometry(3000, 4000, 1, 1).rotateX(-Math.PI / 2), mat('#3f7d8c', { roughness: .25, metalness: .1, flatShading: false }), -1880, .06, 0, scene, false);
+// mountains beyond (the ranges behind Lae), faded by haze
+for (let i = 0; i < 14; i++) { const g = new THREE.IcosahedronGeometry(1, 1); g.scale(320 + R() * 260, 55 + R() * 60, 220); const m = mesh(g, mat('#4f6d4e'), -1500 + i * 260 + R() * 80, -40, -1500 - R() * 500, scene, false); m.rotation.y = R() * 3; }
+// palms and bushes
+function palm(x, z, h) { const g = new THREE.Group(); g.position.set(x, 0, z); scene.add(g); const lean = (R() - .5) * .5; let px = 0, py = 0;
+  for (let i = 0; i < 6; i++) { const s = mesh(new THREE.CylinderGeometry(.18, .24, h / 6, 6), mat('#7b6447'), px, py + h / 12, 0, g); s.rotation.z = lean * i / 6; px += Math.sin(lean * i / 6) * h / 6; py += h / 6; }
+  const crown = new THREE.Group(); crown.position.set(px, py, 0); g.add(crown);
+  for (let k = 0; k < 8; k++) { const f = mesh(new THREE.BoxGeometry(.9, .06, 4.2), mat(k % 2 ? '#4f6f33' : '#5c7d3a'), 0, 0, 2, crown); f.geometry.translate(0, 0, 0); const p = new THREE.Group(); crown.add(p); p.add(f); p.rotation.y = k / 8 * Math.PI * 2 + R(); p.rotation.x = .55 + R() * .3; }
+  g.userData.crown = crown; return g; }
+const PALMS = [];
+for (let i = 0; i < 70; i++) { const side = R() < .5 ? -1 : 1; const x = -340 + R() * 520, z = side > 0 ? 185 + R() * 120 : -(32 + R() * 140); if (Math.abs(x - 20) < 30 && Math.abs(z - 10) < 25) continue; PALMS.push(palm(x, z, 9 + R() * 7)); }
+for (let i = 0; i < 60; i++) { const g = new THREE.IcosahedronGeometry(1, 0); g.scale(2 + R() * 3, 1.5 + R() * 2.5, 2 + R() * 3); mesh(g, mat(R() < .5 ? '#46612f' : '#55703a'), -340 + R() * 520, 1, R() < .5 ? 185 + R() * 100 : -(30 + R() * 160)); }
+// hangar and shed
+{ const h = new THREE.Group(); h.position.set(40, 0, -48); scene.add(h); mesh(new THREE.BoxGeometry(30, 9, 20), mat('#9aa0a3'), 0, 4.5, 0, h);
+  const roof = mesh(new THREE.CylinderGeometry(10.5, 10.5, 30.4, 16, 1, false, 0, Math.PI), mat('#7f8689'), 0, 9, 0, h); roof.rotation.z = Math.PI / 2; roof.rotation.y = Math.PI / 2; roof.scale.set(1, 1, .35);
+  mesh(new THREE.BoxGeometry(14, 7.5, .3), mat('#2b2f33'), 0, 3.75, 10.05, h, false); mesh(new THREE.BoxGeometry(8, 4, 6), mat('#b8b19c'), 26, 2, 4, h); }
+
+// the Electra: nose toward −x, 11.8 m long, 16.8 m span, twin fins
+const SILVER = mat('#d5d8db', { metalness: .55, roughness: .32, flatShading: false });
+const plane = new THREE.Group(); scene.add(plane); const body = new THREE.Group(); plane.add(body);
+{ const prof = []; for (let i = 0; i <= 24; i++) { const u = i / 24, y = u * 11.8; let r = u < .55 ? lerp(.16, .82, Math.pow(u / .55, .7)) : .82 * Math.sqrt(Math.max(0, 1 - Math.pow((u - .55) / .45, 2.2))); prof.push(new THREE.Vector2(Math.max(r, .001), y)); }
+  const fg = new THREE.LatheGeometry(prof, 18); fg.rotateZ(Math.PI / 2); fg.translate(5.4, 0, 0); fg.scale(1, .95, .82); mesh(fg, SILVER, 0, 0, 0, body);
+  // windscreen and cabin windows
+  const glass = mat('#1d2a36', { roughness: .15, metalness: .3 }); const ws = mesh(new THREE.BoxGeometry(1.0, .38, 1.05), glass, -3.95, .5, 0, body); ws.rotation.z = -.5;
+  for (const zs of [-1, 1]) for (const x of [-1.6, .4]) mesh(new THREE.BoxGeometry(.5, .32, .05), glass, x, .3, zs * .69, body);
+  mesh(new THREE.BoxGeometry(.75, 1.3, .05), mat('#b9bcbf', { metalness: .5, roughness: .4 }), 2.6, -.05, .66, body);   // door, left rear
+  // wing (tapered)
+  const wg = new THREE.BoxGeometry(2.5, .3, 16.8, 1, 1, 8); const p = wg.attributes.position; for (let i = 0; i < p.count; i++) { const z = p.getZ(i), k = 1 - .5 * Math.abs(z) / 8.4; p.setX(i, p.getX(i) * k + (1 - k) * .4); } wg.computeVertexNormals();
+  mesh(wg, SILVER, -1.0, -.62, 0, body);
+  // engines, cowlings, propellers, main wheels
+  body.userData.props = [];
+  for (const zs of [-1, 1]) { const z = zs * 2.65;
+    const n = mesh(new THREE.CylinderGeometry(.5, .42, 2.8, 14).rotateZ(Math.PI / 2), SILVER, -2.3, -.4, z, body);
+    mesh(new THREE.CylinderGeometry(.58, .55, .45, 14).rotateZ(Math.PI / 2), mat('#2a2c2e', { metalness: .4, roughness: .5 }), -3.65, -.4, z, body);
+    const prop = new THREE.Group(); prop.position.set(-3.95, -.4, z); body.add(prop);
+    mesh(new THREE.ConeGeometry(.2, .45, 10).rotateZ(Math.PI / 2), SILVER, -.12, 0, 0, prop);
+    for (const s of [-1, 1]) { const b = mesh(new THREE.BoxGeometry(.06, 1.25, .2), mat('#26282a', { roughness: .6 }), 0, s * .65, 0, prop); b.rotation.x = s * .2; }
+    const disc = new THREE.Mesh(new THREE.CircleGeometry(1.3, 32).rotateY(Math.PI / 2), new THREE.MeshBasicMaterial({ color: '#cfd3d6', transparent: true, opacity: 0, depthWrite: false })); disc.position.x = -.02; prop.add(disc); prop.userData.disc = disc;
+    body.userData.props.push(prop);
+    mesh(new THREE.BoxGeometry(.18, 1.1, .18), mat('#3a3c3e'), -2.0, -1.05, z, body);
+    mesh(new THREE.CylinderGeometry(.46, .46, .26, 16).rotateX(Math.PI / 2), mat('#1b1b1b', { roughness: .8 }), -2.0, -1.55, z, body); }
+  // tail: stabiliser and twin fins with the registration
+  mesh(new THREE.BoxGeometry(1.4, .12, 5.8), SILVER, 4.9, .25, 0, body);
+  const tex = (() => { const c = document.createElement('canvas'); c.width = 256; c.height = 128; const x = c.getContext('2d'); x.fillStyle = '#d5d8db'; x.fillRect(0, 0, 256, 128); x.fillStyle = '#111'; x.font = '900 46px Inter'; x.textAlign = 'center'; x.fillText('NR16020', 128, 80); const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t; })();
+  for (const zs of [-1, 1]) { const fin = mesh(new THREE.BoxGeometry(1.25, 1.7, .08), SILVER, 5.0, .95, zs * 2.9, body);
+    const lab = new THREE.Mesh(new THREE.PlaneGeometry(1.1, .55), new THREE.MeshStandardMaterial({ map: tex, roughness: .4, metalness: .4 })); lab.position.set(5.0, .95, zs * 2.95); if (zs < 0) lab.rotation.y = Math.PI; body.add(lab); }
+  mesh(new THREE.CylinderGeometry(.18, .18, .12, 10).rotateX(Math.PI / 2), mat('#1b1b1b'), 5.2, -.75, 0, body);
+}
+function setPlane(x, alt, pitch) { plane.position.set(x, 2.0 + alt, 0); body.rotation.z = pitch; }
+
+// blocky people with face pieces
+function person({ shirt, pants, hair, skin = '#e3b48e', hairLong = false, bag = false }) {
+  const g = new THREE.Group(); scene.add(g); const rb = (w, h, d) => new RoundedBoxGeometry(w, h, d, 2, Math.min(w, h, d) * .18);
+  const S = mat(skin), Hm = mat(hair), Sh = mat(shirt), P = mat(pants), dark = mat('#2a1d16');
+  const legs = [], arms = [];
+  for (const s of [-1, 1]) { const hip = new THREE.Group(); hip.position.set(s * .12, .88, 0); g.add(hip); mesh(rb(.22, .84, .26), P, 0, -.42, 0, hip); mesh(rb(.24, .12, .34), dark, 0, -.86, .04, hip); legs.push(hip);
+    const sh = new THREE.Group(); sh.position.set(s * .36, 1.5, 0); g.add(sh); mesh(rb(.17, .66, .19), Sh, 0, -.3, 0, sh); mesh(rb(.14, .14, .14), S, 0, -.67, 0, sh); arms.push(sh); }
+  mesh(rb(.56, .7, .32), Sh, 0, 1.22, 0, g); mesh(rb(.36, .1, .2), Sh, 0, 1.57, .02, g);
+  const head = new THREE.Group(); head.position.set(0, 1.8, 0); g.add(head);
+  mesh(rb(.36, .38, .34), S, 0, 0, 0, head); mesh(rb(.4, .14, .38), Hm, 0, .2, -.01, head); mesh(rb(.4, hairLong ? .36 : .24, .1), Hm, 0, hairLong ? .02 : .08, -.16, head);
+  for (const s of [-1, 1]) { mesh(rb(.13, .2, .1), Hm, s * .17, .08, -.06, head); mesh(new THREE.BoxGeometry(.05, .055, .02), dark, s * .075, .03, .172, head, false); mesh(new THREE.BoxGeometry(.1, .025, .02), mat(hair), s * .08, .1, .172, head, false); }
+  mesh(new THREE.BoxGeometry(.07, .1, .06), mat('#d9a47f'), 0, -.03, .19, head, false); mesh(new THREE.BoxGeometry(.11, .025, .02), mat('#7a3b2e'), 0, -.11, .172, head, false);
+  if (bag) mesh(rb(.42, .3, .14), mat('#6b4a2b'), 0, -.82, .05, arms[1]);
+  g.userData = { legs, arms, head }; return g;
+}
+function walk(p, ph, amt = 1) { const s = Math.sin(ph) * .42 * amt; p.userData.legs[0].rotation.x = s; p.userData.legs[1].rotation.x = -s; p.userData.arms[0].rotation.x = -s * .8; p.userData.arms[1].rotation.x = s * .5; p.position.y = Math.abs(Math.cos(ph)) * .04 * amt; }
+const amelia = person({ shirt: '#d9c8a2', pants: '#a3916b', hair: '#8a5a33' });
+const fred = person({ shirt: '#eeeae0', pants: '#4b4f55', hair: '#2e241d', bag: true });
+const crew1 = person({ shirt: '#f1efe8', pants: '#e4dfcf', hair: '#1f1a16', skin: '#9a6a4a' });
+const crew2 = person({ shirt: '#cdbf98', pants: '#cdbf98', hair: '#3a2a20', skin: '#c99a76' });
+const crowd = []; for (let i = 0; i < 6; i++) { const p = person({ shirt: ['#f2efe6', '#c9b893', '#e6e0cf', '#b9c0c8'][i % 4], pants: ['#d9d3c0', '#5a5b55', '#cbbf9c'][i % 3], hair: '#2a211a', skin: ['#a5734f', '#e3b48e', '#8d5f42'][i % 3] }); p.position.set(28 + i * 1.6, 0, -24 + (i % 2) * 1.4); p.rotation.y = -2.4 + R() * .6; crowd.push(p); }
+
+const SHOTS = [[0, 6.6, 'board'], [6.6, 10.9, 'takeoff'], [10.9, 99, 'map']];
+function update(t) {
+  const shot = SHOTS.find(s => t >= s[0] && t < s[1]), k = prog(t, shot[0], shot[1]);
+  PALMS.forEach((p, i) => { p.userData.crown.rotation.z = .04 * Math.sin(t * 1.3 + i); p.userData.crown.rotation.x = .03 * Math.sin(t * .9 + i * 2); });
+  crowd.forEach((p, i) => { p.userData.head.rotation.y = .3 * Math.sin(t * .6 + i); });
+  if (shot[2] === 'board') {
+    setPlane(0, 0, -.16);
+    body.userData.props.forEach(p => { p.rotation.x = 0; p.userData.disc.material.opacity = 0; });
+    // the two walk from the hangar side toward the door at the rear of the fuselage
+    const a0 = new THREE.Vector3(17, 0, 12), a1 = new THREE.Vector3(5.2, 0, 3.4), wk = t / 6.6;
+    const side = new THREE.Vector3(.59, 0, -.81).multiplyScalar(1.15); amelia.position.lerpVectors(a0, a1, wk); fred.position.lerpVectors(a0.clone().add(side), a1.clone().add(side), wk); fred.position.addScaledVector(new THREE.Vector3(.81, 0, .59), .5);
+    const dir = Math.atan2(a1.x - a0.x, a1.z - a0.z); amelia.rotation.y = dir; fred.rotation.y = dir;
+    walk(amelia, t * 6.2); walk(fred, t * 6.2 + 1.3); amelia.position.y += 0; fred.userData.head.rotation.y = .25 * Math.sin(t * .8);
+    crew1.position.set(-3.6, 0, 4.2); crew1.rotation.y = Math.atan2(17 - -3.6, 12 - 4.2) - .3; walk(crew1, 0, 0); crew1.userData.arms[1].rotation.x = -1.2 + .15 * Math.sin(t * 2); crew1.userData.arms[1].rotation.z = .2;
+    crew2.position.set(2.8, 0, -4.4); crew2.rotation.y = 1.1; walk(crew2, 0, 0); crew2.userData.head.rotation.y = -.5 + .3 * Math.sin(t * .7);
+    cam.position.set(lerp(27, 20.5, ease(k)), lerp(2.3, 2.0, k), lerp(20.5, 15.8, ease(k))); cam.lookAt(lerp(2.5, 1.5, k), lerp(.8, .9, k), lerp(-.5, -.8, k)); cam.fov = 34;
+    post.dof.focus = cam.position.distanceTo(amelia.position) + .5; post.dof.aper = 7;
+    sun.target.position.set(4, 0, 4); sun.position.set(64, 58, 44); Object.assign(sun.shadow.camera, { left: -26, right: 26, top: 26, bottom: -26, far: 220 }); sun.shadow.camera.updateProjectionMatrix();
+    amelia.visible = fred.visible = crew1.visible = crew2.visible = true;
+  } else if (shot[2] === 'takeoff') {
+    const dt = t - 6.6, x = -60 - 30 * dt - 3 * dt * dt, lift = Math.max(0, dt - 2.9), alt = 2.4 * Math.pow(lift, 1.6);
+    setPlane(x, alt, lift > 0 ? -.07 - .02 * Math.sin(lift * 2) : lerp(-.05, 0, prog(dt, 0, 1.5)));
+    plane.position.y += .03 * Math.sin(t * 40) * (lift > 0 ? 0 : 1);
+    body.userData.props.forEach((p, i) => { p.rotation.x = t * 37 + i; p.userData.disc.material.opacity = .22; });
+    amelia.visible = fred.visible = crew1.visible = crew2.visible = false;
+    cam.position.set(lerp(-70, -150, ease(k)), 2.6, 72); cam.lookAt(x - lerp(9, 1, k), 1.3 + alt * .6, 0); cam.fov = 28;
+    post.dof.focus = cam.position.distanceTo(plane.position); post.dof.aper = 2.5;
+    sun.target.position.set(x, 0, 0); sun.position.set(x + 60, 58, 44); Object.assign(sun.shadow.camera, { left: -30, right: 30, top: 30, bottom: -30, far: 260 }); sun.shadow.camera.updateProjectionMatrix();
+  }
+  cam.updateProjectionMatrix();
+  return shot;
+}
+
+// map: dark sea, beige coast, the route out over the Pacific
+const COAST = (() => { const r = rng(5), p = []; for (let i = 0; i <= 60; i++) { const u = i / 60; p.push([lerp(-120, 760, u) + (r() - .5) * 18, 1320 - 520 * u + 120 * Math.sin(u * 7) + (r() - .5) * 26 + (u > .42 && u < .58 ? 160 * Math.sin((u - .42) / .16 * Math.PI) : 0)]); } return p; })();
+function drawMap(t) {
+  const k = prog(t, 10.9, 12.8), z = 1 + .08 * ease(k);
+  out.save(); out.translate(540, 960); out.scale(z, z); out.rotate(-.02 * k); out.translate(-540, -960);
+  const g = out.createLinearGradient(0, 0, 1080, 1920); g.addColorStop(0, '#13344b'); g.addColorStop(1, '#0a1c2b'); out.fillStyle = g; out.fillRect(-200, -200, 1480, 2320);
+  out.strokeStyle = 'rgba(160,200,230,.07)'; out.lineWidth = 2; for (let i = 1; i < 6; i++) { out.beginPath(); COAST.forEach(([x, y], j) => j ? out.lineTo(x + i * 26, y - i * 40) : out.moveTo(x + i * 26, y - i * 40)); out.stroke(); }
+  out.fillStyle = '#d9c8a1'; out.beginPath(); out.moveTo(-200, 2200); COAST.forEach(([x, y]) => out.lineTo(x, y)); out.lineTo(1300, 600); out.lineTo(1300, 2200); out.closePath(); out.fill();
+  out.strokeStyle = 'rgba(255,255,255,.35)'; out.lineWidth = 2; out.beginPath(); COAST.forEach(([x, y], j) => j ? out.lineTo(x, y) : out.moveTo(x, y)); out.stroke();
+  const L = COAST[30]; out.setLineDash([22, 16]); out.lineDashOffset = -t * 30; out.strokeStyle = '#ffffff'; out.lineWidth = 5;
+  const pts = sample(u => [lerp(L[0], 1180, u), lerp(L[1], 330, u) - 140 * Math.sin(u * Math.PI)], 50); partial(out, pts, ease(prog(t, 11.0, 12.6))); out.setLineDash([]);
+  out.fillStyle = '#ffffff'; out.beginPath(); out.arc(L[0], L[1], 10, 0, 7); out.fill(); out.strokeStyle = 'rgba(255,255,255,.5)'; out.lineWidth = 3; out.beginPath(); out.arc(L[0], L[1], 18 + 10 * ((t * 1.5) % 1), 0, 7); out.stroke();
+  out.restore();
+  out.textBaseline = 'alphabetic'; out.textAlign = 'left'; const la = easeOut(prog(t, 11.1, 11.5)); out.globalAlpha = la;
+  out.fillStyle = '#fff'; out.font = '800 34px Inter'; out.fillText('LAE', L[0] + 30, L[1] + 70); out.font = '600 20px Inter'; out.fillStyle = 'rgba(255,255,255,.7)'; out.fillText('NEW GUINEA · DEPARTURE', L[0] + 30, L[1] + 98);
+  out.textAlign = 'right'; out.fillStyle = '#fff'; out.font = '800 30px Inter'; out.fillText('HOWLAND ISLAND', 1010, 400); out.font = '600 20px Inter'; out.fillStyle = 'rgba(255,255,255,.7)'; out.fillText('2,556 MILES · DESTINATION', 1010, 430);
+  out.font = 'italic 500 19px Inter'; out.fillStyle = 'rgba(255,255,255,.55)'; out.fillText('Route approximate', 1010, 458); out.textAlign = 'left'; out.globalAlpha = 1;
+}
+function spaced(s, x, y, sp) { for (const ch of s) { out.fillText(ch, x, y); x += out.measureText(ch).width + sp; } }
+
+window.draw = function (t) {
+  const shot = update(t);
+  if (shot[2] !== 'map') { post.composer.render(); out.drawImage(gl, 0, 0); } else drawMap(t);
+  out.textBaseline = 'alphabetic'; out.textAlign = 'left';
+  // small label, date card, data block
+  out.fillStyle = 'rgba(255,255,255,.62)'; out.font = '700 21px Inter'; spaced('3D RECONSTRUCTION', 62, 190, 4);
+  if (shot[2] !== 'map') {
+    const a = easeOut(prog(t, .2, .8)); out.globalAlpha = a;
+    out.fillStyle = '#f0b44c'; out.fillRect(62, 222, 56, 5);
+    out.save(); out.shadowColor = 'rgba(0,0,0,.35)'; out.shadowBlur = 14; out.fillStyle = '#ffffff'; out.font = '800 50px Inter'; out.fillText('FRIDAY, 2 JULY 1937', 62, 285); out.restore();
+    out.fillStyle = 'rgba(255,255,255,.82)'; out.font = '600 23px Inter'; spaced('10:00 AM LOCAL · LAE, NEW GUINEA', 64, 325, 2.2); out.globalAlpha = 1;
+  }
+  if (shot[2] === 'takeoff') {
+    const a = easeOut(prog(t, 6.75, 7.2)); out.globalAlpha = a; out.save(); out.shadowColor = 'rgba(0,0,0,.45)'; out.shadowBlur = 10;
+    out.fillStyle = '#fff'; out.font = '800 25px Inter'; spaced('NR16020 · LOCKHEED 10-E ELECTRA', 62, 1238, 1.5);
+    out.fillStyle = 'rgba(255,255,255,.85)'; out.font = '600 21px Inter'; spaced('PILOT AMELIA EARHART · NAVIGATOR FRED NOONAN', 62, 1272, 1);
+    out.fillStyle = 'rgba(255,255,255,.62)'; out.font = 'italic 500 19px Inter'; out.fillText('Model based on period photographs of NR16020', 62, 1304); out.restore(); out.globalAlpha = 1;
+  }
+  // big phrase captions, no box
+  const c = CFG.caps.find(c => t >= c.t0 && t < c.t1);
+  if (c) { out.save(); out.textAlign = 'center'; out.textBaseline = 'middle'; out.font = '800 92px Inter'; out.shadowColor = 'rgba(0,0,0,.5)'; out.shadowBlur = 22; out.shadowOffsetY = 3;
+    out.globalAlpha = Math.min(1, prog(t, c.t0, c.t0 + .06) * 1.0 + .0); let s = 92; while (out.measureText(c.text).width > 900) { s -= 4; out.font = `800 ${s}px Inter`; }
+    out.fillStyle = '#ffffff'; out.fillText(c.text, 520, 1070); out.restore(); }
+};
+window.ready = true;
+</script></body></html>

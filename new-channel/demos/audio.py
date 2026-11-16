@@ -67,6 +67,20 @@ elif demo == 'blue':   # marimba in C, clock ticks, pen scratch while drawing, c
     scratch(.35, 2.6); scratch(3.1, 4.2)
     for k in range(40): add(sfx, 3.6 + 2.2 * (k / 40) ** .6, click(.015, 2200), .1, .5)
     for t0 in [6.4]: add(sfx, t0, thump(220, .3, .1), .25)
+elif demo == 'electra':   # airfield ambience, a low bed, two radial engines on the take-off, a swell on the map
+    n = N; tt = np.arange(n) / SR
+    add(sfx, 0, lp(rng.normal(0, 1, n), 220, 2) * (.8 + .2 * np.sin(2 * np.pi * .13 * tt)), .9)                     # wind
+    surf = bp(rng.normal(0, 1, n), 150, 700, 2) * (.5 + .5 * np.sin(2 * np.pi * .11 * tt) ** 2); add(sfx, 0, surf, .25, -.5)
+    r2 = np.random.default_rng(8)
+    for t0 in r2.uniform(.3, 10.5, 9):   # distant tropical birds
+        m = int(.18 * SR); f = r2.uniform(1800, 2600); ph = 2 * np.pi * np.cumsum(f * (1 + .25 * np.sin(np.arange(m) / SR * 2 * np.pi * 9))) / SR
+        add(sfx, t0, np.sin(ph) * np.sin(np.pi * np.arange(m) / m) ** 2, .025, r2.uniform(-.8, .8))
+    add(mus, 0, pad([hz(38), hz(45), hz(50)], 12.8, 1.5), .55)
+    m = int(4.6 * SR); te = np.arange(m) / SR; rpm = 1500 + 700 * np.minimum(1, te / 2.5); fire = rpm / 60 * 4.5
+    ph = 2 * np.pi * np.cumsum(fire) / SR; eng = (np.sign(np.sin(ph)) * .3 + np.sin(ph) + .5 * np.sin(2 * ph)) * (1 + .5 * lp(rng.normal(0, 1, m), 80))
+    eng = lp(eng + .4 * bp(rng.normal(0, 1, m), 200, 1200) * (1 + np.sin(ph * .5)), 1300, 2) * np.minimum(1, te / .08) * np.minimum(1, (4.3 - te) / .1).clip(0, 1)
+    add(sfx, 6.6, eng, .55, .2)
+    add(mus, 10.9, pad([hz(57), hz(62), hz(64)], 1.9, .4), .4); add(sfx, 10.9, thump(45, 1.2, .2), .5)
 elif demo == 'titanic':   # low strings, a slowing-then-racing pulse, ship rumble, three bell strokes, the impact, then silence
     add(mus, 0, pad([hz(38), hz(45), hz(50)], 16.0, 2.0), .7)
     add(mus, 8.2, pad([hz(62), hz(65)], 7.8, 1.5), .35)
