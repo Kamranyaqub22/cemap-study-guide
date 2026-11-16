@@ -1,0 +1,44 @@
+[
+ {
+  "id": "glass1",
+  "text": "This empire was richer than Rome. You've never heard of it.",
+  "voice": "af_heart",
+  "speed": 1.0,
+  "lang": "en-us"
+ },
+ {
+  "id": "glass2",
+  "text": "In thirteen twenty-four, the king of Mali brought so much gold to Cairo, its value fell for years.",
+  "voice": "af_heart",
+  "speed": 1.05,
+  "lang": "en-us"
+ },
+ {
+  "id": "blue1",
+  "text": "Coffee was once banned in Mecca.",
+  "voice": "am_michael",
+  "speed": 1.0,
+  "lang": "en-us"
+ },
+ {
+  "id": "blue2",
+  "text": "Today, the world drinks about two billion cups a day. Here's how it happened.",
+  "voice": "am_michael",
+  "speed": 1.05,
+  "lang": "en-us"
+ },
+ {
+  "id": "wood1",
+  "text": "You wake up in the year one hundred. You're a Roman soldier.",
+  "voice": "bm_daniel",
+  "speed": 1.0,
+  "lang": "en-gb"
+ },
+ {
+  "id": "wood2",
+  "text": "Today, you'll march twenty Roman miles, carrying your own gear.",
+  "voice": "bm_daniel",
+  "speed": 1.0,
+  "lang": "en-gb"
+ }
+]

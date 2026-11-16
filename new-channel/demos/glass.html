@@ -1,0 +1,145 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Lost Empires demo</title>
+<style>@font-face{font-family:Cinzel;src:url(fonts/Cinzel-Bold.ttf)}html,body{margin:0;background:#000}canvas{display:block}</style>
+</head><body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="common.js"></script>
+<script>
+// LOST EMPIRES — stained glass. Lead lines draw themselves, panes light up, the king of Mali appears last, a caravan walks the dunes.
+const ctx = document.getElementById('c').getContext('2d');
+const LEAD = '#100d12', CX = 540, ACY = 640, R = 390, X0 = CX - R, X1 = CX + R, YB = 1260;
+const HALO = [540, 770];
+
+function outline(ins) {   // closed polyline: arch (left→over→right), right side, bottom, left side
+  const p = [], r = R - ins;
+  for (let i = 0; i <= 40; i++) { const a = Math.PI + Math.PI * i / 40; p.push([CX + r * Math.cos(a), ACY + r * Math.sin(a)]); }
+  for (let i = 1; i <= 12; i++) p.push([X1 - ins, ACY + (YB - ins - ACY) * i / 12]);
+  for (let i = 1; i <= 10; i++) p.push([X1 - ins - (X1 - X0 - 2 * ins) * i / 10, YB - ins]);
+  for (let i = 1; i < 12; i++) p.push([X0 + ins, YB - ins - (YB - ins - ACY) * i / 12]);
+  return p;
+}
+const OUT = outline(0), IN = outline(34);
+const rnd = rng(7);
+// border band panes
+const border = [];
+for (let i = 0; i < OUT.length; i++) { const j = (i + 1) % OUT.length; border.push({ pts: [OUT[i], OUT[j], IN[j], IN[i]], col: i % 2 ? '#d9a02b' : '#9e1f2a', kind: 'b' }); }
+// field panes: jittered grid, some split into triangles
+const cols = 8, rows = 11, gx = (X1 - X0) / cols, gy = (YB - 250) / rows, V = [];
+for (let r = 0; r <= rows; r++) { V.push([]); for (let c = 0; c <= cols; c++) { const edge = r === 0 || c === 0 || r === rows || c === cols; V[r].push([X0 + c * gx + (edge ? 0 : (rnd() - .5) * 46), 250 + r * gy + (edge ? 0 : (rnd() - .5) * 40)]); } }
+const SKY = ['#173a8a', '#2457b0', '#13296b', '#3a2c80', '#1e4f9e', '#2b3f95'], MID = ['#1d6b78', '#2a8a7a', '#1b5560', '#2f7f9a'], SAND = ['#c98228', '#e2a83c', '#a55e1d', '#d8902e', '#b86f22'];
+function colFor(y) { const r = rnd(); if (y < 640) return SKY[(r * SKY.length) | 0]; if (y < 1050) return y < 840 ? SKY[(r * SKY.length) | 0] : MID[(r * MID.length) | 0]; return SAND[(r * SAND.length) | 0]; }
+const field = [];
+for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) {
+  const a = V[r][c], b = V[r][c + 1], d = V[r + 1][c + 1], e = V[r + 1][c];
+  const parts = rnd() < .45 ? (rnd() < .5 ? [[a, b, d], [a, d, e]] : [[a, b, e], [b, d, e]]) : [[a, b, d, e]];
+  for (const pts of parts) { const cy = pts.reduce((s, p) => s + p[1], 0) / pts.length; field.push({ pts, col: colFor(cy), kind: 'f' }); }
+}
+// halo wedges
+const halo = []; for (let i = 0; i < 16; i++) { const a0 = i / 16 * Math.PI * 2, a1 = (i + 1) / 16 * Math.PI * 2, p = [];
+  for (let k = 0; k <= 4; k++) { const a = lerp(a0, a1, k / 4); p.push([HALO[0] + 205 * Math.cos(a), HALO[1] + 205 * Math.sin(a)]); }
+  for (let k = 4; k >= 0; k--) { const a = lerp(a0, a1, k / 4); p.push([HALO[0] + 72 * Math.cos(a), HALO[1] + 72 * Math.sin(a)]); }
+  halo.push({ pts: p, col: i % 2 ? '#f0c24a' : '#d48a1f', kind: 'h' }); }
+// the king (after the 1375 atlas image: crowned, holding up a gold piece, a sceptre)
+const K = [
+  { pts: [[470, 830], [540, 830], [540, 1115], [430, 1115]], col: '#a8232b' },
+  { pts: [[540, 830], [610, 830], [650, 1115], [540, 1115]], col: '#7e1622' },
+  { pts: [[528, 835], [552, 835], [560, 1115], [520, 1115]], col: '#efb93c' },
+  { pts: [[490, 820], [590, 820], [575, 850], [505, 850]], col: '#f2c650' },
+  { pts: [[600, 845], [700, 880], [692, 912], [592, 885]], col: '#931c27' },   // right arm
+  { pts: [[480, 845], [430, 905], [452, 922], [500, 878]], col: '#931c27' },   // left arm
+];
+const crown = [[492, 735], [492, 690], [510, 712], [526, 680], [540, 706], [554, 680], [570, 712], [588, 690], [588, 735]];
+function camel(x, y, s, ph) {   // side view walking right; returns body polygon + legs
+  const P = (dx, dy) => [x + dx * s, y + dy * s];
+  return { body: [P(-60, 0), P(-55, -30), P(-30, -42), P(-12, -60), P(5, -42), P(25, -38), P(42, -52), P(50, -85), P(66, -92), P(78, -86), P(70, -78), P(60, -76), P(56, -45), P(52, -10), P(30, 4), P(-40, 6)],
+    legs: [-45, -28, 22, 38].map((lx, i) => { const sw = Math.sin(ph + (i % 2 ? Math.PI : 0) + (i > 1 ? .8 : 0)) * 12; return [P(lx, 2), P(lx + sw, 52)]; }) };
+}
+// reveal order: from the halo outward
+const allPanes = [...halo, ...field, ...border];
+allPanes.forEach(p => { p.c = [p.pts.reduce((s, q) => s + q[0], 0) / p.pts.length, p.pts.reduce((s, q) => s + q[1], 0) / p.pts.length]; p.d = Math.hypot(p.c[0] - HALO[0], p.c[1] - HALO[1]); p.peri = polyLen([...p.pts, p.pts[0]]); });
+const maxD = Math.max(...allPanes.map(p => p.d));
+allPanes.forEach(p => { const k = p.d / maxD; p.tl = .15 + k * 1.9 + rnd() * .2; p.tf = 1.2 + k * 2.6 + rnd() * .25; });
+K.forEach((p, i) => { p.tl = 1.6 + i * .12; p.tf = 3.1 + i * .1; p.peri = polyLen([...p.pts, p.pts[0]]); });
+
+function shade(hex, f) { const n = parseInt(hex.slice(1), 16); const ch = s => Math.round(clamp(((n >> s) & 255) * f, 0, 255)); return `rgb(${ch(16)},${ch(8)},${ch(0)})`; }
+function light(x, y, t) {   // a slow sun beam sweeping across the window + a flicker
+  const bx = lerp(-200, 1300, (t / 11) % 1.2), d = Math.abs((x - bx) * .8 + (y - 700) * .6) / 260;
+  return .62 + .5 * Math.exp(-d * d) + .06 * Math.sin(x * .03 + y * .021 + t * 2.2);
+}
+function glassPane(p, t, bright = 1) {
+  const a = easeOut(prog(t, p.tf, p.tf + .45)); if (a <= 0) return;
+  const flash = 1 + 1.1 * Math.exp(-Math.pow((t - p.tf - .12) / .12, 2));
+  const L = light(p.c[0], p.c[1], t) * flash * bright;
+  ctx.globalAlpha = a; poly(ctx, p.pts);
+  const g = ctx.createRadialGradient(p.c[0] - 12, p.c[1] - 14, 4, p.c[0], p.c[1], 110);
+  g.addColorStop(0, shade(p.col, L * 1.35)); g.addColorStop(1, shade(p.col, L * .78));
+  ctx.fillStyle = g; ctx.fill(); ctx.globalAlpha = 1;
+}
+function leadPane(p, t, w = 9) { const k = prog(t, p.tl, p.tl + .55); if (k <= 0) return; ctx.lineWidth = w; const f = easeOut(prog(t, p.tf, p.tf + .5)); ctx.strokeStyle = `rgb(${lerp(214,16,f)|0},${lerp(190,13,f)|0},${lerp(150,18,f)|0})`; ctx.lineJoin = 'round'; partial(ctx, [...p.pts, p.pts[0]], ease(k)); }
+
+function draw(t) {
+  // stone wall
+  const bg = ctx.createLinearGradient(0, 0, 0, H); bg.addColorStop(0, '#120f16'); bg.addColorStop(1, '#07060a'); ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
+  ctx.save();
+  const zin = ease(prog(t, 0, 4.2)), s = lerp(1.32, 1, zin) * (1 + .045 * ease(prog(t, 4.2, CFG.dur))), fx = 540, fy = lerp(720, 820, zin);
+  ctx.translate(540, 820); ctx.scale(s, s); ctx.translate(-fx, -fy);
+  // stone courses
+  ctx.strokeStyle = 'rgba(255,240,220,.05)'; ctx.lineWidth = 3;
+  for (let y = 0; y < H; y += 120) { ctx.beginPath(); ctx.moveTo(-200, y); ctx.lineTo(1300, y); ctx.stroke(); for (let x = (y / 120 % 2) * 110 - 200; x < 1300; x += 220) { ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x, y + 120); ctx.stroke(); } }
+  // glow spilling from the window
+  const lit = easeOut(prog(t, 1.5, 4.5));
+  ctx.globalCompositeOperation = 'lighter'; const gl = ctx.createRadialGradient(540, 760, 100, 540, 760, 760); gl.addColorStop(0, `rgba(255,190,90,${.22 * lit})`); gl.addColorStop(1, 'rgba(0,0,0,0)'); ctx.fillStyle = gl; ctx.fillRect(-300, -300, 1700, 2300); ctx.globalCompositeOperation = 'source-over';
+  // glass, clipped to the window
+  ctx.save(); poly(ctx, OUT); ctx.clip();
+  ctx.fillStyle = '#0b0910'; ctx.fillRect(0, 0, W, H);
+  for (const p of field) glassPane(p, t);
+  for (const p of halo) glassPane(p, t, 1.1 + .15 * Math.sin(t * 3 + p.c[0]));
+  // caravan on the dunes (dark glass, leaded)
+  const cv = easeOut(prog(t, 3.4, 4.4));
+  if (cv > 0) for (let i = 0; i < 5; i++) {
+    const x = ((i * 230 + t * 46) % 1150) - 80, c = camel(x, 1200, .95, t * 5 + i);
+    ctx.globalAlpha = cv; ctx.lineWidth = 7; ctx.strokeStyle = LEAD;
+    for (const [a, b] of c.legs) { ctx.lineWidth = 13; ctx.beginPath(); ctx.moveTo(...a); ctx.lineTo(...b); ctx.stroke(); ctx.lineWidth = 7; ctx.strokeStyle = '#3a210d'; ctx.stroke(); ctx.strokeStyle = LEAD; }
+    poly(ctx, c.body); ctx.fillStyle = '#3d220c'; ctx.fill(); ctx.lineWidth = 7; ctx.stroke(); ctx.globalAlpha = 1;
+  }
+  // the king
+  for (const p of K) { p.c = p.c || [p.pts.reduce((s, q) => s + q[0], 0) / 4, p.pts.reduce((s, q) => s + q[1], 0) / 4]; glassPane(p, t); }
+  const kf = easeOut(prog(t, 3.0, 3.6));
+  ctx.globalAlpha = kf;
+  ctx.beginPath(); ctx.arc(540, 770, 54, 0, 7); ctx.fillStyle = shade('#5a3218', light(540, 770, t)); ctx.fill();
+  poly(ctx, crown); ctx.fillStyle = shade('#f2c34a', light(540, 700, t) * 1.2); ctx.fill();
+  ctx.fillStyle = '#4a2a14'; ctx.beginPath(); ctx.arc(702, 896, 20, 0, 7); ctx.fill(); ctx.beginPath(); ctx.arc(440, 912, 18, 0, 7); ctx.fill();
+  // sceptre
+  ctx.fillStyle = shade('#e9b23a', light(420, 900, t)); ctx.fillRect(412, 780, 16, 330); poly(ctx, [[420, 740], [442, 772], [420, 800], [398, 772]]); ctx.fill();
+  // the gold piece: glints on "gold"
+  const glint = Math.exp(-Math.pow((t - 6.0) / .35, 2)) + .25 * (.5 + .5 * Math.sin(t * 4));
+  const gx = 738, gy = 878; ctx.beginPath(); ctx.arc(gx, gy, 44, 0, 7); const gg = ctx.createRadialGradient(gx - 12, gy - 14, 4, gx, gy, 46); gg.addColorStop(0, '#fff3b8'); gg.addColorStop(.5, '#f2bf3c'); gg.addColorStop(1, '#a8701a'); ctx.fillStyle = gg; ctx.fill();
+  ctx.globalAlpha = 1;
+  ctx.restore();
+  // leads on top
+  for (const p of [...field, ...halo]) leadPane(p, t);
+  for (const p of K) leadPane(p, t, 10);
+  const kl = prog(t, 1.9, 2.8);
+  if (kl > 0) { ctx.lineWidth = 10; ctx.strokeStyle = LEAD; partial(ctx, sample(u => [540 + 54 * Math.cos(u * 6.3), 770 + 54 * Math.sin(u * 6.3)], 40), ease(kl)); partial(ctx, [...crown, crown[0]], ease(kl));
+    partial(ctx, [[420, 740], [442, 772], [420, 800], [398, 772], [420, 740]], ease(kl)); ctx.strokeRect(412, 800, 16 * kl, 310 * kl);
+    partial(ctx, sample(u => [738 + 44 * Math.cos(u * 6.3), 878 + 44 * Math.sin(u * 6.3)], 40), ease(kl)); }
+  for (const p of border) { glassPane(p, t); leadPane(p, t, 8); }
+  ctx.lineWidth = 16; ctx.strokeStyle = LEAD; partial(ctx, [...OUT, OUT[0]], ease(prog(t, 0, 1.6)));
+  ctx.lineWidth = 6; ctx.strokeStyle = '#3a3038'; partial(ctx, [...OUT, OUT[0]], ease(prog(t, 0, 1.6)));
+  // glints in the glass
+  const sp = ease(prog(t, 5.6, 6.6));
+  if (sp > 0 && sp < 1) { ctx.globalCompositeOperation = 'lighter'; const r = 90 * Math.sin(sp * Math.PI); ctx.strokeStyle = 'rgba(255,240,190,.9)'; ctx.lineWidth = 5; ctx.beginPath(); ctx.moveTo(738 - r, 878); ctx.lineTo(738 + r, 878); ctx.moveTo(738, 878 - r); ctx.lineTo(738, 878 + r); ctx.stroke(); ctx.globalCompositeOperation = 'source-over'; }
+  // dust in the beam, in front of the glass
+  ctx.globalCompositeOperation = 'lighter';
+  const dr = rng(99); for (let i = 0; i < 70; i++) { const x0 = dr() * 1080, y0 = dr() * 1500 + 150, sp2 = 10 + dr() * 25; const x = x0 + Math.sin(t * .7 + i) * 20, y = (y0 + t * sp2) % 1600 + 120;
+    const a = .5 * lit * (.4 + .6 * Math.sin(t * 2 + i)); if (a > 0) { ctx.fillStyle = `rgba(255,220,160,${a})`; ctx.beginPath(); ctx.arc(x, y, 2 + dr() * 2.5, 0, 7); ctx.fill(); } }
+  ctx.globalCompositeOperation = 'source-over';
+  ctx.restore();
+  // plaque
+  const pl = easeBack(prog(t, CFG.mark, CFG.mark + .5));
+  if (pl > 0) { ctx.save(); ctx.translate(540, 1335); ctx.scale(pl, pl); ctx.fillStyle = '#16111a'; ctx.strokeStyle = '#c9952e'; ctx.lineWidth = 4; ctx.beginPath(); ctx.roundRect(-230, -44, 460, 88, 10); ctx.fill(); ctx.stroke();
+    ctx.font = '700 50px Cinzel'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillStyle = '#f0c25a'; ctx.fillText('MALI · 1324', 0, 4); ctx.restore(); }
+  // title (screen space)
+  const ta = easeOut(prog(t, .1, .8)); ctx.globalAlpha = ta; ctx.textAlign = 'center'; ctx.font = '700 58px Cinzel'; ctx.fillStyle = '#efc35c'; ctx.fillText('LOST EMPIRES', 540, 205);
+  ctx.globalAlpha = 1;
+  captions(ctx, t, CFG.caps, { font: 'Inter', weight: 800, size: 56, y: 1500, fill: '#fff6e0', stroke: '#0a0710', strokeW: 12 });
+}
+</script></body></html>

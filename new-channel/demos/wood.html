@@ -1,0 +1,117 @@
+<!doctype html><html><head><meta charset="utf-8"><title>A Day in the Life demo</title>
+<style>@font-face{font-family:"Alfa Slab One";src:url(fonts/AlfaSlabOne.ttf)}html,body{margin:0;background:#000}canvas{display:block}</style>
+</head><body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="common.js"></script>
+<script>
+// A DAY IN THE LIFE — woodcut / linocut. Each block is stamped onto the paper; then the soldier marches and the world slides past.
+const ctx = document.getElementById('c').getContext('2d');
+const PAPER = '#efe3c8', INK = '#17130f', RED = '#b5281f', SLAB = '"Alfa Slab One"';
+const SX0 = 70, SX1 = 1010, SY0 = 360, SY1 = 1290;
+// paper grain
+const grain = document.createElement('canvas'); grain.width = 360; grain.height = 640; { const g = grain.getContext('2d'), r = rng(3), im = g.createImageData(360, 640);
+  for (let i = 0; i < im.data.length; i += 4) { const v = 200 + r() * 55 | 0; im.data[i] = v; im.data[i + 1] = v - 6; im.data[i + 2] = v - 20; im.data[i + 3] = r() < .5 ? 60 : 0; } g.putImageData(im, 0, 0); }
+const R = rng(11);
+const gouges = n => Array.from({ length: n }, () => [R(), R(), .4 + R() * .6, R()]);
+const G_HILL = gouges(60), G_GROUND = gouges(70), G_TENT = gouges(30);
+function stamp(t, t0) {   // 0..1 ink-in with a press overshoot; returns [alpha, scale, dx]
+  const k = prog(t, t0, t0 + .22); return [easeOut(k * 1.4), 1 + .07 * (1 - easeOut(k)), (1 - easeOut(k)) * 10];
+}
+function withStamp(t, t0, cx, cy, f) { const [a, s, dx] = stamp(t, t0); if (a <= 0) return; ctx.save(); ctx.globalAlpha = a; ctx.translate(cx + dx, cy); ctx.scale(s, s); ctx.translate(-cx, -cy); f(); ctx.restore(); }
+function hillPath(off, base, amp, freq, seed) { ctx.beginPath(); ctx.moveTo(SX0 - 50, SY1 + 50); for (let x = SX0 - 50; x <= SX1 + 50; x += 12) { const u = (x + off) * freq; ctx.lineTo(x, base - amp * (.6 * Math.sin(u + seed) + .4 * Math.sin(u * 2.3 + seed * 2))); } ctx.lineTo(SX1 + 50, SY1 + 50); ctx.closePath(); }
+function hillY(x, off, base, amp, freq, seed) { const u = (x + off) * freq; return base - amp * (.6 * Math.sin(u + seed) + .4 * Math.sin(u * 2.3 + seed * 2)); }
+function gougeMarks(list, x0, x1, yf, off, t) {   // white tapered cuts
+  ctx.fillStyle = PAPER; for (const [a, b, l, c] of list) { const span = x1 - x0, x = x0 + (((a * span - off) % span) + span) % span, y = yf(x, b); const len = 26 + 40 * l;
+    ctx.beginPath(); ctx.moveTo(x, y); ctx.quadraticCurveTo(x + len / 2, y - 6 - c * 4, x + len, y + 1); ctx.quadraticCurveTo(x + len / 2, y - 1, x, y); ctx.fill(); } }
+function soldier(x, by, ph, walk) {
+  const bob = walk * Math.abs(Math.sin(ph)) * 8, y = by - bob;
+  const sw = walk * .42 * Math.sin(ph);
+  ctx.lineCap = 'round';
+  // pack pole and bundle (behind)
+  ctx.strokeStyle = INK; ctx.lineWidth = 9; ctx.beginPath(); ctx.moveTo(x + 10, y - 330); ctx.lineTo(x - 120, y - 450); ctx.stroke();
+  ctx.save(); ctx.translate(x - 125, y - 420 + walk * Math.sin(ph * 2) * 5); ctx.rotate(walk * .08 * Math.sin(ph));
+  ctx.fillStyle = INK; ctx.beginPath(); ctx.ellipse(0, 10, 48, 38, 0, 0, 7); ctx.fill(); ctx.strokeStyle = PAPER; ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(-40, 6); ctx.lineTo(40, 14); ctx.moveTo(-5, -26); ctx.lineTo(4, 46); ctx.stroke();
+  ctx.fillStyle = INK; ctx.beginPath(); ctx.arc(-30, 62, 18, 0, Math.PI); ctx.fill(); ctx.restore();
+  // legs
+  for (const [s, shade] of [[-sw, '#3a2f25'], [sw, INK]]) { ctx.save(); ctx.translate(x, y - 170); ctx.rotate(s); ctx.strokeStyle = INK; ctx.lineWidth = 32; ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, 160); ctx.stroke(); ctx.strokeStyle = shade === INK ? '#e2d2ad' : '#bfae8a'; ctx.lineWidth = 18; ctx.stroke();
+    ctx.fillStyle = INK; ctx.beginPath(); ctx.ellipse(12, 168, 26, 10, 0, 0, 7); ctx.fill(); ctx.strokeStyle = INK; ctx.lineWidth = 4; for (let k = 0; k < 3; k++) { ctx.beginPath(); ctx.moveTo(-12, 120 + k * 14); ctx.lineTo(12, 116 + k * 14); ctx.stroke(); } ctx.restore(); }
+  // tunic (red) with folds
+  ctx.fillStyle = RED; poly(ctx, [[x - 50, y - 300], [x + 50, y - 300], [x + 66, y - 160], [x - 66, y - 160]]); ctx.fill();
+  ctx.strokeStyle = INK; ctx.lineWidth = 4; for (let k = -2; k <= 2; k++) { ctx.beginPath(); ctx.moveTo(x + k * 18, y - 230); ctx.lineTo(x + k * 24, y - 162); ctx.stroke(); }
+  // segmented armour
+  ctx.fillStyle = INK; poly(ctx, [[x - 56, y - 360], [x + 52, y - 360], [x + 58, y - 228], [x - 60, y - 228]]); ctx.fill();
+  ctx.strokeStyle = PAPER; ctx.lineWidth = 4; for (let k = 0; k < 5; k++) { ctx.beginPath(); ctx.moveTo(x - 52, y - 345 + k * 24); ctx.quadraticCurveTo(x, y - 336 + k * 24, x + 54, y - 345 + k * 24); ctx.stroke(); }
+  // head: face in profile, helmet
+  ctx.fillStyle = PAPER; ctx.strokeStyle = INK; ctx.lineWidth = 6; ctx.beginPath(); ctx.moveTo(x - 6, y - 372); ctx.lineTo(x + 30, y - 380); ctx.lineTo(x + 40, y - 410); ctx.lineTo(x + 50, y - 418); ctx.lineTo(x + 38, y - 432); ctx.lineTo(x + 36, y - 450); ctx.lineTo(x - 20, y - 456); ctx.lineTo(x - 26, y - 390); ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.fillStyle = INK; ctx.beginPath(); ctx.arc(x + 24, y - 436, 4.5, 0, 7); ctx.fill();
+  ctx.beginPath(); ctx.moveTo(x - 40, y - 440); ctx.quadraticCurveTo(x - 30, y - 510, x + 10, y - 506); ctx.quadraticCurveTo(x + 46, y - 500, x + 46, y - 452); ctx.lineTo(x - 10, y - 452); ctx.lineTo(x - 10, y - 404); ctx.lineTo(x - 46, y - 400); ctx.closePath(); ctx.fill();
+  ctx.fillStyle = RED; ctx.beginPath(); ctx.moveTo(x - 24, y - 500); ctx.quadraticCurveTo(x + 8, y - 548 + walk * 4 * Math.sin(ph * 2), x + 40, y - 498); ctx.closePath(); ctx.fill();
+  // pilum over the shoulder
+  ctx.strokeStyle = INK; ctx.lineWidth = 8; ctx.beginPath(); ctx.moveTo(x - 60, y - 200); ctx.lineTo(x + 150, y - 560); ctx.stroke();
+  ctx.fillStyle = INK; poly(ctx, [[x + 150, y - 560], [x + 170, y - 610], [x + 160, y - 552]]); ctx.fill();
+  // the scutum
+  ctx.save(); ctx.translate(x + 70, y - 260); ctx.fillStyle = RED; ctx.strokeStyle = INK; ctx.lineWidth = 10; ctx.beginPath(); ctx.roundRect(-46, -140, 92, 270, 14); ctx.fill(); ctx.stroke();
+  ctx.lineWidth = 6; ctx.beginPath(); ctx.moveTo(-46, -6); ctx.lineTo(46, -6); ctx.moveTo(0, -140); ctx.lineTo(0, 130); ctx.stroke();
+  ctx.fillStyle = INK; ctx.beginPath(); ctx.arc(0, -6, 24, 0, 7); ctx.fill(); ctx.fillStyle = PAPER; ctx.beginPath(); ctx.arc(-6, -12, 6, 0, 7); ctx.fill();
+  ctx.strokeStyle = PAPER; ctx.lineWidth = 3; for (let k = 0; k < 4; k++) { ctx.beginPath(); ctx.moveTo(-36, -120 + k * 30); ctx.lineTo(-12, -112 + k * 30); ctx.stroke(); } ctx.restore();
+}
+const NUM = ['I', 'II', 'III', 'IV', 'V'];
+
+function draw(t) {
+  ctx.fillStyle = PAPER; ctx.fillRect(0, 0, W, H);
+  const press = easeOut(prog(t, 0, .45));
+  const shake = [0.15, .9, 1.6, 2.4].reduce((s, t0) => s + Math.exp(-(t - t0) * 14) * (t > t0 ? 1 : 0), 0);
+  const walk = ease(prog(t, 4.2, 5.0)), march = Math.max(0, t - 4.2) * 150 * walk, ph = (t - 4.2) * 7.2;
+  ctx.save();
+  const z = 1 + .07 * ease(prog(t, .5, 4.3)) - .04 * ease(prog(t, 4.3, 6));
+  ctx.translate(540, 825 + (1 - press) * 260 + Math.sin(t * 90) * shake * 6); ctx.scale(z, z); ctx.translate(-540 + (z - 1) * -400, -825);
+  // the block, clipped
+  ctx.save(); ctx.beginPath(); ctx.rect(SX0, SY0, SX1 - SX0, SY1 - SY0); ctx.clip();
+  // sky lines, thicker toward the top; sun carved out
+  const sunY = lerp(1080, 700, ease(prog(t, .2, 5))), sunX = 720;
+  withStamp(t, .15, 540, 800, () => {
+    ctx.fillStyle = INK; for (let y = SY0 + 6; y < SY1; y += 18) { const th = lerp(10, 1.5, (y - SY0) / 700); ctx.beginPath();
+      for (let x = SX0; x < SX1; x += 6) { const d = Math.hypot(x - sunX, y - sunY); if (d < 165) continue; ctx.rect(x, y + Math.sin(x * .02 + y) * 1.5, 6, Math.max(1.2, th)); } ctx.fill(); }
+    // rays
+    ctx.strokeStyle = RED; ctx.lineWidth = 6; for (let i = 0; i < 18; i++) { const a = i / 18 * Math.PI * 2 + t * .15; ctx.beginPath(); ctx.moveTo(sunX + 140 * Math.cos(a), sunY + 140 * Math.sin(a)); ctx.lineTo(sunX + 160 * Math.cos(a), sunY + 160 * Math.sin(a)); ctx.stroke(); }
+    ctx.fillStyle = RED; ctx.beginPath(); ctx.arc(sunX, sunY, 118, 0, 7); ctx.fill();
+    ctx.strokeStyle = PAPER; ctx.lineWidth = 4; for (let k = 0; k < 4; k++) { ctx.beginPath(); ctx.arc(sunX, sunY, 30 + k * 22, Math.PI * 1.1, Math.PI * 1.45); ctx.stroke(); }
+  });
+  // far hills
+  const offH = march * .25;
+  withStamp(t, .9, 540, 980, () => { ctx.fillStyle = INK; hillPath(offH, 1000, 70, .006, 1); ctx.fill();
+    gougeMarks(G_HILL, SX0 - 20, SX1 + 60, (x, b) => hillY(x, offH, 1000, 70, .006, 1) + 22 + b * 260, offH * 1.0, t); });
+  // camp: tents, palisade, smoke
+  const offC = march * .55;
+  withStamp(t, 1.6, 540, 1080, () => {
+    for (let i = 0; i < 9; i++) { const x = ((i * 150 - offC) % 1350 + 1350) % 1350 - 120 + SX0, y = 1110;
+      ctx.fillStyle = PAPER; ctx.strokeStyle = INK; ctx.lineWidth = 6; poly(ctx, [[x, y], [x + 55, y - 80], [x + 110, y]]); ctx.fill(); ctx.stroke();
+      ctx.fillStyle = INK; poly(ctx, [[x + 55, y - 80], [x + 110, y], [x + 70, y]]); ctx.fill();
+      ctx.lineWidth = 3; for (let k = 1; k < 4; k++) { ctx.beginPath(); ctx.moveTo(x + 55 - k * 12, y - 80 + k * 18); ctx.lineTo(x + 55 - k * 12 + 8, y); ctx.stroke(); }
+      if (i % 3 === 0) { ctx.lineWidth = 4; ctx.beginPath(); for (let u = 0; u <= 1; u += .05) { const sx = x + 50 + Math.sin(u * 9 - t * 3 + i) * 12 * u, sy = y - 90 - u * 130; u ? ctx.lineTo(sx, sy) : ctx.moveTo(sx, sy); } ctx.stroke(); } }
+    ctx.fillStyle = INK; for (let x = SX0 - 40 - (offC % 34); x < SX1 + 40; x += 34) poly(ctx, [[x, 1150], [x + 13, 1112], [x + 26, 1150]]), ctx.fill(); ctx.fillRect(SX0, 1146, SX1 - SX0, 14);
+  });
+  // ground
+  withStamp(t, 1.6, 540, 1200, () => { ctx.fillStyle = INK; ctx.fillRect(SX0, 1158, SX1 - SX0, 200);
+    gougeMarks(G_GROUND, SX0 - 40, SX1 + 80, (x, b) => 1175 + b * 110, march, t); });
+  // milestone: M·P XX
+  const ms = SX1 + 40 - (march - 250);
+  if (march > 250 && ms > SX0 - 200) { ctx.fillStyle = INK; ctx.beginPath(); ctx.roundRect(ms, 1000, 110, 180, [50, 50, 4, 4]); ctx.fill(); ctx.fillStyle = PAPER; ctx.font = `34px ${SLAB}`; ctx.textAlign = 'center'; ctx.fillText('M·P', ms + 55, 1065); ctx.fillText('XX', ms + 55, 1115); }
+  // the soldier
+  withStamp(t, 2.4, 380, 1000, () => soldier(380, 1250, ph, walk));
+  // dust behind the feet
+  if (walk > 0) { ctx.strokeStyle = INK; ctx.lineWidth = 3; for (let i = 0; i < 6; i++) { const k = ((t * 2.2 + i / 6) % 1), x = 330 - k * 180, y = 1245 - k * 40; ctx.globalAlpha = (1 - k) * walk; ctx.beginPath(); ctx.arc(x, y, 8 + k * 22, 0, 7); ctx.stroke(); } ctx.globalAlpha = 1; }
+  // the hour badge
+  if (walk > 0) { const h = Math.min(4, Math.floor((t - 4.5) / 1.0)); if (h >= 0) { const pop = easeBack(prog(t, 4.5 + h, 4.5 + h + .25));
+    ctx.save(); ctx.translate(210, 440); ctx.scale(pop, pop); ctx.fillStyle = RED; ctx.beginPath(); ctx.roundRect(-110, -38, 220, 76, 8); ctx.fill(); ctx.fillStyle = PAPER; ctx.font = `40px ${SLAB}`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText('HORA ' + NUM[h], 0, 3); ctx.restore(); } }
+  ctx.restore();
+  ctx.strokeStyle = INK; ctx.lineWidth = 12; ctx.strokeRect(SX0, SY0, SX1 - SX0, SY1 - SY0);
+  ctx.restore();
+  // paper grain, re-laid every other frame (hand-printed boil)
+  const f = Math.floor(t * 12); ctx.save(); ctx.globalCompositeOperation = 'multiply'; ctx.globalAlpha = .55; ctx.drawImage(grain, (f % 3) * -4, (f % 2) * -4, W + 12, H + 12); ctx.restore();
+  // title block
+  withStamp(t, .05, 540, 240, () => { ctx.fillStyle = INK; ctx.fillRect(SX0, 158, SX1 - SX0, 108); ctx.fillStyle = PAPER; ctx.font = `66px ${SLAB}`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText('A DAY IN THE LIFE', 540, 214); });
+  withStamp(t, .5, 540, 310, () => { ctx.fillStyle = RED; ctx.font = `38px ${SLAB}`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText('ROMAN LEGIONARY · AD 100', 540, 312); });
+  captions(ctx, t, CFG.caps, { font: SLAB, weight: 400, size: 48, y: 1460, fill: INK, maxW: 880,
+    box: (c, x, y, w, h) => { c.fillStyle = PAPER; c.fillRect(x, y, w, h); c.strokeStyle = INK; c.lineWidth = 6; c.strokeRect(x, y, w, h); } });
+}
+</script></body></html>

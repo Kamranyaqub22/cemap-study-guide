@@ -1,0 +1,100 @@
+<!doctype html><html><head><meta charset="utf-8"><title>One Thing demo</title>
+<style>html,body{margin:0;background:#000}canvas{display:block}</style>
+</head><body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="common.js"></script>
+<script>
+// ONE THING, ALL OF HISTORY — blueprint. A pen draws the object, dimensions snap in, a counter rolls, a ruler walks through the centuries.
+const ctx = document.getElementById('c').getContext('2d');
+const INK = '#eaf3ff', MONO = '"JetBrains Mono"';
+const ell = (cx, cy, rx, ry, a0 = 0, a1 = Math.PI * 2, n = 70) => sample(u => [cx + rx * Math.cos(lerp(a0, a1, u)), cy + ry * Math.sin(lerp(a0, a1, u))], n);
+const quad = (a, c, b, n = 40) => sample(u => [(1 - u) ** 2 * a[0] + 2 * (1 - u) * u * c[0] + u * u * b[0], (1 - u) ** 2 * a[1] + 2 * (1 - u) * u * c[1] + u * u * b[1]], n);
+const cub = (a, b, c, d, n = 50) => sample(u => { const v = 1 - u; return [v ** 3 * a[0] + 3 * v * v * u * b[0] + 3 * v * u * u * c[0] + u ** 3 * d[0], v ** 3 * a[1] + 3 * v * v * u * b[1] + 3 * v * u * u * c[1] + u ** 3 * d[1]]; }, n);
+// the cup, as pen strokes [polyline, start, end]
+const CUP = [
+  [ell(500, 875, 245, 52), .35, 1.1],
+  [ell(500, 868, 205, 38, 0, Math.PI), .9, 1.4],
+  [ell(500, 908, 150, 22, 0, Math.PI), 1.2, 1.55],
+  [ell(500, 600, 150, 32), .5, 1.2],
+  [quad([350, 600], [358, 790], [402, 860]), 1.1, 1.5],
+  [quad([650, 600], [642, 790], [598, 860]), 1.3, 1.7],
+  [ell(500, 860, 98, 20, 0, Math.PI), 1.5, 1.85],
+  [cub([644, 645], [770, 640], [778, 800], [612, 805]), 1.7, 2.2],
+  [cub([640, 680], [730, 680], [732, 772], [620, 772]), 1.9, 2.35],
+  [ell(500, 614, 134, 24), 2.1, 2.6],
+];
+const BODY = [...quad([350, 600], [358, 790], [402, 860]), ...ell(500, 860, 98, 20, 0, Math.PI).reverse(), ...quad([598, 860], [642, 790], [650, 600]), ...ell(500, 600, 150, 32, 0, Math.PI).reverse()];
+// the bean
+const BEAN = [[sample(u => { const a = u * Math.PI * 2, x = 112 * Math.cos(a), y = 70 * Math.sin(a) * (1 + .08 * Math.cos(a)); const r = -.32; return [300 + x * Math.cos(r) - y * Math.sin(r), 1110 + x * Math.sin(r) + y * Math.cos(r)]; }, 80), 3.1, 3.9],
+  [sample(u => { const x = lerp(-85, 85, u), y = 16 * Math.sin(u * Math.PI * 2); const r = -.32; return [300 + x * Math.cos(r) - y * Math.sin(r), 1110 + x * Math.sin(r) + y * Math.cos(r)]; }, 40), 3.7, 4.2]];
+function arrow(x1, y1, x2, y2, k) {
+  const x = lerp(x1, x2, k), y = lerp(y1, y2, k); ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x, y); ctx.stroke();
+  const a = Math.atan2(y2 - y1, x2 - x1); for (const [px, py, aa] of [[x1, y1, a], [x, y, a + Math.PI]]) { ctx.beginPath(); ctx.moveTo(px, py); ctx.lineTo(px + 16 * Math.cos(aa + .35), py + 16 * Math.sin(aa + .35)); ctx.lineTo(px + 16 * Math.cos(aa - .35), py + 16 * Math.sin(aa - .35)); ctx.closePath(); ctx.fill(); }
+}
+function txt(s, x, y, size, a = 1, align = 'left', w = 700) { ctx.globalAlpha = a; ctx.font = `${w} ${size}px ${MONO}`; ctx.textAlign = align; ctx.textBaseline = 'middle'; ctx.fillStyle = INK; ctx.fillText(s, x, y); ctx.globalAlpha = 1; }
+function typed(s, t, t0, cps = 26) { return s.slice(0, Math.max(0, Math.floor((t - t0) * cps))); }
+function nib(p, t) { if (!p) return; ctx.save(); ctx.globalCompositeOperation = 'lighter'; const g = ctx.createRadialGradient(p[0], p[1], 0, p[0], p[1], 30); g.addColorStop(0, 'rgba(200,235,255,.95)'); g.addColorStop(1, 'rgba(120,190,255,0)'); ctx.fillStyle = g; ctx.beginPath(); ctx.arc(p[0], p[1], 30, 0, 7); ctx.fill(); ctx.restore(); }
+const EVENTS = [[1511, 'MECCA BAN'], [1554, 'ISTANBUL'], [1652, 'LONDON'], [1727, 'BRAZIL'], [2026, 'TODAY']];
+const yx = y => lerp(110, 900, (y - 1500) / 540);
+
+function draw(t) {
+  const bg = ctx.createRadialGradient(540, 800, 200, 540, 900, 1300); bg.addColorStop(0, '#1d5aa0'); bg.addColorStop(1, '#0d3364'); ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
+  ctx.save();
+  const zin = ease(prog(t, 0, 3.2)), s = lerp(1.3, 1, zin) * (1 + .035 * ease(prog(t, 3.2, CFG.dur)));
+  ctx.translate(540, 760); ctx.scale(s, s); ctx.translate(-lerp(520, 540, zin), -lerp(690, 760, zin) - 20 * ease(prog(t, 3.2, CFG.dur)));
+  // drifting grid
+  const ox = (t * 9) % 36, oy = (t * 5) % 36;
+  ctx.lineWidth = 1.5; ctx.strokeStyle = 'rgba(255,255,255,.07)'; ctx.beginPath();
+  for (let x = -400 + ox; x < 1500; x += 36) { ctx.moveTo(x, -400); ctx.lineTo(x, 2400); } for (let y = -400 + oy; y < 2400; y += 36) { ctx.moveTo(-400, y); ctx.lineTo(1500, y); } ctx.stroke();
+  ctx.lineWidth = 2; ctx.strokeStyle = 'rgba(255,255,255,.13)'; ctx.beginPath();
+  for (let x = -400 + ox; x < 1500; x += 180) { ctx.moveTo(x, -400); ctx.lineTo(x, 2400); } for (let y = -400 + oy; y < 2400; y += 180) { ctx.moveTo(-400, y); ctx.lineTo(1500, y); } ctx.stroke();
+  ctx.lineCap = 'round'; ctx.lineJoin = 'round'; ctx.strokeStyle = INK; ctx.fillStyle = INK;
+  // section hatching inside the cup
+  const hk = ease(prog(t, 2.4, 3.4));
+  if (hk > 0) { ctx.save(); poly(ctx, BODY); ctx.clip(); ctx.lineWidth = 2; ctx.strokeStyle = 'rgba(234,243,255,.45)'; ctx.beginPath(); for (let x = 300; x < 300 + 420 * hk; x += 20) { ctx.moveTo(x, 560); ctx.lineTo(x - 300, 860); } ctx.stroke(); ctx.restore(); ctx.strokeStyle = INK; }
+  // cup strokes
+  let tip = null; ctx.lineWidth = 4.5;
+  for (const [p, a, b] of CUP) { const k = prog(t, a, b); const q = partial(ctx, p, ease(k)); if (k > 0 && k < 1) tip = q; }
+  // steam
+  const st = easeOut(prog(t, 2.5, 3.3));
+  if (st > 0) { ctx.lineWidth = 3.5; ctx.setLineDash([18, 12]); ctx.lineDashOffset = -t * 40;
+    for (let i = 0; i < 3; i++) partial(ctx, sample(u => [440 + i * 60 + 22 * Math.sin(u * 7 + t * 2.6 + i * 1.7) * u, 575 - u * 150], 30), st);
+    ctx.setLineDash([]); }
+  // dimensions
+  ctx.lineWidth = 2.5; const d1 = ease(prog(t, 1.8, 2.4)), d2 = ease(prog(t, 2.1, 2.7));
+  if (d1 > 0) { ctx.beginPath(); ctx.moveTo(350, 590); ctx.lineTo(350, 505); ctx.moveTo(650, 590); ctx.lineTo(650, 505); ctx.stroke(); arrow(350, 520, 650, 520, d1); txt('Ø 90', 362, 492, 34, d1, 'left'); }
+  if (d2 > 0) { ctx.beginPath(); ctx.moveTo(340, 600); ctx.lineTo(270, 600); ctx.moveTo(392, 860); ctx.lineTo(270, 860); ctx.stroke(); arrow(285, 600, 285, 860, d2);
+    ctx.save(); ctx.translate(250, 730); ctx.rotate(-Math.PI / 2); txt('H 80', 0, 0, 34, d2, 'center'); ctx.restore(); }
+  // note with a revision cloud: the 1511 ban
+  const nk = prog(t, .7, 1.6);
+  if (nk > 0) { txt(typed('NOTE 1: BANNED IN MECCA, 1511', t, .7, 34), 120, 990, 34);
+    const cl = prog(t, 1.4, 2.2); ctx.strokeStyle = '#ff8f7a'; ctx.lineWidth = 4;
+    partial(ctx, sample(u => { const a = u * Math.PI * 2, r = 1 + .06 * Math.abs(Math.sin(a * 14)); return [460 + 380 * r * Math.cos(a), 990 + 52 * r * Math.sin(a)]; }, 160), ease(cl)); ctx.strokeStyle = INK; }
+  // the bean, fig. 2
+  ctx.lineWidth = 4.5; for (const [p, a, b] of BEAN) { const k = prog(t, a, b); const q = partial(ctx, p, ease(k)); if (k > 0 && k < 1) tip = q; }
+  const lk = ease(prog(t, 3.9, 4.3)); if (lk > 0) { ctx.lineWidth = 2.5; ctx.beginPath(); ctx.moveTo(300, 1185); ctx.lineTo(300, lerp(1185, 1200, lk)); ctx.lineTo(lerp(300, 130, lk), 1200); ctx.stroke(); txt(typed('FIG. 2  SEED, COFFEA ARABICA', t, 4.0, 40), 140, 1225, 24, 1); }
+  // counter: cups a day
+  const ck = prog(t, 3.6, 5.8);
+  if (ck > 0) { const n = Math.round(2e9 * easeOut(ck)); txt('≈ ' + n.toLocaleString('en-US'), 470, 1090, 52, Math.min(1, ck * 6)); txt('CUPS / DAY, WORLDWIDE', 474, 1140, 26, Math.min(1, ck * 6), 'left', 500); }
+  // ruler through the centuries
+  const rk = ease(prog(t, 5.6, 6.3));
+  if (rk > 0) { ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(110, 1290); ctx.lineTo(lerp(110, 900, rk), 1290); ctx.stroke();
+    for (let y = 1500; y <= 2040; y += 10) { const x = yx(y); if (x > lerp(110, 900, rk)) break; const big = y % 100 === 0; ctx.lineWidth = big ? 3 : 1.5; ctx.beginPath(); ctx.moveTo(x, 1290); ctx.lineTo(x, 1290 - (big ? 26 : 12)); ctx.stroke(); if (big) txt(String(y), x, 1320, 24, rk, 'center', 500); }
+    const mk = ease(prog(t, 6.4, 9.2)), yr = Math.round(lerp(1511, 2026, mk)), mx = yx(yr);
+    ctx.fillStyle = '#ff8f7a'; ctx.beginPath(); ctx.moveTo(mx, 1286); ctx.lineTo(mx - 13, 1258); ctx.lineTo(mx + 13, 1258); ctx.closePath(); ctx.globalAlpha = rk; ctx.fill(); ctx.globalAlpha = 1; ctx.fillStyle = INK;
+    txt(String(yr), Math.min(mx, 860), 1236, 28, rk, 'center', 800);
+    EVENTS.forEach(([y, s], i) => { if (yr >= y && i > 0) { const a = easeOut((yr - y) / 25 + .2); ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(yx(y), 1296); ctx.lineTo(yx(y), 1340 + (i % 2) * 34); ctx.stroke(); txt(s, Math.min(yx(y) + 6, 820), 1356 + (i % 2) * 36, 24, a, 'left', 700); } }); }
+  nib(tip, t);
+  ctx.restore();
+  // title block (screen space)
+  ctx.strokeStyle = INK; ctx.lineWidth = 3; const tb = ease(prog(t, 0, .9));
+  partial(ctx, [[70, 160], [1010, 160], [1010, 330], [70, 330], [70, 160]], tb);
+  if (tb > .5) { ctx.beginPath(); ctx.moveTo(700, 160); ctx.lineTo(700, lerp(160, 330, tb)); ctx.moveTo(700, 245); ctx.lineTo(lerp(700, 1010, tb), 245); ctx.stroke(); }
+  txt('ONE THING', 100, 215, 60, easeOut(prog(t, .3, .8)), 'left', 800); txt('ALL OF HISTORY', 102, 285, 30, easeOut(prog(t, .5, 1)), 'left', 500);
+  txt('DWG 001', 724, 205, 26, easeOut(prog(t, .6, 1)), 'left', 500); txt('COFFEE', 724, 290, 46, easeOut(prog(t, .7, 1.1)), 'left', 800);
+  // protractor ticking round in the margin
+  ctx.save(); ctx.translate(900, 470); ctx.rotate(t * .5); ctx.globalAlpha = easeOut(prog(t, .8, 1.5)) * .7; ctx.lineWidth = 2.5; ctx.beginPath(); ctx.arc(0, 0, 62, Math.PI, 0); ctx.closePath(); ctx.stroke();
+  for (let a = 0; a <= 18; a++) { const r = a % 3 ? 52 : 44, an = Math.PI + a * Math.PI / 18; ctx.beginPath(); ctx.moveTo(62 * Math.cos(an), 62 * Math.sin(an)); ctx.lineTo(r * Math.cos(an), r * Math.sin(an)); ctx.stroke(); } ctx.restore();
+  captions(ctx, t, CFG.caps, { font: MONO, weight: 800, size: 46, y: 1510, fill: '#ffffff', maxW: 920,
+    box: (c, x, y, w, h) => { c.fillStyle = 'rgba(9,36,74,.88)'; c.fillRect(x, y, w, h); c.strokeStyle = '#eaf3ff'; c.lineWidth = 3; c.strokeRect(x, y, w, h); } });
+}
+</script></body></html>
