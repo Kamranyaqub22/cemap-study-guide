@@ -67,6 +67,16 @@ elif demo == 'blue':   # marimba in C, clock ticks, pen scratch while drawing, c
     scratch(.35, 2.6); scratch(3.1, 4.2)
     for k in range(40): add(sfx, 3.6 + 2.2 * (k / 40) ** .6, click(.015, 2200), .1, .5)
     for t0 in [6.4]: add(sfx, t0, thump(220, .3, .1), .25)
+elif demo == 'titanic':   # low strings, a slowing-then-racing pulse, ship rumble, three bell strokes, the impact, then silence
+    add(mus, 0, pad([hz(38), hz(45), hz(50)], 16.0, 2.0), .7)
+    add(mus, 8.2, pad([hz(62), hz(65)], 7.8, 1.5), .35)
+    n = int(16 * SR); add(sfx, 0, lp(rng.normal(0, 1, n), 180, 4) * np.minimum(1, np.arange(n) / SR / 1.5), 2.2)   # engines and water
+    t0 = .5
+    while t0 < 15.9: add(mus, t0, thump(55, .5, .15), .55); add(mus, t0 + .18, thump(50, .4, .1), .35); t0 += lerp_ if (lerp_ := max(.42, 1.15 - .05 * t0)) else 1
+    for k in range(3): add(sfx, 10.0 + k * .32, bell(hz(81), 1.6), .35, .3)
+    crash = lp(rng.normal(0, 1, int(1.6 * SR)), 900, 2) * np.exp(-np.arange(int(1.6 * SR)) / SR * 2.5)
+    add(sfx, 15.95, crash, 1.4); add(sfx, 15.95, thump(40, 1.5, .8), 1.2)
+    add(mus, 16.5, bell(hz(57), 2.5), .2)
 else:   # frame-drum march, a horn call, block-print thuds, footsteps
     bpm = 112; b = 60 / bpm
     for t0 in [.15, .9, 1.6, 2.4]: add(sfx, t0, thump(62, .7, .6), .9); add(sfx, t0 + .01, lp(rng.normal(0, 1, 2400), 2500) * np.exp(-np.arange(2400) / SR * 60), .3)
@@ -82,10 +92,12 @@ else:   # frame-drum march, a horn call, block-print thuds, footsteps
 voice = np.zeros(N); duck = np.ones(N)
 for v in cfg['voice']:
     x, sr = sf.read(f"out/voice/{v['id']}.wav"); x = x if x.ndim == 1 else x.mean(1); x = resample_poly(x, SR, sr)
+    if v['id'] == 't3': x = np.tanh(bp(x, 350, 3200, 3) * 6) * .5   # shouted down a telephone
     i = int(v['t'] * SR); x = x[:N - i]; voice[i:i + len(x)] += x
     duck[max(0, i - 2400):i + len(x) + 4800] = .45
 duck = np.convolve(duck, np.ones(4800) / 4800, 'same')
 fade = np.minimum(1, np.minimum(T / .05, (cfg['dur'] - T) / .6))[:, None]
+if demo == 'titanic': mus[int(15.95 * SR):int(16.5 * SR)] = 0
 mix = (mus * duck[:, None] + sfx + voice[:, None] * 1.0) * fade
 mix = hp(mix.T, 35).T
 sf.write(f'out/mix_{demo}.wav', mix / (np.abs(mix).max() + 1e-9) * .9, SR)

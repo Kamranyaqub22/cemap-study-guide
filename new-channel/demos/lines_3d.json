@@ -1,0 +1,6 @@
+[
+ {"id":"t1","text":"A lookout sees a dark shape on the water, dead ahead. Titanic has seconds to turn.","voice":"bm_lewis","speed":1.05,"lang":"en-gb"},
+ {"id":"t2","text":"Eleven forty PM. The fourteenth of April, nineteen twelve.","voice":"bm_lewis","speed":1.05,"lang":"en-gb"},
+ {"id":"t3","text":"Iceberg, right ahead!","voice":"am_puck","speed":1.1,"lang":"en-us"},
+ {"id":"t4","text":"At about twenty-two knots, the ship begins to turn. It is already too late.","voice":"bm_lewis","speed":1.05,"lang":"en-gb"}
+]

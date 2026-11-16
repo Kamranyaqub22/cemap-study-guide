@@ -1,0 +1,122 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Minute by Minute demo</title>
+<style>html,body{margin:0;background:#000}canvas{display:block}#g{position:absolute;left:-9999px}</style>
+<script type="importmap">{"imports":{"three":"./out/three.module.js"}}</script>
+</head><body><canvas id="c" width="1080" height="1920"></canvas><canvas id="g" width="1080" height="1920"></canvas>
+<script src="common.js"></script>
+<script type="module">
+// MINUTE BY MINUTE — low-poly 3D reconstruction. Titanic, 14 April 1912, 11:40 PM: a moonless, calm, starlit night.
+import * as THREE from 'three';
+const out = document.getElementById('c').getContext('2d');
+const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('g'), antialias: true, preserveDrawingBuffer: true });
+renderer.setSize(1080, 1920, false); renderer.outputColorSpace = THREE.SRGBColorSpace;
+const scene = new THREE.Scene(); scene.background = new THREE.Color('#05080f'); const FOG = new THREE.Fog('#05080f', 80, 320); scene.fog = FOG;
+const cam = new THREE.PerspectiveCamera(42, 1080 / 1920, .1, 1200);
+const flat = (c, o = {}) => new THREE.MeshStandardMaterial({ color: c, flatShading: true, roughness: .85, metalness: 0, ...o });
+scene.add(new THREE.HemisphereLight('#8aa2d4', '#101828', 2.2));
+const starLight = new THREE.DirectionalLight('#b4c6ec', 2.4); starLight.position.set(-40, 80, 30); scene.add(starLight);
+
+// stars
+{ const g = new THREE.BufferGeometry(), p = [], r = rng(4); for (let i = 0; i < 1600; i++) { const a = r() * Math.PI * 2, e = .03 + r() * 1.2; p.push(600 * Math.cos(e) * Math.cos(a), 600 * Math.sin(e), 600 * Math.cos(e) * Math.sin(a)); }
+  g.setAttribute('position', new THREE.Float32BufferAttribute(p, 3)); const s = new THREE.Points(g, new THREE.PointsMaterial({ color: '#dfe8ff', size: 1.6, sizeAttenuation: false, fog: false })); scene.add(s); }
+// sea: low-poly waves, re-shaped each frame around the camera
+const SEA = new THREE.PlaneGeometry(500, 500, 70, 70); SEA.rotateX(-Math.PI / 2);
+const sea = new THREE.Mesh(SEA, flat('#16305a', { roughness: .4, metalness: .15 })); scene.add(sea);
+const base = SEA.attributes.position.array.slice();
+function waves(t, cx, cz) { const a = SEA.attributes.position.array; sea.position.set(Math.round(cx / 7) * 7, 0, Math.round(cz / 7) * 7);
+  for (let i = 0; i < a.length; i += 3) { const x = base[i] + sea.position.x, z = base[i + 2] + sea.position.z; a[i + 1] = .28 * Math.sin(x * .21 + t * 1.1) + .2 * Math.sin(z * .17 - t * .9) + .1 * Math.sin((x + z) * .5 + t * 2); }
+  SEA.attributes.position.needsUpdate = true; SEA.computeVertexNormals(); }
+
+// the ship (bow toward −z), length 60
+const ship = new THREE.Group(); scene.add(ship);
+{ const s = new THREE.Shape(); s.moveTo(0, -30); s.quadraticCurveTo(3.6, -22, 3.6, -12); s.lineTo(3.6, 24); s.quadraticCurveTo(3.4, 30, 0, 30.5); s.quadraticCurveTo(-3.4, 30, -3.6, 24); s.lineTo(-3.6, -12); s.quadraticCurveTo(-3.6, -22, 0, -30);
+  const hull = new THREE.ExtrudeGeometry(s, { depth: 5, bevelEnabled: false }); hull.rotateX(Math.PI / 2); hull.translate(0, 4.2, 0);
+  ship.add(new THREE.Mesh(hull, flat('#14161a')));
+  const red = new THREE.ExtrudeGeometry(s, { depth: 1.2, bevelEnabled: false }); red.rotateX(Math.PI / 2); red.translate(0, .2, 0); red.scale(.99, 1, .99); ship.add(new THREE.Mesh(red, flat('#6e1f1a')));
+  const band = new THREE.Mesh(new THREE.BoxGeometry(7.1, .5, 44), flat('#e8e2d2')); band.position.set(0, 4.3, 2); ship.add(band);
+  const deck = new THREE.Mesh(new THREE.BoxGeometry(6.2, 2.4, 34), flat('#ece6d6')); deck.position.set(0, 5.6, 3); ship.add(deck);
+  const deck2 = new THREE.Mesh(new THREE.BoxGeometry(5.2, 1.6, 24), flat('#ece6d6')); deck2.position.set(0, 7.6, 1); ship.add(deck2);
+  const bridge = new THREE.Mesh(new THREE.BoxGeometry(5.6, 1.4, 2.4), flat('#f2ecdc')); bridge.position.set(0, 8.9, -11); ship.add(bridge);
+  for (let i = 0; i < 4; i++) { const f = new THREE.Group(); const body = new THREE.Mesh(new THREE.CylinderGeometry(1.15, 1.25, 7, 10), flat('#c99a3e')); const top = new THREE.Mesh(new THREE.CylinderGeometry(1.17, 1.17, 1.4, 10), flat('#141414'));
+    body.scale.z = 1.35; top.scale.z = 1.35; top.position.y = 3.2; f.add(body, top); f.position.set(0, 11.6, -7 + i * 8.6); f.rotation.x = -.12; ship.add(f); }
+  for (const z of [-19, 21]) { const m = new THREE.Mesh(new THREE.CylinderGeometry(.18, .22, 22, 6), flat('#3b2e22')); m.position.set(0, 13, z); ship.add(m); }
+  const nest = new THREE.Mesh(new THREE.CylinderGeometry(.9, .8, 1.2, 10, 1, true), flat('#3b2e22', { side: THREE.DoubleSide })); nest.position.set(0, 17.4, -19); ship.add(nest);
+  // lit portholes and windows (instanced)
+  const win = new THREE.InstancedMesh(new THREE.BoxGeometry(.06, .28, .28), new THREE.MeshBasicMaterial({ color: '#ffd38a' }), 640); let n = 0; const m4 = new THREE.Matrix4(), r = rng(9);
+  for (const side of [-1, 1]) { for (let row = 0; row < 3; row++) for (let z = -24; z < 26; z += 1.05) { if (r() < .25) continue; m4.makeTranslation(side * (3.62 - (z < -12 ? (z + 12) * -.02 : 0)), 1.9 + row * .8, z); win.setMatrixAt(n++, m4); }
+    for (let z = -13; z < 20; z += .9) { if (r() < .2) continue; m4.makeTranslation(side * 3.12, 5.6, z); win.setMatrixAt(n++, m4); } }
+  win.count = n; ship.add(win);
+  const glow = new THREE.PointLight('#ffcf80', 40, 30, 1.6); glow.position.set(0, 9, 0); ship.add(glow);
+}
+// the lookout in the crow's nest, a bell and a telephone
+const look = new THREE.Group(); ship.add(look); look.position.set(0, 17.4, -19);
+{ const coat = new THREE.Mesh(new THREE.CylinderGeometry(.32, .38, 1.4, 8), flat('#1f2734')); coat.position.y = .3; look.add(coat);
+  const head = new THREE.Mesh(new THREE.IcosahedronGeometry(.24, 1), flat('#e2b490')); head.position.y = 1.2; look.add(head);
+  const cap = new THREE.Mesh(new THREE.CylinderGeometry(.26, .26, .14, 10), flat('#141a24')); cap.position.y = 1.4; look.add(cap);
+  const arm = new THREE.Mesh(new THREE.BoxGeometry(.14, .14, .7), flat('#1f2734')); arm.position.set(.3, .75, -.25); arm.rotation.x = .4; look.add(arm); look.userData.arm = arm; }
+const bell = new THREE.Mesh(new THREE.ConeGeometry(.28, .45, 10, 1, true), flat('#c8962f', { metalness: .6, roughness: .4, side: THREE.DoubleSide })); bell.geometry.translate(0, -.22, 0); bell.position.set(.75, 19.0, -19.6); ship.add(bell);
+const phone = new THREE.Mesh(new THREE.BoxGeometry(.3, .45, .2), flat('#2b211a')); phone.position.set(-.7, 18.3, -19.7); ship.add(phone);
+// smoke from the first three funnels
+const puffs = []; { const g = new THREE.IcosahedronGeometry(1, 0); for (let i = 0; i < 36; i++) { const m = new THREE.Mesh(g, flat('#2a2f38', { transparent: true, opacity: .5 })); scene.add(m); puffs.push(m); } }
+// the iceberg (starboard bow at the moment of impact)
+const berg = new THREE.Group(); scene.add(berg);
+{ const g = new THREE.IcosahedronGeometry(1, 1), p = g.attributes.position, r = rng(21); const map = new Map();
+  for (let i = 0; i < p.count; i++) { const k = [p.getX(i), p.getY(i), p.getZ(i)].map(v => v.toFixed(3)).join(); if (!map.has(k)) map.set(k, .75 + r() * .5); const f = map.get(k); p.setXYZ(i, p.getX(i) * f, Math.max(p.getY(i), -.3) * f * (p.getY(i) > 0 ? 1.5 : 1), p.getZ(i) * f); }
+  g.computeVertexNormals(); const ice = new THREE.Mesh(g, flat('#c9d9ea', { emissive: '#1a2a40' })); ice.scale.set(9, 9, 11); berg.add(ice);
+  const tip = new THREE.Mesh(new THREE.IcosahedronGeometry(1, 0), flat('#dbe7f4', { emissive: '#1a2a40' })); tip.scale.set(3.5, 7, 3.5); tip.position.set(-2, 11, 1); tip.rotation.z = .3; berg.add(tip); }
+berg.position.set(7.5, -1, -126);
+
+const SPEED = 6;
+function shipAt(t) { const yaw = .16 * ease(prog(t, 12.0, 16.5)); ship.rotation.y = yaw; ship.position.set(-1.2 * ease(prog(t, 13, 16.5)), 0, -SPEED * t); ship.rotation.z = .006 * Math.sin(t * .8); return yaw; }
+const local = (x, y, z) => ship.localToWorld(new THREE.Vector3(x, y, z));
+function sc(t, a, b) { return t >= a && t < b; }
+const SHOTS = [[0, 3.0, 'nest'], [3.0, 5.9, 'side'], [5.9, 8.2, 'quarter'], [8.2, 10.0, 'board'], [10.0, 11.6, 'lookout'], [11.6, 14.0, 'board2'], [14.0, 16.2, 'water'], [16.2, 99, 'card']];
+function camera(t) {
+  const s = SHOTS.find(s => sc(t, s[0], s[1])), k = prog(t, s[0], s[1]); cam.fov = 42;
+  switch (s[2]) {
+    case 'nest': cam.position.copy(local(.2 * Math.sin(t), 18.6 + .08 * Math.sin(t * 1.3), -19.6)); cam.lookAt(local(0, 4 - 2 * k, -110)); cam.fov = lerp(56, 44, ease(k)); break;
+    case 'side': cam.position.copy(local(-52 + 6 * k, 9 + 3 * k, 30 - 26 * k)); cam.lookAt(local(0, 7, -4 - 8 * k)); cam.fov = 46; break;
+    case 'quarter': cam.position.copy(local(26 - 4 * k, 26 - 6 * k, 58 - 10 * k)); cam.lookAt(local(0, 4, -20 - 10 * k)); cam.fov = 40; break;
+    case 'board': case 'board2': { const c = new THREE.Vector3(ship.position.x * .5 + berg.position.x * .5, 0, (ship.position.z + 12 + berg.position.z) / 2); const tilt = s[2] === 'board' ? lerp(1.2, 1.12, k) : lerp(1.1, 1.04, k);
+      const d = s[2] === 'board' ? lerp(185, 165, ease(k)) : lerp(150, 135, ease(k)); cam.position.set(c.x - d * Math.cos(tilt) * .25, d * Math.sin(tilt), c.z + d * Math.cos(tilt)); cam.lookAt(c); cam.fov = 30; break; }
+    case 'lookout': cam.position.copy(local(4.2 - .6 * k, 19.8, -13.5 - .8 * k)); cam.lookAt(local(.1, 18.2, -19.3)); cam.fov = 44; break;
+    case 'water': cam.position.set(berg.position.x - 20, 2.2, berg.position.z - 34); cam.lookAt(local(0, 6, -24)); cam.fov = lerp(50, 40, ease(k)); break;
+    default: cam.position.set(0, 300, 0); cam.lookAt(0, 0, 0);
+  }
+  cam.updateProjectionMatrix(); return s;
+}
+function project(v) { const p = v.clone().project(cam); return [(p.x + 1) / 2 * 1080, (1 - p.y) / 2 * 1920, p.z]; }
+
+window.draw = function (t) {
+  shipAt(t); const shot = camera(t); scene.fog = (shot[2] === 'board' || shot[2] === 'board2') ? null : FOG;
+  waves(t, cam.position.x, cam.position.z - 120);
+  // bell rings on the warning
+  const ring = prog(t, 9.9, 11.6); bell.rotation.z = ring > 0 && ring < 1 ? .5 * Math.sin(ring * 40) * (1 - ring) : 0;
+  look.userData.arm.rotation.x = ring > 0 && ring < 1 ? .4 + .5 * Math.sin(ring * 40) : .4;
+  // smoke
+  puffs.forEach((m, i) => { const f = i % 3, age = ((t * .35 + i / puffs.length * 3) % 1); const p = local(0, 15 + age * 6, -7 + f * 8.6 + age * 14); m.position.copy(p); m.scale.setScalar(.8 + age * 2.4); m.material.opacity = .45 * (1 - age); });
+  renderer.render(scene, cam);
+  out.drawImage(document.getElementById('g'), 0, 0);
+  // overlays
+  out.textBaseline = 'middle';
+  if (shot[2] === 'board' || shot[2] === 'board2') {   // the diorama read: labels and the gap closing
+    const bow = project(local(0, 5, -30)), ice = project(new THREE.Vector3(berg.position.x, 8, berg.position.z));
+    out.save(); out.setLineDash([16, 12]); out.lineDashOffset = -t * 60; out.strokeStyle = '#ffd25e'; out.lineWidth = 5; out.beginPath(); out.moveTo(bow[0], bow[1]); out.lineTo(ice[0], ice[1]); out.stroke(); out.restore();
+    const tag = (x, y, s, col) => { out.font = '800 34px Inter'; const w = out.measureText(s).width + 36; out.fillStyle = col; out.beginPath(); out.roundRect(x - w / 2, y - 76, w, 54, 10); out.fill(); out.fillStyle = '#0b0f18'; out.textAlign = 'center'; out.fillText(s, x, y - 48); };
+    tag(bow[0], bow[1] - 10, 'TITANIC', '#f2ecdc'); tag(ice[0], ice[1] - 20, 'ICEBERG', '#bfe0ff');
+    out.font = '800 40px Inter'; out.textAlign = 'left'; out.fillStyle = '#ffd25e'; out.fillText(shot[2] === 'board' ? 'GAP CLOSING' : 'TURNING TO PORT', 72, 330);
+  }
+  // time stamp
+  const ts = prog(t, 5.9, 6.2); if (t > 5.9 && t < 16.2) { out.globalAlpha = Math.min(1, ts * 3); out.fillStyle = 'rgba(5,8,15,.75)'; out.beginPath(); out.roundRect(70, 180, 470, 100, 12); out.fill();
+    const secs = Math.floor((t - 5.9) * 1.2), mm = 40 + Math.floor(secs / 60), ss = secs % 60;
+    out.fillStyle = '#ffffff'; out.font = '800 52px "JetBrains Mono"'; out.textAlign = 'left'; out.fillText(`23:${mm}:${String(ss).padStart(2, '0')}`, 96, 222); out.font = '600 24px Inter'; out.fillStyle = '#a9b8d6'; out.fillText('14 APRIL 1912 · NORTH ATLANTIC', 98, 262); out.globalAlpha = 1; }
+  // impact: a flash and a cut to black
+  if (t > 15.95 && t < 16.2) { out.fillStyle = `rgba(230,240,255,${1 - prog(t, 15.95, 16.2)})`; out.fillRect(0, 0, 1080, 1920); }
+  if (shot[2] === 'card') { out.fillStyle = '#05070c'; out.fillRect(0, 0, 1080, 1920); const a = easeOut(prog(t, 16.4, 16.9)); out.globalAlpha = a; out.textAlign = 'center';
+    out.font = '800 46px Inter'; out.fillStyle = '#ffd25e'; out.fillText('MINUTE BY MINUTE', 540, 860); out.font = '900 120px Inter'; out.fillStyle = '#ffffff'; out.fillText('TITANIC', 540, 970); out.font = '600 34px Inter'; out.fillStyle = '#a9b8d6'; out.fillText('Full story on the channel', 540, 1070); out.globalAlpha = 1; }
+  // captions: narration white; the radio quote in yellow on a dark tab
+  const q = CFG.caps.find(c => t >= c.t0 && t < c.t1);
+  captions(out, t, CFG.caps.filter(c => !c.quote), { font: 'Inter', weight: 800, size: 56, y: 1460, fill: '#ffffff', stroke: '#05070c', strokeW: 12 });
+  if (q && q.quote) captions(out, t, [q], { font: 'Inter', weight: 900, size: 68, y: 1460, fill: '#ffd25e', box: (c, x, y, w, h) => { c.fillStyle = 'rgba(5,8,15,.85)'; c.fillRect(x, y, w, h); } });
+};
+window.ready = true;
+</script></body></html>
