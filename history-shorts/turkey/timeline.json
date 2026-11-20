@@ -1,0 +1,442 @@
+{
+ "cold": {
+  "scene": "hagia",
+  "whip": [
+   880,
+   240,
+   820,
+   1.8
+  ],
+  "dur": 6.0
+ },
+ "dur": 58.35,
+ "vo": {
+  "L01": 0.3,
+  "L02": 5.579,
+  "L03": 11.823,
+  "L04": 17.063,
+  "L05": 22.953,
+  "L06": 29.678,
+  "L07": 35.559,
+  "L08": 42.89,
+  "L09": 49.382,
+  "L10": 54.653
+ },
+ "eras": [
+  {
+   "scene": "gobekli",
+   "line": "L02",
+   "label": "G\u00d6BEKLI TEPE",
+   "year": "c. 9500 BC",
+   "pal": {
+    "sky1": "#F4E4C6",
+    "sky2": "#E2B07C",
+    "far": "#C08A5A",
+    "mid": "#8A6A44",
+    "near": "#2A1E16",
+    "sun": "#C4502E",
+    "glow": "#F8E2AE"
+   },
+   "i": 0,
+   "vo": 5.579,
+   "sweep": 5.079,
+   "swdur": 0.45,
+   "label_t": 5.569,
+   "year_t": 5.719,
+   "snap_t": null,
+   "silence_t": 5.469,
+   "t1": 11.303,
+   "land_t": 5.079
+  },
+  {
+   "scene": "hattusa",
+   "line": "L03",
+   "label": "THE HITTITE CAPITAL",
+   "year": "c. 1600 BC",
+   "pal": {
+    "sky1": "#EFE6D2",
+    "sky2": "#C9C29C",
+    "far": "#A8946A",
+    "mid": "#6E7A4E",
+    "near": "#262018",
+    "sun": "#B0442E",
+    "glow": "#F4E8C0"
+   },
+   "i": 1,
+   "vo": 11.823,
+   "sweep": 11.303,
+   "swdur": 0.45,
+   "label_t": 11.873,
+   "year_t": 12.023,
+   "snap_t": null,
+   "silence_t": 11.773,
+   "t1": 16.543
+  },
+  {
+   "scene": "constantinople",
+   "line": "L04",
+   "label": "CONSTANTINOPLE",
+   "year": "330",
+   "pal": {
+    "sky1": "#F2E6D0",
+    "sky2": "#D7B6C6",
+    "far": "#A88AA6",
+    "mid": "#5C6E8E",
+    "near": "#22203A",
+    "sun": "#B8862E",
+    "glow": "#F8E4B4"
+   },
+   "i": 2,
+   "vo": 17.063,
+   "sweep": 16.543,
+   "swdur": 0.45,
+   "label_t": 17.313,
+   "year_t": 17.463,
+   "snap_t": null,
+   "silence_t": 17.213,
+   "t1": 22.513
+  },
+  {
+   "scene": "hagia",
+   "line": "L05",
+   "label": "HAGIA SOPHIA",
+   "year": "537",
+   "pal": {
+    "sky1": "#F4E8D4",
+    "sky2": "#B8D0D6",
+    "far": "#9AAFB8",
+    "mid": "#3E7E86",
+    "near": "#1E2A30",
+    "sun": "#C9572E",
+    "glow": "#FAEAC2"
+   },
+   "i": 3,
+   "vo": 22.953,
+   "sweep": 22.513,
+   "swdur": 0.45,
+   "label_t": 22.983,
+   "year_t": 23.133,
+   "snap_t": null,
+   "t1": 28.428
+  },
+  {
+   "scene": "siege",
+   "line": "L06",
+   "label": "CONSTANTINOPLE FALLS",
+   "year": "1453",
+   "silence": true,
+   "pal": {
+    "sky1": "#D0CCC6",
+    "sky2": "#A49C94",
+    "far": "#847A70",
+    "mid": "#5A5650",
+    "near": "#1E1C1C",
+    "sun": "#A8402C",
+    "glow": "#E4DACA"
+   },
+   "pause": 0.8,
+   "i": 4,
+   "vo": 29.678,
+   "sweep": 28.428,
+   "swdur": 0.7,
+   "label_t": 29.708,
+   "year_t": 29.858,
+   "snap_t": null,
+   "silence_t": 31.268,
+   "t1": 35.039
+  },
+  {
+   "scene": "suleiman",
+   "line": "L07",
+   "label": "THE OTTOMAN GOLDEN AGE",
+   "year": "1500s",
+   "pal": {
+    "sky1": "#F6EAD0",
+    "sky2": "#9ED0D2",
+    "far": "#4E9AA6",
+    "mid": "#2E6E8A",
+    "near": "#1A2440",
+    "sun": "#C8372E",
+    "glow": "#FCE6A8"
+   },
+   "i": 5,
+   "vo": 35.559,
+   "sweep": 35.039,
+   "swdur": 0.45,
+   "label_t": 35.549,
+   "year_t": 35.699,
+   "snap_t": null,
+   "silence_t": 35.449,
+   "t1": 41.64
+  },
+  {
+   "scene": "republic",
+   "line": "L08",
+   "label": "THE REPUBLIC OF TURKEY",
+   "year": "1923",
+   "tiles": true,
+   "pause": 1.1,
+   "pal": {
+    "sky1": "#F6E8DA",
+    "sky2": "#E6A898",
+    "far": "#B87A86",
+    "mid": "#3C6E7A",
+    "near": "#1E1E2C",
+    "sun": "#D23A2E",
+    "glow": "#FBE2B2"
+   },
+   "i": 6,
+   "vo": 42.89,
+   "sweep": 41.64,
+   "swdur": 1.2,
+   "label_t": 42.9,
+   "year_t": 43.05,
+   "snap_t": null,
+   "t1": 48.862
+  },
+  {
+   "scene": "today",
+   "line": "L09",
+   "label": "ABOUT 86 MILLION PEOPLE",
+   "year": "TODAY",
+   "pal": {
+    "sky1": "#FADCC6",
+    "sky2": "#E8A2A8",
+    "far": "#A87EA6",
+    "mid": "#3E6688",
+    "near": "#1A1C30",
+    "sun": "#EE7A3A",
+    "glow": "#FFE2A8"
+   },
+   "i": 7,
+   "vo": 49.382,
+   "sweep": 48.862,
+   "swdur": 0.45,
+   "label_t": 49.332,
+   "year_t": 49.482,
+   "snap_t": null,
+   "t1": 54.503
+  }
+ ],
+ "end": {
+  "wall": 54.503,
+  "wall_dur": 1.1,
+  "card": 55.153,
+  "text": [
+   "TEA",
+   "TIME?"
+  ]
+ },
+ "subs": [
+  {
+   "line": "L01",
+   "t0": 0.0,
+   "text": "Can we fit nearly 12,000 years of Turkey",
+   "speech_end": 2.6,
+   "t1": 2.48,
+   "lines": [
+    "Can we fit nearly",
+    "12,000 years of Turkey"
+   ]
+  },
+  {
+   "line": "L01",
+   "t0": 2.52,
+   "text": "into one minute? Let's find out.",
+   "speech_end": 4.88,
+   "t1": 5.459,
+   "lines": [
+    "into one minute?",
+    "Let's find out."
+   ]
+  },
+  {
+   "line": "L02",
+   "t0": 5.499,
+   "text": "Around 9500 BC, hunters build",
+   "speech_end": 8.459,
+   "t1": 8.339,
+   "lines": [
+    "Around 9500 BC,",
+    "hunters build"
+   ]
+  },
+  {
+   "line": "L02",
+   "t0": 8.379,
+   "text": "giant stone pillars at G\u00f6bekli Tepe.",
+   "speech_end": 11.099,
+   "t1": 11.703,
+   "lines": [
+    "giant stone pillars",
+    "at G\u00f6bekli Tepe."
+   ]
+  },
+  {
+   "line": "L03",
+   "t0": 11.743,
+   "text": "Around 1600 BC, the Hittites",
+   "speech_end": 14.483,
+   "t1": 14.363,
+   "lines": [
+    "Around 1600 BC, the Hittites"
+   ]
+  },
+  {
+   "line": "L03",
+   "t0": 14.403,
+   "text": "make Hattusa their walled capital.",
+   "speech_end": 16.263,
+   "t1": 16.943,
+   "lines": [
+    "make Hattusa their",
+    "walled capital."
+   ]
+  },
+  {
+   "line": "L04",
+   "t0": 16.983,
+   "text": "In the year 330, Constantine makes Constantinople",
+   "speech_end": 20.163,
+   "t1": 20.043,
+   "lines": [
+    "In the year 330, Constantine",
+    "makes Constantinople"
+   ]
+  },
+  {
+   "line": "L04",
+   "t0": 20.083,
+   "text": "the new capital of Rome.",
+   "speech_end": 22.163,
+   "t1": 22.833,
+   "lines": [
+    "the new capital of Rome."
+   ]
+  },
+  {
+   "line": "L05",
+   "t0": 22.873,
+   "text": "In 537, Hagia Sophia opens,",
+   "speech_end": 25.513,
+   "t1": 25.393,
+   "lines": [
+    "In 537, Hagia Sophia opens,"
+   ]
+  },
+  {
+   "line": "L05",
+   "t0": 25.433,
+   "text": "with a dome that seems to hang in the air.",
+   "speech_end": 28.193,
+   "t1": 29.558,
+   "lines": [
+    "with a dome that seems",
+    "to hang in the air."
+   ]
+  },
+  {
+   "line": "L06",
+   "t0": 29.598,
+   "text": "In 1453, Ottoman cannons break the walls,",
+   "speech_end": 32.778,
+   "t1": 32.658,
+   "lines": [
+    "In 1453, Ottoman",
+    "cannons break the walls,"
+   ]
+  },
+  {
+   "line": "L06",
+   "t0": 32.698,
+   "text": "and Constantinople falls.",
+   "speech_end": 34.678,
+   "t1": 35.439,
+   "lines": [
+    "and Constantinople falls."
+   ]
+  },
+  {
+   "line": "L07",
+   "t0": 35.479,
+   "text": "In the 1500s, Suleiman the Magnificent",
+   "speech_end": 38.139,
+   "t1": 38.019,
+   "lines": [
+    "In the 1500s,",
+    "Suleiman the Magnificent"
+   ]
+  },
+  {
+   "line": "L07",
+   "t0": 38.059,
+   "text": "rules a vast empire on three continents.",
+   "speech_end": 40.859,
+   "t1": 42.77,
+   "lines": [
+    "rules a vast empire",
+    "on three continents."
+   ]
+  },
+  {
+   "line": "L08",
+   "t0": 42.81,
+   "text": "In 1923, Atat\u00fcrk founds the Republic of Turkey,",
+   "speech_end": 46.37,
+   "t1": 46.25,
+   "lines": [
+    "In 1923, Atat\u00fcrk founds",
+    "the Republic of Turkey,"
+   ]
+  },
+  {
+   "line": "L08",
+   "t0": 46.29,
+   "text": "with Ankara as its capital.",
+   "speech_end": 48.59,
+   "t1": 49.262,
+   "lines": [
+    "with Ankara as its capital."
+   ]
+  },
+  {
+   "line": "L09",
+   "t0": 49.302,
+   "text": "Today, about 86 million people call Turkey home,",
+   "speech_end": 52.562,
+   "t1": 52.442,
+   "lines": [
+    "Today, about 86 million",
+    "people call Turkey home,"
+   ]
+  },
+  {
+   "line": "L09",
+   "t0": 52.482,
+   "text": "on two continents.",
+   "speech_end": 53.762,
+   "t1": 54.533,
+   "lines": [
+    "on two continents."
+   ]
+  },
+  {
+   "line": "L10",
+   "t0": 54.573,
+   "text": "Have you tried Turkish tea? Tell us below.",
+   "speech_end": 56.993,
+   "t1": 58.35,
+   "lines": [
+    "Have you tried Turkish",
+    "tea? Tell us below."
+   ]
+  }
+ ],
+ "country": "TURKEY",
+ "sub": "@PrintedHistory",
+ "brand": "FOLLOW @PrintedHistory",
+ "paper": "#F4ECDA",
+ "intro": {
+  "vo": 0.3
+ }
+}

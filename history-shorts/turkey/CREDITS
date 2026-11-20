@@ -1,0 +1,22 @@
+Turkey in 60 Seconds · History in 60 Seconds series · Silkscreen Travel Poster style
+
+Picture: drawn in code (Canvas 2D). Print engine engine/silk.js from the Lemo-Opuscar library (MIT).
+Landmarks (a ring of T-shaped stone pillars, a walled capital on a ridge with a chariot, a harbour city with a great column and
+galleys, a domed church on a ring of windows, triple land walls under smoke with a cannon, a domed mosque with four minarets and
+tulips, a castle hill and an assembly hall on a new boulevard, a strait with a suspension bridge, ferries and balloons) are original
+stylised silhouettes drawn as simple paths, not traced from photographs. No logos, no flags or emblems, no maps or borders.
+
+Fonts (SIL Open Font License 1.1; licence texts in fonts/):
+  Big Shoulders Display — Patric King / Google Fonts
+  Outfit — Rodrigo Fuenzalida / Google Fonts
+
+Voice: Kokoro-82M v1.0 (hexgrad, Apache-2.0) via kokoro-onnx, voice bm_george. Checked with faster-whisper (MIT), model base.en.
+
+Music (original score, music/compose.py): oboe (in the role of the zurna), harp (in the role of the kanun), bassoon, bass drum
+(davul) and frame drum played from recorded samples through core/audio/sampler.py (Lemo-Opuscar, MIT).
+  Samples (CC0): VS Chamber Orchestra: Community Edition (Versilian Studios), Versilian Community Sample Library (Versilian Studios).
+Sound (mix.py): paper swish, stamps, tiles clicking over, wind, birds, hooves, harbour water, gulls, a city murmur, distant booms,
+a ferry horn, traffic: synthesised in code.
+Mastering: FFmpeg (LGPL/GPL) via imageio-ffmpeg.
+
+Facts and sources: FACTS.md.

@@ -1,0 +1,13 @@
+# Facts — Turkey
+
+| Claim (narration / print) | Source |
+|---|---|
+| Hook: "nearly 12,000 years" — Göbekli Tepe's enclosures date from c. 9600–8200 BC (about 11,600 years ago) | UNESCO, "Göbekli Tepe" — https://whc.unesco.org/en/list/1572/ |
+| c. 9500 BC: hunter-gatherers build megalithic enclosures of T-shaped limestone pillars carved with animals at Göbekli Tepe | UNESCO, "Göbekli Tepe" — https://whc.unesco.org/en/list/1572/ ; Britannica, "Göbekli Tepe" — https://www.britannica.com/place/Gobekli-Tepe |
+| c. 1600 BC: Hattusa (Hattusha) becomes the walled capital of the Hittite kingdom (c. 17th century BC; capital for about four centuries). The print shows walls, towers and a corbelled gate, not the later (14th–13th c. BC) Lion Gate | UNESCO, "Hattusha: the Hittite Capital" — https://whc.unesco.org/en/list/377 ; Britannica, "Hattusa" — https://www.britannica.com/place/Hattusa |
+| 330: Constantine dedicates Constantinople (the former Byzantium) as the new capital of the Roman Empire; the Column of Constantine stood in his forum | Britannica, "Constantinople" — https://www.britannica.com/place/Constantinople ; Britannica, "Constantine I" — https://www.britannica.com/biography/Constantine-I-Roman-emperor |
+| 537: Justinian's Hagia Sophia is completed; its dome on a ring of 40 windows seemed (in Procopius's words) to hang from heaven | Britannica, "Hagia Sophia" — https://www.britannica.com/topic/Hagia-Sophia |
+| 1453: Ottoman forces under Mehmed II, with great cannons, breach the land walls and take Constantinople (29 May 1453) | Britannica, "Fall of Constantinople" — https://www.britannica.com/event/Fall-of-Constantinople-1453 |
+| 1500s: Süleyman the Magnificent (sultan 1520–66) rules an empire spanning three continents (Europe, Asia, Africa); the Süleymaniye Mosque (1550–57) | Britannica, "Süleyman the Magnificent" — https://www.britannica.com/biography/Suleyman-I ; EBSCO Research Starters, "Reign of Süleyman" — https://www.ebsco.com/research-starters/history/reign-suleyman |
+| 1923: the Republic of Turkey is proclaimed on 29 October 1923 with Mustafa Kemal Atatürk as president; Ankara is made the capital (13 October 1923) | Britannica, "Atatürk" — https://www.britannica.com/biography/Kemal-Ataturk ; Britannica, "Ankara" — https://www.britannica.com/place/Ankara |
+| Population about 86 million (86,092,168 on 31 December 2025, TÜİK address-based register); the country spans Europe and Asia | TÜİK (TurkStat), Address Based Population Registration System results, reported by Hürriyet Daily News — https://hurriyetdailynews.com/turkiyes-population-hits-85-6-million-official-data-205502 and BirGün — https://www.birgun.net/haber/tuik-announced-turkeys-population-has-passed-86-million-691706 |

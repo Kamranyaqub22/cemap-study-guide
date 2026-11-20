@@ -7,9 +7,9 @@ Read `PRODUCTION.md` (the runbook) and `countries.csv` (the queue). Each country
 Never deliver, push as finished or mark `review` an episode that falls short on any of them: fix it and rebuild until it passes.
 If the build can't run (toolkit missing), say so and stop; never ship an unchecked video. Measure with `tools/qc.py` on both the new
 and the previous episode (same method, same thresholds); `tools/still_spots.py` shows which era is too still.
-Latest reference, France (qc.py): −14.0 LUFS · 56.3 s · 0 blank frames · motion 100.0 / 100.0 / 99.9 / 97.5 % at 0.1 / 0.2 / 0.3 / 0.5 ·
-longest still 0.00 / 0.00 / 0.04 / 0.12 s · sweep >4 kHz −52.1 dB vs rest −27.9 dB · 0 speech-check mismatches, final file word for word.
-(Mexico for comparison: 100.0 / 100.0 / 99.9 / 89.6 %, longest still 0 / 0 / 0.04 / 2.50 s, sweep −46.5 dB; Greece 85.9 % at 0.5, −43.9 dB.)
+Latest reference, Turkey (qc.py): −14.0 LUFS · 58.3 s · 0 blank frames · motion 100.0 / 100.0 / 100.0 / 97.9 % at 0.1 / 0.2 / 0.3 / 0.5 ·
+longest still 0.00 / 0.00 / 0.00 / 0.08 s · sweep >4 kHz −61.2 dB vs rest −28.2 dB · 0 speech-check mismatches, final file word for word.
+(France for comparison: 100.0 / 100.0 / 99.9 / 97.5 %, longest still 0 / 0 / 0.04 / 0.12 s, sweep −52.1 dB; Mexico 89.6 % at 0.5, −46.5 dB.)
 
 Checklist (check before delivering):
 - every narration line passes `asr_check.py`, and the final file transcribes back word for word (a long-form whisper slip may be checked on a short clip);
@@ -19,9 +19,9 @@ Checklist (check before delivering):
 - nothing important under the Shorts UI: top ~140 px, right ~130 px (y 980–1720), bottom ~360 px.
 
 **Keep every episode different** (YouTube "inauthentic content"): new hook style, cold-open camera move, base landscape, signature moment,
-instruments/mode. Used so far — hooks: contrast / surprising fact / list-of-three / paradox question (Italy) / peak first, then rewind (UK) / talk to the viewer about something they use (India) / quiz question (USA) / myth first (Greece) / hidden-city mystery (Mexico) / "imagine…" (France); signatures: snap / 7-ink fountain / route stamp / mosaic set ring by ring (Italy) / steam-engine wipe (UK) / brush-painted zero (India) / rocket-plume wipe (USA) / boustrophedon wipe (Greece) / papel picado (Mexico) / the wall falls block by block (France);
-instruments: koto+taiko / oud+darbuka / harp+sistrum / mandolin+accordion+tamburello in 6/8 (Italy) / change-ringing bells+brass band+snare, 4/4 march (UK) / sitar+tabla+tanpura in teental (India) / banjo+fiddle+bass+washboard 2/4 (USA) / bouzouki+lyra+daouli in 7/8 (Greece) / marimba+guitar+guitarrón+maracas in sesquiáltera (Mexico) / harpsichord+strings+timpani minuet in 3/4, real CC0 samples (France). Cold opens: slide / fall / glide / crane up (Italy) / push in with a roll (UK) / descend in an arc (India) / punch-in (USA) / spiral out (Greece) / spring pull-back (Mexico) / torch reveal (France).
-Endings: "Which country next?" (Japan, UAE, Egypt) / "Where should we print next?" (Italy) / "Which era would you visit?" (UK) / "What surprised you most?" (India) / "Did you get the quiz right?" (USA) / "Would you have voted in ancient Athens?" (Greece) / "Have you been to Mexico?" (Mexico) / "Which print is your favourite?" (France). See each folder's `TREATMENT.md`.
+instruments/mode. Used so far — hooks: contrast / surprising fact / list-of-three / paradox question (Italy) / peak first, then rewind (UK) / talk to the viewer about something they use (India) / quiz question (USA) / myth first (Greece) / hidden-city mystery (Mexico) / "imagine…" (France) / a challenge (Turkey); signatures: snap / 7-ink fountain / route stamp / mosaic set ring by ring (Italy) / steam-engine wipe (UK) / brush-painted zero (India) / rocket-plume wipe (USA) / boustrophedon wipe (Greece) / papel picado (Mexico) / the wall falls block by block (France) / Iznik tile flip (Turkey);
+instruments: koto+taiko / oud+darbuka / harp+sistrum / mandolin+accordion+tamburello in 6/8 (Italy) / change-ringing bells+brass band+snare, 4/4 march (UK) / sitar+tabla+tanpura in teental (India) / banjo+fiddle+bass+washboard 2/4 (USA) / bouzouki+lyra+daouli in 7/8 (Greece) / marimba+guitar+guitarrón+maracas in sesquiáltera (Mexico) / harpsichord+strings+timpani minuet in 3/4, real CC0 samples (France) / oboe-as-zurna+harp-as-kanun+davul in 9/8 aksak (Turkey). Cold opens: slide / fall / glide / crane up (Italy) / push in with a roll (UK) / descend in an arc (India) / punch-in (USA) / spiral out (Greece) / spring pull-back (Mexico) / torch reveal (France) / whip pan (Turkey).
+Endings: "Which country next?" (Japan, UAE, Egypt) / "Where should we print next?" (Italy) / "Which era would you visit?" (UK) / "What surprised you most?" (India) / "Did you get the quiz right?" (USA) / "Would you have voted in ancient Athens?" (Greece) / "Have you been to Mexico?" (Mexico) / "Which print is your favourite?" (France) / "Have you tried Turkish tea?" (Turkey). See each folder's `TREATMENT.md`.
 
 **Branding:** `content.json` → `"sub": "@PrintedHistory"`, `"brand": "FOLLOW @PrintedHistory"`. Daily slot: 5:00 PM (owner's time zone).
 
@@ -42,6 +42,10 @@ Endings: "Which country next?" (Japan, UAE, Egypt) / "Where should we print next
 - The camera must never come to rest: film.js keeps it part-linear and drifting under the next sweep; a cold open must last until the first sweep and keep moving (at zoom ≈ 1 a pan of the anchor does nothing: change the zoom).
 - `sh tools/new_country.sh` copies the newest episode: update its `SRC` after each new episode (engine fixes live in film.js, timeline.py, mix.py).
 - Kokoro: "Charlemagne", "Chauvet", "Versailles" come out wrong: respell "Sharlemain", "Show-vay", "Vair-sigh"; "Orléans" is heard as "all aliens" (say "the city of Orleans").
+- A silence era's sweep (0.7 s) is longer than the 0.45 s gap between lines, so it eats the end of the previous line: give that era a `pause` (~0.8 s) as Turkey does.
+- A line that starts "In the 1500s…" (year not first) needs `at: null` + `year_at`, like "Around…" and "In the year…".
+- Kokoro: "Göbekli Tepe" → "Gurbeckly Teppay", "Hattusa" → "Hattoosa", "Hagia Sophia" → "Haggia Sofia"; "rule"/"rules an" were heard as "ruled"/"rules and".
+- More motion: widen ZK (Turkey 1.0/1.14) — the camera's push is what moves most of the frame.
 - The end wall is often the stillest stretch at 0.5: France swings the prints harder (film.js `wall`).
 - A line that ends on a sibilant right before a silence era's (early) sweep puts hiss in the sweep: end it on a vowel.
 - Real instrument samples (VSCO 2 CE, VCSL; CC0) are available through `core/audio/sampler.py` (they download on first use); credit them with `S.credits([...])`.

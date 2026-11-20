@@ -99,3 +99,23 @@ Sources: UNESCO, Britannica, Château de Versailles, INSEE, UN Tourism. Animatio
 ```
 The Chauvet cave paintings are over 36,000 years old 🔥 Which print is your favourite? Which country next?
 ```
+
+## Turkey — `turkey/turkey.mp4` · `turkey/turkey.srt` · **22 Nov 2026, 5:00 PM**
+
+**Caption**
+```
+Can we fit nearly 12,000 years of Turkey into one minute? Challenge accepted. ⏱️
+
+Göbekli Tepe, the Hittites, Constantinople, Hagia Sophia, 1453, Süleyman the Magnificent, Atatürk's republic, and today.
+
+Have you tried Turkish tea? Tell us in the comments 👇
+
+Sources: UNESCO, Britannica, TÜİK. Animation, music and narration made in code.
+
+#history #turkey #turkiye #historyin60seconds #reels
+```
+
+**First comment (pin it)**
+```
+Göbekli Tepe is about 11,600 years old 🪨 Have you tried Turkish tea? Which country next?
+```

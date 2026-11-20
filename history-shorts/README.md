@@ -15,6 +15,7 @@ A YouTube Shorts series: one country's history per video, 60 seconds, vertical 1
 | Greece | [`greece/greece.mp4`](greece/greece.mp4) | [`greece/greece.srt`](greece/greece.srt) | [upload sheet](greece/UPLOAD.md) · [treatment](greece/TREATMENT.md) · [facts](greece/FACTS.md) · [credits](greece/CREDITS) |
 | Mexico | [`mexico/mexico.mp4`](mexico/mexico.mp4) | [`mexico/mexico.srt`](mexico/mexico.srt) | [upload sheet](mexico/UPLOAD.md) · [treatment](mexico/TREATMENT.md) · [facts](mexico/FACTS.md) · [credits](mexico/CREDITS) |
 | France | [`france/france.mp4`](france/france.mp4) | [`france/france.srt`](france/france.srt) | [upload sheet](france/UPLOAD.md) · [treatment](france/TREATMENT.md) · [facts](france/FACTS.md) · [credits](france/CREDITS) |
+| Turkey | [`turkey/turkey.mp4`](turkey/turkey.mp4) | [`turkey/turkey.srt`](turkey/turkey.srt) | [upload sheet](turkey/UPLOAD.md) · [treatment](turkey/TREATMENT.md) · [facts](turkey/FACTS.md) · [credits](turkey/CREDITS) |
 
 **Daily workflow, uploading and the country queue:** [`PRODUCTION.md`](PRODUCTION.md) · [`countries.csv`](countries.csv)
 
