@@ -7,9 +7,9 @@ Read `PRODUCTION.md` (the runbook) and `countries.csv` (the queue). Each country
 Never deliver, push as finished or mark `review` an episode that falls short on any of them: fix it and rebuild until it passes.
 If the build can't run (toolkit missing), say so and stop; never ship an unchecked video. Measure with `tools/qc.py` on both the new
 and the previous episode (same method, same thresholds); `tools/still_spots.py` shows which era is too still.
-Latest reference, Mexico (qc.py): −14.0 LUFS · 52.3 s · 0 blank frames · motion 100.0 / 100.0 / 99.9 / 89.6 % at 0.1 / 0.2 / 0.3 / 0.5 ·
-longest still 0.00 / 0.00 / 0.04 / 2.50 s · sweep >4 kHz −46.5 dB vs rest −28.2 dB · 0 speech-check mismatches, final file word for word.
-(Greece for comparison: 100.0 / 100.0 / 99.8 / 85.9 %, longest still 0 / 0 / 0.08 / 2.67 s, sweep −43.9 dB; USA 100.0 / 100.0 / 99.8 / 84.4 %, −42.8 dB.)
+Latest reference, France (qc.py): −14.0 LUFS · 56.3 s · 0 blank frames · motion 100.0 / 100.0 / 99.9 / 97.5 % at 0.1 / 0.2 / 0.3 / 0.5 ·
+longest still 0.00 / 0.00 / 0.04 / 0.12 s · sweep >4 kHz −52.1 dB vs rest −27.9 dB · 0 speech-check mismatches, final file word for word.
+(Mexico for comparison: 100.0 / 100.0 / 99.9 / 89.6 %, longest still 0 / 0 / 0.04 / 2.50 s, sweep −46.5 dB; Greece 85.9 % at 0.5, −43.9 dB.)
 
 Checklist (check before delivering):
 - every narration line passes `asr_check.py`, and the final file transcribes back word for word (a long-form whisper slip may be checked on a short clip);
@@ -19,9 +19,9 @@ Checklist (check before delivering):
 - nothing important under the Shorts UI: top ~140 px, right ~130 px (y 980–1720), bottom ~360 px.
 
 **Keep every episode different** (YouTube "inauthentic content"): new hook style, cold-open camera move, base landscape, signature moment,
-instruments/mode. Used so far — hooks: contrast / surprising fact / list-of-three / paradox question (Italy) / peak first, then rewind (UK) / talk to the viewer about something they use (India) / quiz question (USA) / myth first (Greece) / hidden-city mystery (Mexico); signatures: snap / 7-ink fountain / route stamp / mosaic set ring by ring (Italy) / steam-engine wipe (UK) / brush-painted zero (India) / rocket-plume wipe (USA) / boustrophedon wipe (Greece) / papel picado (Mexico);
-instruments: koto+taiko / oud+darbuka / harp+sistrum / mandolin+accordion+tamburello in 6/8 (Italy) / change-ringing bells+brass band+snare, 4/4 march (UK) / sitar+tabla+tanpura in teental (India) / banjo+fiddle+bass+washboard 2/4 (USA) / bouzouki+lyra+daouli in 7/8 (Greece) / marimba+guitar+guitarrón+maracas in sesquiáltera (Mexico). Cold opens: slide / fall / glide / crane up (Italy) / push in with a roll (UK) / descend in an arc (India) / punch-in (USA) / spiral out (Greece) / spring pull-back (Mexico).
-Endings: "Which country next?" (Japan, UAE, Egypt) / "Where should we print next?" (Italy) / "Which era would you visit?" (UK) / "What surprised you most?" (India) / "Did you get the quiz right?" (USA) / "Would you have voted in ancient Athens?" (Greece) / "Have you been to Mexico?" (Mexico). See each folder's `TREATMENT.md`.
+instruments/mode. Used so far — hooks: contrast / surprising fact / list-of-three / paradox question (Italy) / peak first, then rewind (UK) / talk to the viewer about something they use (India) / quiz question (USA) / myth first (Greece) / hidden-city mystery (Mexico) / "imagine…" (France); signatures: snap / 7-ink fountain / route stamp / mosaic set ring by ring (Italy) / steam-engine wipe (UK) / brush-painted zero (India) / rocket-plume wipe (USA) / boustrophedon wipe (Greece) / papel picado (Mexico) / the wall falls block by block (France);
+instruments: koto+taiko / oud+darbuka / harp+sistrum / mandolin+accordion+tamburello in 6/8 (Italy) / change-ringing bells+brass band+snare, 4/4 march (UK) / sitar+tabla+tanpura in teental (India) / banjo+fiddle+bass+washboard 2/4 (USA) / bouzouki+lyra+daouli in 7/8 (Greece) / marimba+guitar+guitarrón+maracas in sesquiáltera (Mexico) / harpsichord+strings+timpani minuet in 3/4, real CC0 samples (France). Cold opens: slide / fall / glide / crane up (Italy) / push in with a roll (UK) / descend in an arc (India) / punch-in (USA) / spiral out (Greece) / spring pull-back (Mexico) / torch reveal (France).
+Endings: "Which country next?" (Japan, UAE, Egypt) / "Where should we print next?" (Italy) / "Which era would you visit?" (UK) / "What surprised you most?" (India) / "Did you get the quiz right?" (USA) / "Would you have voted in ancient Athens?" (Greece) / "Have you been to Mexico?" (Mexico) / "Which print is your favourite?" (France). See each folder's `TREATMENT.md`.
 
 **Branding:** `content.json` → `"sub": "@PrintedHistory"`, `"brand": "FOLLOW @PrintedHistory"`. Daily slot: 5:00 PM (owner's time zone).
 
@@ -41,6 +41,10 @@ Endings: "Which country next?" (Japan, UAE, Egypt) / "Where should we print next
 - Sweep timing (USA onwards, in timeline.py): each print lands 0.1 s before its year is spoken, lines are 0.45 s apart, and a silence era's longer sweep starts earlier so it ends as the print lands; an era whose line starts with "Around the year…" uses `at: null` + `year_at`. Then no narration sound or label stamp falls inside a sweep.
 - The camera must never come to rest: film.js keeps it part-linear and drifting under the next sweep; a cold open must last until the first sweep and keep moving (at zoom ≈ 1 a pan of the anchor does nothing: change the zoom).
 - `sh tools/new_country.sh` copies the newest episode: update its `SRC` after each new episode (engine fixes live in film.js, timeline.py, mix.py).
+- Kokoro: "Charlemagne", "Chauvet", "Versailles" come out wrong: respell "Sharlemain", "Show-vay", "Vair-sigh"; "Orléans" is heard as "all aliens" (say "the city of Orleans").
+- The end wall is often the stillest stretch at 0.5: France swings the prints harder (film.js `wall`).
+- A line that ends on a sibilant right before a silence era's (early) sweep puts hiss in the sweep: end it on a vowel.
+- Real instrument samples (VSCO 2 CE, VCSL; CC0) are available through `core/audio/sampler.py` (they download on first use); credit them with `S.credits([...])`.
 - Kokoro: "Minoans" and "Tenochtitlan" come out wrong (avoid them); respell "Knossus", "Acropolice", "Tayo-teewa-kahn" (Teotihuacan); "still in force" is heard as "enforced".
 - Whisper splits some names ("Brahmagupta" → "Brahma Gupta"): check the phonemes, then put whisper's spelling in `asr` and keep the real one in `sub`.
 - Watch the moments around each sweep: an eased start (camera settled, wipe still off-screen) makes a still stretch; move things at a steady speed from the first frame.

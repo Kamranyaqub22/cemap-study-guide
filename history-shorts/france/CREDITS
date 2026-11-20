@@ -1,0 +1,22 @@
+France in 60 Seconds · History in 60 Seconds series · Silkscreen Travel Poster style
+
+Picture: drawn in code (Canvas 2D). Print engine engine/silk.js from the Lemo-Opuscar library (MIT).
+Landmarks (a painted cave wall with torches, a hilltop town behind siege works, a domed eight-sided chapel under a crown, a walled
+river city with a rider, a palace garden front with fountains, a fortress with round towers and a crowd, an iron lattice tower, a
+river city with twin cathedral towers and a white dome) are original stylised silhouettes drawn as simple paths, not traced from
+photographs. No logos, no flags or emblems, no maps or borders.
+
+Fonts (SIL Open Font License 1.1; licence texts in fonts/):
+  Big Shoulders Display — Patric King / Google Fonts
+  Outfit — Rodrigo Fuenzalida / Google Fonts
+
+Voice: Kokoro-82M v1.0 (hexgrad, Apache-2.0) via kokoro-onnx, voice bm_george. Checked with faster-whisper (MIT), model base.en.
+
+Music (original score, music/compose.py): harpsichord, violins, violas, cellos, pizzicato basses and timpani played from recorded
+samples through core/audio/sampler.py (Lemo-Opuscar, MIT).
+  Samples (CC0): VS Chamber Orchestra: Community Edition (Versilian Studios), Versilian Community Sample Library (Versilian Studios).
+Sound (mix.py): paper swish, stamps, falling stone blocks, cave drips and a torch, wind, marching feet, a bell, a river, fountains,
+hooves, a crowd, bicycle bells, city traffic: synthesised in code.
+Mastering: FFmpeg (LGPL/GPL) via imageio-ffmpeg.
+
+Facts and sources: FACTS.md.

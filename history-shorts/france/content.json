@@ -1,0 +1,162 @@
+{
+ "country": "FRANCE",
+ "sub": "@PrintedHistory",
+ "brand": "FOLLOW @PrintedHistory",
+ "paper": "#F4ECDA",
+ "intro": {
+  "line": "L01"
+ },
+ "cold": {
+  "scene": "cave",
+  "torch": [
+   260,
+   820,
+   800,
+   900,
+   1.7
+  ],
+  "dur": 6.0
+ },
+ "eras": [
+  {
+   "scene": "cave",
+   "line": "L02",
+   "at": null,
+   "label": "THE CHAUVET CAVE",
+   "year": "c. 34,000 BC",
+   "pal": {
+    "sky1": "#E9C9A0",
+    "sky2": "#B9774E",
+    "far": "#8A5034",
+    "mid": "#5A3426",
+    "near": "#1C120E",
+    "sun": "#C2402A",
+    "glow": "#F6D9A0"
+   }
+  },
+  {
+   "scene": "alesia",
+   "line": "L03",
+   "at": "52",
+   "label": "CAESAR CONQUERS GAUL",
+   "year": "52 BC",
+   "silence": true,
+   "silence_at": "defeats",
+   "pal": {
+    "sky1": "#CFCCC4",
+    "sky2": "#9C9890",
+    "far": "#7C786C",
+    "mid": "#55584A",
+    "near": "#1E1E1C",
+    "sun": "#9A3A2C",
+    "glow": "#E2DACA"
+   }
+  },
+  {
+   "scene": "charlemagne",
+   "line": "L04",
+   "at": null,
+   "year_at": "800",
+   "label": "CHARLEMAGNE, EMPEROR",
+   "year": "800",
+   "pal": {
+    "sky1": "#F0E2C6",
+    "sky2": "#C7B27E",
+    "far": "#9E8A5A",
+    "mid": "#5E6E4A",
+    "near": "#2A2018",
+    "sun": "#B8862A",
+    "glow": "#F7E6B0"
+   }
+  },
+  {
+   "scene": "joan",
+   "line": "L05",
+   "at": "1429",
+   "label": "JOAN OF ARC AT ORL\u00c9ANS",
+   "year": "1429",
+   "pal": {
+    "sky1": "#EEE6DA",
+    "sky2": "#A8B8CE",
+    "far": "#8C98AE",
+    "mid": "#4E6680",
+    "near": "#1C2230",
+    "sun": "#C0392E",
+    "glow": "#F4E8C6"
+   }
+  },
+  {
+   "scene": "versailles",
+   "line": "L06",
+   "at": "1682",
+   "label": "THE COURT AT VERSAILLES",
+   "year": "1682",
+   "pal": {
+    "sky1": "#F6EBD2",
+    "sky2": "#B8D4DC",
+    "far": "#9EB59A",
+    "mid": "#4E7A58",
+    "near": "#22302A",
+    "sun": "#D2A032",
+    "glow": "#FCEFC2"
+   }
+  },
+  {
+   "scene": "bastille",
+   "line": "L07",
+   "at": "1789",
+   "label": "THE FRENCH REVOLUTION",
+   "year": "1789",
+   "blocks": true,
+   "pause": 1.1,
+   "pal": {
+    "sky1": "#F4E6D0",
+    "sky2": "#E8A88A",
+    "far": "#9C8C9E",
+    "mid": "#3E5C8A",
+    "near": "#1C1A2C",
+    "sun": "#D23A30",
+    "glow": "#FBE4B0"
+   }
+  },
+  {
+   "scene": "eiffel",
+   "line": "L08",
+   "at": "1889",
+   "label": "THE EIFFEL TOWER",
+   "year": "1889",
+   "pal": {
+    "sky1": "#F6E8D6",
+    "sky2": "#D8B8C8",
+    "far": "#A894AE",
+    "mid": "#6E7896",
+    "near": "#22223A",
+    "sun": "#C8562E",
+    "glow": "#FBE0B6"
+   }
+  },
+  {
+   "scene": "today",
+   "line": "L09",
+   "at": null,
+   "label": "NEARLY 69 MILLION PEOPLE",
+   "year": "TODAY",
+   "pal": {
+    "sky1": "#FADFCB",
+    "sky2": "#9FB6DA",
+    "far": "#8E92B8",
+    "mid": "#4E6E86",
+    "near": "#1A1E30",
+    "sun": "#E8743A",
+    "glow": "#FFE2A6"
+   }
+  }
+ ],
+ "end": {
+  "line": "L10",
+  "text": [
+   "FAVE",
+   "PRINT?"
+  ]
+ }
+}

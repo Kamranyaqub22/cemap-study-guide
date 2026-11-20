@@ -1,0 +1,92 @@
+[
+ {
+  "id": "L01",
+  "text": "Imagine painting a cave wall by firelight, thirty-six thousand years ago. France's story starts there.",
+  "asr": "imagine painting a cave wall by firelight 36,000 years ago France's story starts there",
+  "sub": "Imagine painting a cave wall by firelight, | 36,000 years ago. France's story starts there.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L02",
+  "text": "In the Show-vay cave, early artists paint lions, horses and a rhino.",
+  "asr": "in the Chauvet cave early artists paint lions horses and a rhino",
+  "sub": "In the Chauvet cave, early artists paint | lions, horses and a rhino.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L03",
+  "text": "In fifty-two BC, Julius Caesar defeats the Gauls at Alesia, and Gaul becomes Roman.",
+  "asr": "in 52 BC Julius Caesar defeats the Gauls at Alesia and Gaul becomes Roman",
+  "sub": "In 52 BC, Julius Caesar defeats the Gauls at Alesia, | and Gaul becomes Roman.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L04",
+  "text": "In the year eight hundred, Sharlemain is crowned emperor of the West.",
+  "asr": "in the year 800 Charlemagne is crowned emperor of the west",
+  "sub": "In the year 800, Charlemagne | is crowned emperor of the West.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L05",
+  "text": "In fourteen twenty-nine, teenage Joan of Arc frees the city of Orleans.",
+  "asr": "in 1429 teenage Joan of Arc frees the city of Orleans",
+  "sub": "In 1429, teenage Joan of Arc | frees the city of Orl\u00e9ans.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L06",
+  "text": "In sixteen eighty-two, Louis the Fourteenth moves his court to Vair-sigh.",
+  "asr": "in 1682 Louis XIV moves his court to Versailles",
+  "sub": "In 1682, Louis XIV | moves his court to Versailles.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L07",
+  "text": "In seventeen eighty-nine, Parisians storm the Bastille, and the French Revolution begins.",
+  "asr": "in 1789 Parisians storm the Bastille and the French Revolution begins",
+  "sub": "In 1789, Parisians storm the Bastille, | and the French Revolution begins.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L08",
+  "text": "In eighteen eighty-nine, the Eiffel Tower rises over Paris, the tallest structure on Earth.",
+  "asr": "in 1889 the Eiffel Tower rises over Paris the tallest structure on Earth",
+  "sub": "In 1889, the Eiffel Tower rises over Paris, | the tallest structure on Earth.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L09",
+  "text": "Today, nearly sixty-nine million people call France home, the most visited country in the world.",
+  "asr": "today nearly 69 million people call France home the most visited country in the world",
+  "sub": "Today, nearly 69 million people call France home, | the most visited country in the world.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ },
+ {
+  "id": "L10",
+  "text": "Which print is your favourite? Tell us below.",
+  "asr": "which print is your favorite tell us below",
+  "sub": "Which print is your favourite? Tell us below.",
+  "voice": "bm_george",
+  "speed": 1.1,
+  "lang": "en-gb"
+ }
+]

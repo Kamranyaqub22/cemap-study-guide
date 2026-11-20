@@ -14,6 +14,7 @@ A YouTube Shorts series: one country's history per video, 60 seconds, vertical 1
 | USA | [`united-states/united-states.mp4`](united-states/united-states.mp4) | [`united-states/united-states.srt`](united-states/united-states.srt) | [upload sheet](united-states/UPLOAD.md) · [treatment](united-states/TREATMENT.md) · [facts](united-states/FACTS.md) · [credits](united-states/CREDITS) |
 | Greece | [`greece/greece.mp4`](greece/greece.mp4) | [`greece/greece.srt`](greece/greece.srt) | [upload sheet](greece/UPLOAD.md) · [treatment](greece/TREATMENT.md) · [facts](greece/FACTS.md) · [credits](greece/CREDITS) |
 | Mexico | [`mexico/mexico.mp4`](mexico/mexico.mp4) | [`mexico/mexico.srt`](mexico/mexico.srt) | [upload sheet](mexico/UPLOAD.md) · [treatment](mexico/TREATMENT.md) · [facts](mexico/FACTS.md) · [credits](mexico/CREDITS) |
+| France | [`france/france.mp4`](france/france.mp4) | [`france/france.srt`](france/france.srt) | [upload sheet](france/UPLOAD.md) · [treatment](france/TREATMENT.md) · [facts](france/FACTS.md) · [credits](france/CREDITS) |
 
 **Daily workflow, uploading and the country queue:** [`PRODUCTION.md`](PRODUCTION.md) · [`countries.csv`](countries.csv)
 

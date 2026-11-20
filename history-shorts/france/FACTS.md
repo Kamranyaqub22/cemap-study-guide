@@ -1,0 +1,13 @@
+# Facts — France
+
+| Claim (narration / print) | Source |
+|---|---|
+| Hook / c. 34,000 BC: the Chauvet cave (Ardèche) holds some of the oldest known cave paintings, more than 36,000 years old; its animals include lions, horses and rhinoceroses (UNESCO World Heritage Site since 2014) | UNESCO, "Decorated Cave of Pont d'Arc, known as Grotte Chauvet-Pont d'Arc, Ardèche" — https://whc.unesco.org/en/list/1426 ; World History Encyclopedia, "Chauvet Cave" — https://www.worldhistory.org/Chauvet_Cave/ ; Britannica, "Chauvet Cave" — https://www.britannica.com/place/Chauvet-Cave |
+| 52 BC: Julius Caesar defeats Vercingetorix and the Gauls at the siege of Alesia; Gaul becomes Roman (siege lines around the hilltop town) | Britannica, "Battle of Alesia" — https://www.britannica.com/event/Battle-of-Alesia ; Britannica, "Vercingetorix" — https://www.britannica.com/biography/Vercingetorix |
+| 800: Charlemagne is crowned emperor (of the Romans, in the West) by Pope Leo III on Christmas Day 800; the octagonal Palatine Chapel at Aachen is his | Britannica, "Charlemagne" — https://www.britannica.com/biography/Charlemagne |
+| 1429: Joan of Arc, about 17, leads the force that lifts the siege of Orléans (May 1429) | Britannica, "Saint Joan of Arc" — https://www.britannica.com/biography/Saint-Joan-of-Arc ; Britannica, "Siege of Orléans" — https://www.britannica.com/event/Siege-of-Orleans |
+| 1682: Louis XIV moves the court and government to Versailles (6 May 1682) | Château de Versailles, "Versailles, capital of the kingdom (1682)" — https://en.chateauversailles.fr/discover/history/key-dates/versailles-capital-kingdom-1682 |
+| 1789: Parisians storm the Bastille on 14 July 1789, a start of the French Revolution | Britannica, "Bastille" — https://www.britannica.com/topic/Bastille-fortress-Paris-France ; Britannica, "French Revolution" — https://www.britannica.com/event/French-Revolution |
+| 1889: the Eiffel Tower is completed for the 1889 Exposition Universelle; at 300 m it is the tallest structure in the world until 1930 | Britannica, "Eiffel Tower" — https://www.britannica.com/topic/Eiffel-Tower-Paris-France |
+| Population: 68.6 million on 1 January 2025 (France including overseas departments) — "nearly 69 million" | INSEE, "Bilan démographique 2024", Insee Première no. 2033 — https://www.insee.fr/fr/statistiques/8327319 |
+| France is the world's most visited country (about 100 million international visitors in 2024) | UN Tourism / Atout France figures reported by Time Out, "France was once again the world's most visited country last year" — https://www.timeout.com/news/france-was-once-again-the-worlds-most-visited-country-last-year-heres-the-full-list-012225 |

@@ -79,3 +79,23 @@ Sources: Britannica, INEGI. Animation, music and narration made in code.
 ```
 Tenochtitlan was built on an island in a lake 🏝️ Have you been to Mexico? Which country next?
 ```
+
+## France — `france/france.mp4` · `france/france.srt` · **21 Nov 2026, 5:00 PM**
+
+**Caption**
+```
+Imagine painting a cave wall by firelight, 36,000 years ago. 🔥
+
+36,000 years of France in one minute: the Chauvet cave, Caesar at Alesia, Charlemagne, Joan of Arc, Versailles, the Bastille, the Eiffel Tower, and today.
+
+Which print is your favourite? Tell us in the comments 👇
+
+Sources: UNESCO, Britannica, Château de Versailles, INSEE, UN Tourism. Animation, music and narration made in code.
+
+#history #france #paris #historyin60seconds #reels
+```
+
+**First comment (pin it)**
+```
+The Chauvet cave paintings are over 36,000 years old 🔥 Which print is your favourite? Which country next?
+```
